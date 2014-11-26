@@ -10,3 +10,11 @@ Code Changelog
 * Will be slowly implementing the concept of using the files to pull the data, and be able to begin to parse everything for analysis.
 * Now I am writing the code for only one user to make sure that the logic is working correctly.  Then, later on this week I will definitely be incorporating multiple users, and use various "if..." statements to be able to control the program flow.  
 * It will take up a lot of lines of code, but I hope it will get the job done in the long run.
+
+25th November 2014
+* Tearing this code down, and will now be reconstructing this code with the latest developments which I know have worked after testing various methods.  
+* I will be able to have the user select the user(s) and the sample size (N) for which they can be able to calculate and generate the genuine scores.
+* For now, I will have the data being shown so that way I know that my logic is working as I originally envisioned/thought of.
+* Now here is the plan of attack:
+     1. Take the PasswordData.csv file and break it up into 50 or so separate csv files based upon the user subject ID
+	 2. Have my code that is below to be user friendly, and (hopefully) efficient enough where the user can be able to control the experiments. 

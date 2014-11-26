@@ -12,17 +12,11 @@ using System.Text;
 /// CSCI-860-W01: Biometrics and its Applications in a Networked Society
 /// Instructor: Dr. Kiran Balagani
 /// 
-/// 25th November 2014
-/// * Tearing this code down, and will now be reconstructing this code with the latest developments
-/// which I know have worked after testing various methods.  
-/// * I will be able to have the user select the user(s) and the sample size (N) for which they can be 
-/// able to calculate and generate the genuine scores.
-/// * For now, I will have the data being shown so that way I know that my logic is working as I originally
-/// envisioned/thought of.
-/// * Now here is the plan of attack:
-///     1. Take the PasswordData.csv file and break it up into 50 or so separate csv files based upon the user subject ID
-///     2. Have my code that is below to be user friendly, and (hopefully) efficient enough where the user can be able to control
-///     the experiments.  
+/// 26th November 2014
+/// * Finally, I have been able to get going on the formal programming of this assignment.
+/// * Here, I can be able to extract N samples from a CSV file properly.  
+/// * Next here, the template generation is going to be key, and then genuine and impostor score generation using the 
+/// samples.  Finally, I have to be able to calculate the False Accept and False Reject rates at various thresholds.  
 /// </summary>
 
 namespace ProgrammingAssignment1_SpecialTopics
@@ -35,21 +29,42 @@ namespace ProgrammingAssignment1_SpecialTopics
             // Overall header for the Console
             Console.Write("===Programming Assignment 1===" + Environment.NewLine);
             Console.Write("Pranav S. Krishnamurthy" + Environment.NewLine + "CSCI-860-W01: Biometrics and its Applications in a Networked Society");
-            Console.WriteLine("We will now be starting to take data from various users and begin to calculate various rates. Begin by selecting the user to analyze.");
+            Console.WriteLine("We will now be starting to take data from various users and begin to calculate various rates. Now, begin by selecting the user to analyze.");
             #endregion
 
             // This is the string for which the end user will determine which user will have the samples retrieved.
-            string userNumber = Console.ReadLine(); 
+            string userNumber = Console.ReadLine();
 
+            #region One of 50 if statements to be coded for extracting data.  
             if (userNumber == "1")
             {
                 // Initialization of the 2D array called s002.  
-                double[,] s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv"); 
+                double[,] s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv");
+
+                // Prompting the user to now enter in the number of samples to be analyzed
+                Console.Write("Enter the value of N, the number of samples upon which the analysis will be conducted.");
+                string inputN = Console.ReadLine(); 
+
+                if (inputN == "100")
+                {
+                    int N = int.Parse(inputN); 
+
+                    for (int n = 0; n < N; n++)
+                    {
+                        for (int j = 0; j < s002.GetLength(1); j++)
+                        {
+                            Console.Write(s002[n, j] + " "); 
+                        }
+                        Console.Write(Environment.NewLine); 
+                    }
+                }
             }
+            #endregion
 
             Console.ReadKey(); // Default program termination
         }
 
+        #region CSV to 2D double array conversion
         /// <summary>
         /// This method will now convert the CSV files into 
         /// 2D double arrays
@@ -63,7 +78,30 @@ namespace ProgrammingAssignment1_SpecialTopics
             String input = File.ReadAllText(filePath); 
 
             // Initialize the counters
-            int i = 0, j = 0; 
+            int i = 0, j = 0;
+
+            // Initialize the new 2D double array which has 400 rows and 21 columns
+            double[,] values = new double[400, 21]; 
+
+            // Using a nested foreach loop so that way I can be able to use the new line delimeter to break up the rows and the comma delimiter to remove the 
+            // commas which separates each element. 
+            foreach (var row in input.Split('\n'))
+            {
+                j = 0; 
+                
+                // Again using the nested foreach loop in order to remove the comma which separates the various values. 
+                foreach (var col in row.Trim().Split(','))
+                {
+                    values[i, j] = double.Parse(col.Trim());
+                    j++; // Increment the column
+                }
+                i++; // Increment the row
+            }
+
+            // Outputs the 2D double array called values, which in turn becomes the 
+            // 2D double array called 
+            return values;
         }
+        #endregion
     }
 }
