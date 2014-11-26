@@ -47,8 +47,10 @@
   <ItemGroup>
     <Content Include="code_changelog.txt" />
     <Content Include="Data Files\s002.csv" />
+    <None Include="Data Files\PasswordData.csv" />
     <None Include="Data Files\s003.csv" />
     <None Include="Data Files\s004.csv" />
+    <None Include="Data Files\s005.csv" />
     <None Include="Data Files\s007.csv" />
     <None Include="Data Files\s008.csv" />
     <None Include="Data Files\s010.csv" />
@@ -56,6 +58,10 @@
     <None Include="Data Files\s012.csv" />
     <None Include="Data Files\s013.csv" />
     <None Include="Data Files\s015.csv" />
+    <None Include="Data Files\s016.csv" />
+    <None Include="Data Files\s017.csv" />
+    <None Include="Data Files\s018.csv" />
+    <None Include="Data Files\s019.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
