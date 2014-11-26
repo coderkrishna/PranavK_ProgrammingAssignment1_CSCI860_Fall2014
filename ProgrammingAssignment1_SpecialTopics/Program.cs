@@ -35,9 +35,19 @@ namespace ProgrammingAssignment1_SpecialTopics
             // Overall header for the Console
             Console.Write("===Programming Assignment 1===" + Environment.NewLine);
             Console.Write("Pranav S. Krishnamurthy" + Environment.NewLine + "CSCI-860-W01: Biometrics and its Applications in a Networked Society");
-            Console.Write("We will now be starting to take data from various users and begin to calculate various rates. Begin by selecting the user to analyze.");
+            Console.WriteLine("We will now be starting to take data from various users and begin to calculate various rates. Begin by selecting the user to analyze.");
             #endregion
 
+            // This is the string for which the end user will determine which user will have the samples retrieved.
+            string userNumber = Console.ReadLine(); 
+
+            if (userNumber == "1")
+            {
+                if (File.Exists(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv"))
+                {
+                    Console.Write("File exists!"); 
+                }
+            }
 
             Console.ReadKey(); // Default program termination
         }

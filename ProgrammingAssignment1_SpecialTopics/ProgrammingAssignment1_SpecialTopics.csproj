@@ -45,7 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data Files\s002.csv" />
+    <Content Include="Data Files\s002.csv" />
     <None Include="Data Files\s003.csv" />
     <None Include="Data Files\s004.csv" />
     <None Include="Data Files\s007.csv" />
