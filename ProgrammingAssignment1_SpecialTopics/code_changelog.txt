@@ -1,0 +1,12 @@
+﻿Pranav S. Krishnamurthy
+CSCI-860-W01: Biometrics and its Applications in a Networked Society
+Code Changelog
+
+23rd November 2014
+* Beginning to formally write the logic out, and having an idea.
+* Now checking for the existence of a file
+ 
+24th November 2014
+* Will be slowly implementing the concept of using the files to pull the data, and be able to begin to parse everything for analysis.
+* Now I am writing the code for only one user to make sure that the logic is working correctly.  Then, later on this week I will definitely be incorporating multiple users, and use various "if..." statements to be able to control the program flow.  
+* It will take up a lot of lines of code, but I hope it will get the job done in the long run.

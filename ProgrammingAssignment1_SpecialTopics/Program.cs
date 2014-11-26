@@ -43,13 +43,27 @@ namespace ProgrammingAssignment1_SpecialTopics
 
             if (userNumber == "1")
             {
-                if (File.Exists(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv"))
-                {
-                    Console.Write("File exists!"); 
-                }
+                // Initialization of the 2D array called s002.  
+                double[,] s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv"); 
             }
 
             Console.ReadKey(); // Default program termination
+        }
+
+        /// <summary>
+        /// This method will now convert the CSV files into 
+        /// 2D double arrays
+        /// </summary>
+        /// <param name="filePath">The location of the CSV file</param>
+        /// <returns></returns>
+        static double[,] ParseData(string filePath)
+        {
+            // I am using the String class, and will now be able to begin to convert the CSV file
+            // into a 2D double array
+            String input = File.ReadAllText(filePath); 
+
+            // Initialize the counters
+            int i = 0, j = 0; 
         }
     }
 }
