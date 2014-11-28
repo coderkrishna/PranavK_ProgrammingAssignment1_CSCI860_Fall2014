@@ -33,7 +33,11 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region Header
             // Overall header for the Console
             Console.Write("===Programming Assignment 1===" + Environment.NewLine);
-            Console.Write("Pranav S. Krishnamurthy" + Environment.NewLine + "CSCI-860-W01: Biometrics and its Applications in a Networked Society");
+
+            // Adding a separation at the end of the header. 
+            Console.Write("Pranav S. Krishnamurthy" + Environment.NewLine + "CSCI-860-W01: Biometrics and its Applications in a Networked Society" + Environment.NewLine);
+
+            // Providing the instructions
             Console.WriteLine("We will now be starting to take data from various users and begin to calculate various rates. Now, begin by selecting the user to analyze.");
             #endregion
 
@@ -47,7 +51,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 double[,] s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv");
 
                 // Prompting the user to now enter in the number of samples to be analyzed
-                Console.Write("Enter the value of N, the number of samples upon which the analysis will be conducted.  The value of N can be either 100, 200, or 300");
+                Console.Write("Enter the value of N, the number of samples upon which the analysis will be conducted.  The value of N can be either 100, 200, or 300" + Environment.NewLine);
                 string inputN = Console.ReadLine(); 
                 
                 // Extracting either 100, 200, or 300 samples from the specified user
@@ -77,14 +81,13 @@ namespace ProgrammingAssignment1_SpecialTopics
                 // If the user enters in a number that is not equal to either the three options listed
                 if (inputN != "100" || inputN != "200" || inputN != "300")
                 {
-                    Console.WriteLine("Your input sampling is too large try again!");
-                    Main(); 
+                    Console.WriteLine("Your input sampling is too large, the program will quit");
+                    Console.ReadKey(); 
                 }
             }
             #endregion
 
             
-
             Console.ReadKey(); // Default program termination
         }
 
