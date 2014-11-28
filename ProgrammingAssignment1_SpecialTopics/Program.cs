@@ -16,7 +16,12 @@ using System.Text;
 /// * Finally, I have been able to get going on the formal programming of this assignment.
 /// * Here, I can be able to extract N samples from a CSV file properly.  
 /// * Next here, the template generation is going to be key, and then genuine and impostor score generation using the 
-/// samples.  Finally, I have to be able to calculate the False Accept and False Reject rates at various thresholds.  
+/// samples.  Finally, I have to be able to calculate the False Accept and False Reject rates at various thresholds.
+/// 
+/// 28th November 2014
+/// * I plan to code the template creation, genuine score calculation, and the impostor score calculation methods today.  
+/// * I will adjust the parameters accordingly, and will also have to code the various method calls to extract the data
+/// from all of the CSV files. 
 /// </summary>
 
 namespace ProgrammingAssignment1_SpecialTopics
@@ -35,31 +40,50 @@ namespace ProgrammingAssignment1_SpecialTopics
             // This is the string for which the end user will determine which user will have the samples retrieved.
             string userNumber = Console.ReadLine();
 
-            #region One of 50 if statements to be coded for extracting data.  
+            #region One of 51 (or so) if statements to be coded for extracting data.  
             if (userNumber == "1")
             {
                 // Initialization of the 2D array called s002.  
                 double[,] s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv");
 
                 // Prompting the user to now enter in the number of samples to be analyzed
-                Console.Write("Enter the value of N, the number of samples upon which the analysis will be conducted.");
+                Console.Write("Enter the value of N, the number of samples upon which the analysis will be conducted.  The value of N can be either 100, 200, or 300");
                 string inputN = Console.ReadLine(); 
-
-                if (inputN == "100")
+                
+                // Extracting either 100, 200, or 300 samples from the specified user
+                if (inputN == "100" || inputN == "200" || inputN == "300")
                 {
-                    int N = int.Parse(inputN); 
+                    int N = int.Parse(inputN);
+
+                    // Creating a new array called s002_100 which denotes the double 2D array that will be used for the calculations
+                    // of genuine and impostor scores
+                    double[,] s002_Samples = new double[N, 21]; 
 
                     for (int n = 0; n < N; n++)
                     {
                         for (int j = 0; j < s002.GetLength(1); j++)
                         {
-                            Console.Write(s002[n, j] + " "); 
+                            // Making sure that we are able to extract the first 100 samples and then from that 
+                            // we can be able to make the various calculations
+                            s002_Samples[n, j] = s002[n, j]; 
+
+                            // Printing out the 2D double array that contains the first 100 samples. 
+                            Console.Write(s002_Samples[n, j] + " "); 
                         }
                         Console.Write(Environment.NewLine); 
                     }
                 }
+
+                // If the user enters in a number that is not equal to either the three options listed
+                if (inputN != "100" || inputN != "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large try again!");
+                    Main(); 
+                }
             }
             #endregion
+
+            
 
             Console.ReadKey(); // Default program termination
         }
