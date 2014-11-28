@@ -16,7 +16,11 @@ using System.Text;
 /// * I plan to code the template creation, genuine score calculation, and the impostor score calculation methods today.  
 /// * I will adjust the parameters accordingly, and will also have to code the various method calls to extract the data
 /// from all of the CSV files. 
-/// * Making the end useability as seamless and as clear as possible. 
+/// * Making the end useability as seamless and as clear as possible.
+/// 
+/// Accomplishments:
+/// * Calculated the template vectors correctly
+/// * Do not need to ensure that the data is being extracted for one user - Already have that printed before
 /// </summary>
 
 namespace ProgrammingAssignment1_SpecialTopics
@@ -65,15 +69,17 @@ namespace ProgrammingAssignment1_SpecialTopics
                             // Making sure that we are able to extract the first 100 samples and then from that 
                             // we can be able to make the various calculations
                             s002_Samples[n, j] = s002[n, j]; 
-
-                            // Printing out the 2D double array that contains the first 100 samples. 
-                            Console.Write(s002_Samples[n, j] + " "); 
                         }
-                        // Row separator
-                        Console.Write(Environment.NewLine); 
                     }
 
-                    // TODO: Calculate the templates now and store it in an array
+                    // Calculates the templates now and stores it in an array which can be used later on. 
+                    double[] mu_s002 = CalculateTemplateVectors(s002_Samples, N); 
+
+                    for (int i = 0; i < mu_s002.Length; i++)
+                    {
+                        Console.Write(mu_s002[i] + " "); 
+                    }
+                    Console.Write(Environment.NewLine); 
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -93,6 +99,32 @@ namespace ProgrammingAssignment1_SpecialTopics
             #endregion
 
             Console.ReadKey(); // Default program termination
+        }
+
+        static double[] CalculateTemplateVectors(double[,] s002_Samples, int N)
+        {
+            // Initializing the scalar and vector variables here
+            int calcCol = s002_Samples.GetLength(1);
+
+            double[] sum = new double[calcCol];
+            double[] mean = new double[calcCol]; 
+
+            // Iterating over the 2D double array which represents the extracted samples
+            for (int i = 0; i < s002_Samples.GetLength(0); i++)
+            {
+                for (int j = 0; j < calcCol; j++)
+                {
+                    sum[j] += s002_Samples[i, j]; 
+                }
+            }
+
+            for (int k = 0; k < mean.Length; k++)
+            {
+                mean[k] = sum[k] / N;
+                // Console.Write(mean[k] + " "); 
+            }
+
+            return mean; 
         }
 
         #region CSV to 2D double array conversion
