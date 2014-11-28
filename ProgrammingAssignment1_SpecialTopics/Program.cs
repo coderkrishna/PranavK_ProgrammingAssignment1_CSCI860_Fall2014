@@ -50,7 +50,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 double[,] s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv");
 
                 // Prompting the user to now enter in the number of samples to be analyzed
-                Console.Write("Enter the value of N, the number of samples upon which the analysis will be conducted.  The value of N can be either 100, 200, or 300" + Environment.NewLine);
+                Console.Write("Enter the value of N which is the sample size. The value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
                 
                 // Extracting either 100, 200, or 300 samples from the specified user
@@ -75,15 +75,15 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Calculates the templates now and stores it in an array which can be used later on. 
                     double[] mu_s002 = CalculateTemplateVectors(s002_Samples, N); 
 
+                    // Printing out the template calculations
                     for (int i = 0; i < mu_s002.Length; i++)
                     {
-                        Console.Write(mu_s002[i] + " "); 
-                    }
-                    Console.Write(Environment.NewLine); 
+                        Console.Write(mu_s002[i] + Environment.NewLine); 
+                    } 
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
-                if (inputN != "100" || inputN != "200" || inputN != "300")
+                else if (inputN != "100" || inputN != "200" || inputN != "300")
                 {
                     Console.WriteLine("Your input sampling is too large, the program will quit");
                     Console.ReadKey(); 
@@ -101,31 +101,42 @@ namespace ProgrammingAssignment1_SpecialTopics
             Console.ReadKey(); // Default program termination
         }
 
+        #region Template vector creation
+        /// <summary>
+        /// This method will calculate the template vectors using the user data
+        /// </summary>
+        /// <param name="s002_Samples">This is the array that has N samples extracted</param>
+        /// <param name="N">Variable N, representing the sample size.  This value of N is used to generate the template data.</param>
+        /// <returns></returns>
         static double[] CalculateTemplateVectors(double[,] s002_Samples, int N)
         {
-            // Initializing the scalar and vector variables here
-            int calcCol = s002_Samples.GetLength(1);
+            #region Creating two regular double arrays
+            double[] sum = new double[s002_Samples.GetLength(1)];
+            double[] mean = new double[s002_Samples.GetLength(1)];
+            #endregion
 
-            double[] sum = new double[calcCol];
-            double[] mean = new double[calcCol]; 
-
-            // Iterating over the 2D double array which represents the extracted samples
+            // Iterating over the 2D array in its entirety
+            // Iterate over the rows of the 2D double array
             for (int i = 0; i < s002_Samples.GetLength(0); i++)
             {
-                for (int j = 0; j < calcCol; j++)
+                // Iterate over the columns of the 2D double array
+                for (int j = 0; j < s002_Samples.GetLength(1); j++)
                 {
+                    // The sum array (one dimensional), in which each element is the 
+                    // sum of each column in the samples array
                     sum[j] += s002_Samples[i, j]; 
                 }
             }
 
+            // Iterating over the mean array to
             for (int k = 0; k < mean.Length; k++)
             {
-                mean[k] = sum[k] / N;
-                // Console.Write(mean[k] + " "); 
+                mean[k] = sum[k] / N; 
             }
 
             return mean; 
         }
+        #endregion
 
         #region CSV to 2D double array conversion
         /// <summary>
