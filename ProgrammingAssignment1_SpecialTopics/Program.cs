@@ -11,7 +11,7 @@ using System.Text;
 /// Programming Assignment 1
 /// CSCI-860-W01: Biometrics and its Applications in a Networked Society
 /// Instructor: Dr. Kiran Balagani
-/// d
+/// 
 /// 28th November 2014
 /// * I plan to code the template creation, genuine score calculation, and the impostor score calculation methods today.  
 /// * I will adjust the parameters accordingly, and will also have to code the various method calls to extract the data
@@ -72,6 +72,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                         // Row separator
                         Console.Write(Environment.NewLine); 
                     }
+
+                    // TODO: Calculate the templates now and store it in an array
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -84,7 +86,10 @@ namespace ProgrammingAssignment1_SpecialTopics
             #endregion
 
             #region For user 2
-            
+            if (userNumber == "2")
+            {
+                double[,] s003 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s003.csv"); 
+            }
             #endregion
 
             Console.ReadKey(); // Default program termination
@@ -96,7 +101,7 @@ namespace ProgrammingAssignment1_SpecialTopics
         /// 2D double arrays
         /// </summary>
         /// <param name="filePath">The location of the CSV file</param>
-        /// <returns></returns>
+        /// <returns>2D Double array with dimensions of 400 rows and 21 columns</returns>
         static double[,] ParseData(string filePath)
         {
             // I am using the String class, and will now be able to begin to convert the CSV file
