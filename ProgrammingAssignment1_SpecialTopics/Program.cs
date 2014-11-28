@@ -11,17 +11,12 @@ using System.Text;
 /// Programming Assignment 1
 /// CSCI-860-W01: Biometrics and its Applications in a Networked Society
 /// Instructor: Dr. Kiran Balagani
-/// 
-/// 26th November 2014
-/// * Finally, I have been able to get going on the formal programming of this assignment.
-/// * Here, I can be able to extract N samples from a CSV file properly.  
-/// * Next here, the template generation is going to be key, and then genuine and impostor score generation using the 
-/// samples.  Finally, I have to be able to calculate the False Accept and False Reject rates at various thresholds.
-/// 
+/// d
 /// 28th November 2014
 /// * I plan to code the template creation, genuine score calculation, and the impostor score calculation methods today.  
 /// * I will adjust the parameters accordingly, and will also have to code the various method calls to extract the data
 /// from all of the CSV files. 
+/// * Making the end useability as seamless and as clear as possible. 
 /// </summary>
 
 namespace ProgrammingAssignment1_SpecialTopics
@@ -37,14 +32,14 @@ namespace ProgrammingAssignment1_SpecialTopics
             // Adding a separation at the end of the header. 
             Console.Write("Pranav S. Krishnamurthy" + Environment.NewLine + "CSCI-860-W01: Biometrics and its Applications in a Networked Society" + Environment.NewLine);
 
-            // Providing the instructions
-            Console.WriteLine("We will now be starting to take data from various users and begin to calculate various rates. Now, begin by selecting the user to analyze.");
+            // Providing the instructions in the program when executing it. 
+            Console.WriteLine("We will now be starting to take data from various users and begin to calculate various rates. Now, begin by selecting the user to analyze.  Keep in mind that the subject ID's will not be entered in.  Every user number that is between 1 and 51.  That will automatically then tie the user number to the appropriate CSV file.");
             #endregion
 
             // This is the string for which the end user will determine which user will have the samples retrieved.
             string userNumber = Console.ReadLine();
 
-            #region One of 51 (or so) if statements to be coded for extracting data.  
+            #region For user 1 
             if (userNumber == "1")
             {
                 // Initialization of the 2D array called s002.  
@@ -74,6 +69,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                             // Printing out the 2D double array that contains the first 100 samples. 
                             Console.Write(s002_Samples[n, j] + " "); 
                         }
+                        // Row separator
                         Console.Write(Environment.NewLine); 
                     }
                 }
@@ -87,7 +83,10 @@ namespace ProgrammingAssignment1_SpecialTopics
             }
             #endregion
 
+            #region For user 2
             
+            #endregion
+
             Console.ReadKey(); // Default program termination
         }
 
