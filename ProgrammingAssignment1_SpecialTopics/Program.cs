@@ -47,7 +47,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             if (userNumber == "1")
             {
                 // Initialization of the 2D array called s002.  
-                double[,] s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv");
+                double[,]s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv");
 
                 // Prompting the user to now enter in the number of samples to be analyzed
                 Console.Write("Enter the value of N which is the sample size. The value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
@@ -94,8 +94,46 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 2
             if (userNumber == "2")
             {
+                // Referring to the second user
                 double[,] s003 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s003.csv");
-    
+
+                // Prompting the user to enter in the number of samples to be analyzed. 
+                Console.Write("Enter N: The number of samples. The value of N can be either 100, 200, or 300." + Environment.NewLine+ "N = ");
+                string inputN = Console.ReadLine(); 
+
+                if (inputN == "100"|| inputN == "200" || inputN == "300")
+                {
+                    // Creating the integer N, which is the sample size variable
+                    int N = int.Parse(inputN);
+
+                    // Again initializing an array of samples
+                    double[,] s003_Samples = new double[N, 21];
+
+                    for (int n = 0; n < N; n++)
+                    {
+                        for (int j = 0; j < s003.GetLength(1); j++)
+                        {
+                            // Making sure that we are able to extract the first 100 samples and then from that 
+                            // we can be able to make the various calculations
+                            s003_Samples[n, j] = s003[n, j];
+                        }
+                    }
+
+                    // Calling to the method which will calculate the Template Vectors. 
+                    double[] mu_s003 = CalculateTemplateVectors(s003_Samples, N); 
+
+                    // Printing out the average vector given the value of N
+                    for (int i = 0; i < mu_s003.Length; i++)
+                    {
+                        Console.WriteLine(mu_s003[i]); 
+                    }
+                }
+
+                else if (inputN != "100" || inputN != "200" || inputN !="300")
+                {
+                    Console.Write("The sample size that you requested is too large.");
+                    Console.ReadKey(); 
+                }
             }
             #endregion
 
