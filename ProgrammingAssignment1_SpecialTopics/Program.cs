@@ -27,6 +27,12 @@ namespace ProgrammingAssignment1_SpecialTopics
 {
     class Program
     {
+        #region Static 2D double arrays
+        static double[,] s002;
+        static double[,] s003;
+        static double[,] s004;
+        static double[,] s005;
+        #endregion
         static void Main()
         {
             #region Header
@@ -47,7 +53,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             if (userNumber == "1")
             {
                 // Initialization of the 2D array called s002.  
-                double[,]s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv");
+                s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv");
 
                 // Prompting the user to now enter in the number of samples to be analyzed
                 Console.Write("Enter the value of N which is the sample size. The value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
@@ -95,7 +101,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             if (userNumber == "2")
             {
                 // Referring to the second user
-                double[,] s003 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s003.csv");
+                s003 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s003.csv");
 
                 // Prompting the user to enter in the number of samples to be analyzed. 
                 Console.Write("Enter N: The number of samples. The value of N can be either 100, 200, or 300." + Environment.NewLine+ "N = ");
@@ -133,6 +139,30 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     Console.Write("The sample size that you requested is too large.");
                     Console.ReadKey(); 
+                }
+            }
+            #endregion
+
+            #region For user 3
+            if (userNumber == "3")
+            {
+                // Creating the 2D Double array3
+                s004 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s004.csv");
+
+                // Prompting the user       
+                Console.Write("Enter N: The number of samples.  Value of N can be 100, 200 or 300." + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine(); 
+
+                // Switching up the input in the if statement
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+
+                }
+
+                else if (inputN != "100" || inputN != "200" || inputN != "300")
+                {
+                    Console.Write("Your input sampling is too large, and the program will now quit");
+                    Console.ReadKey();  
                 }
             }
             #endregion
