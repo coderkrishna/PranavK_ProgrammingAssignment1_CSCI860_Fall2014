@@ -12,27 +12,30 @@ using System.Text;
 /// CSCI-860-W01: Biometrics and its Applications in a Networked Society
 /// Instructor: Dr. Kiran Balagani
 /// 
-/// 28th November 2014
-/// * I plan to code the template creation, genuine score calculation, and the impostor score calculation methods today.  
-/// * I will adjust the parameters accordingly, and will also have to code the various method calls to extract the data
-/// from all of the CSV files. 
-/// * Making the end useability as seamless and as clear as possible.
-/// 
-/// Accomplishments:
-/// * Calculated the template vectors correctly
-/// * Do not need to ensure that the data is being extracted for one user - Already have that printed before
+/// 29th November 2014
+/// * Today I have to write out the code for the other users to extract the data and calculate the template vectors.
+/// * Next, I will have to code the genuine and impostor calculation methods
+/// * After that, code the calculations for the impostor pass rate and the false reject rate at various thresholds. 
 /// </summary>
 
 namespace ProgrammingAssignment1_SpecialTopics
 {
     class Program
     {
-        #region Static 2D double arrays
+        #region Static 2D double arrays which correspond to their respective data files
         static double[,] s002;
         static double[,] s003;
         static double[,] s004;
         static double[,] s005;
         #endregion
+
+        #region Static double arrays that represent the mean vectors of each user which will be used for genuine and impostor calculations
+        static double[] mu_s002;
+        static double[] mu_s003;
+        static double[] mu_s004;
+        static double[] mu_s005;         
+        #endregion
+
         static void Main()
         {
             #region Header
@@ -43,20 +46,20 @@ namespace ProgrammingAssignment1_SpecialTopics
             Console.Write("Pranav S. Krishnamurthy" + Environment.NewLine + "CSCI-860-W01: Biometrics and its Applications in a Networked Society" + Environment.NewLine);
 
             // Providing the instructions in the program when executing it. 
-            Console.WriteLine("We will now be starting to take data from various users and begin to calculate various rates. Now, begin by selecting the user to analyze.  Keep in mind that the subject ID's will not be entered in.  Every user number that is between 1 and 51.  That will automatically then tie the user number to the appropriate CSV file.");
+            Console.WriteLine("We will now be starting to take data from various users and begin to calculate various rates. Now, begin by selecting the user to analyze.  Keep in mind that the subject ID's will not be entered in.  Every user number that is between 1 and 51 and that the user number will be tied to the appropriate subject ID.");
             #endregion
 
             // This is the string for which the end user will determine which user will have the samples retrieved.
             string userNumber = Console.ReadLine();
 
-            #region For user 1 
+            #region For user 1
             if (userNumber == "1")
             {
                 // Initialization of the 2D array called s002.  
                 s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv");
 
                 // Prompting the user to now enter in the number of samples to be analyzed
-                Console.Write("Enter the value of N which is the sample size. The value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                Console.Write("Enter N:  The number of samples. The value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
                 
                 // Extracting either 100, 200, or 300 samples from the specified user
@@ -79,12 +82,12 @@ namespace ProgrammingAssignment1_SpecialTopics
                     }
 
                     // Calculates the templates now and stores it in an array which can be used later on. 
-                    double[] mu_s002 = CalculateTemplateVectors(s002_Samples, N); 
+                    mu_s002 = CalculateTemplateVectors(s002_Samples, N); 
 
                     // Printing out the template calculations
                     for (int i = 0; i < mu_s002.Length; i++)
                     {
-                        Console.Write(mu_s002[i] + Environment.NewLine); 
+                        Console.WriteLine(mu_s002[i]); 
                     } 
                 }
 
@@ -126,7 +129,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     }
 
                     // Calling to the method which will calculate the Template Vectors. 
-                    double[] mu_s003 = CalculateTemplateVectors(s003_Samples, N); 
+                    mu_s003 = CalculateTemplateVectors(s003_Samples, N); 
 
                     // Printing out the average vector given the value of N
                     for (int i = 0; i < mu_s003.Length; i++)
@@ -156,13 +159,76 @@ namespace ProgrammingAssignment1_SpecialTopics
                 // Switching up the input in the if statement
                 if (inputN == "100" || inputN == "200" || inputN == "300")
                 {
+                    // The integer will be parsed from the string
+                    int N = int.Parse(inputN);
 
+                    double[,] s004_Samples = new double[N, 21]; 
+
+                    // Nested for loop to store the samples, really this is extracting the data
+                    for (int n = 0; n < N; n++)
+                    {
+                        for(int j = 0; j < s004.GetLength(1); j++)
+                        {
+                            s004_Samples[n, j] = s004[n, j];
+                        }
+                    }
+
+                    // Method call to calculate the template vectors
+                    mu_s004 = CalculateTemplateVectors(s004_Samples, N); 
+
+                    // Printing out the template vector
+                    for (int i = 0; i < mu_s004.Length; i++)
+                    {
+                        Console.WriteLine(mu_s004[i]); 
+                    }
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
                 {
                     Console.Write("Your input sampling is too large, and the program will now quit");
                     Console.ReadKey();  
+                }
+            }
+            #endregion
+
+            #region For user 4
+            if(userNumber == "4")
+            {
+                s005 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s005.csv");
+
+                // Prompting the user to enter in the sample size
+                Console.Write("Enter N: The number of samples.  Value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine(); 
+
+                // If the inputN string which is the number of samples (initially parsed as a string) is either the values mentioned in the conditional
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    // The local variable will have the extracted data
+                    double[,] s005_Samples = new double[N, 21]; 
+
+                    // Populating the 2D double array with data
+                    for (int n = 0; n < N; n++)
+                    {
+                        for(int j = 0; j < s005.GetLength(1); j++)
+                        {
+                            s005_Samples[n, j] = s005[n, j]; 
+                        }
+                    }
+
+                    mu_s005 = CalculateTemplateVectors(s005_Samples, N);
+ 
+                    for(int i = 0; i < mu_s005.Length; i++)
+                    {
+                        Console.WriteLine(mu_s005[i]); 
+                    }
+                }
+
+                else if (inputN != "100" || inputN != "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey(); 
                 }
             }
             #endregion
