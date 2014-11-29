@@ -27,13 +27,15 @@ namespace ProgrammingAssignment1_SpecialTopics
         static double[,] s003;
         static double[,] s004;
         static double[,] s005;
+        static double[,] s007;
         #endregion
 
         #region Static double arrays that represent the mean vectors of each user which will be used for genuine and impostor calculations
         static double[] mu_s002;
         static double[] mu_s003;
         static double[] mu_s004;
-        static double[] mu_s005;         
+        static double[] mu_s005;
+        static double[] mu_s007; 
         #endregion
 
         static void Main()
@@ -217,11 +219,52 @@ namespace ProgrammingAssignment1_SpecialTopics
                         }
                     }
 
+                    // Making the call to calculate the template vectors
                     mu_s005 = CalculateTemplateVectors(s005_Samples, N);
  
                     for(int i = 0; i < mu_s005.Length; i++)
                     {
                         Console.WriteLine(mu_s005[i]); 
+                    }
+                }
+
+                else if (inputN != "100" || inputN != "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey(); 
+                }
+            }
+            #endregion
+
+            #region For user 5
+            if (userNumber == "5")
+            {
+                s007 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s007.csv");
+
+                // Prompting the user to enter in the number of samples
+                Console.Write("Enter N: The number of samples.  Value of N can either be 100, 200, or 300." + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine(); 
+
+                // The code to execute when the number of samples equals one of the three options
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s007_Samples = new double[N, 21]; 
+
+                    for (int n = 0; n < N; n++)
+                    {
+                        for (int j = 0; j < s007.GetLength(1); j++)
+                        {
+                            s007_Samples[n, j] = s007[n, j]; 
+                        }
+                    }
+
+                    mu_s007 = CalculateTemplateVectors(s007_Samples, N); 
+
+                    for (int i = 0; i < mu_s007.Length; i++)
+                    {
+                        Console.WriteLine(mu_s007[i]); 
                     }
                 }
 
@@ -301,6 +344,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 // Again using the nested foreach loop in order to remove the comma which separates the various values. 
                 foreach (var col in row.Trim().Split(','))
                 {
+                    // Populating the double array with the data parsed from the CSV file
                     values[i, j] = double.Parse(col.Trim());
                     j++; // Increment the column
                 }
