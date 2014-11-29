@@ -94,7 +94,8 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 2
             if (userNumber == "2")
             {
-                double[,] s003 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s003.csv"); 
+                double[,] s003 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s003.csv");
+    
             }
             #endregion
 
@@ -107,7 +108,7 @@ namespace ProgrammingAssignment1_SpecialTopics
         /// </summary>
         /// <param name="s002_Samples">This is the array that has N samples extracted</param>
         /// <param name="N">Variable N, representing the sample size.  This value of N is used to generate the template data.</param>
-        /// <returns></returns>
+        /// <returns>The average array that is called as mean</returns>
         static double[] CalculateTemplateVectors(double[,] s002_Samples, int N)
         {
             #region Creating two regular double arrays
