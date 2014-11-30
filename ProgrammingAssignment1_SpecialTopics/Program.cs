@@ -24,23 +24,31 @@ namespace ProgrammingAssignment1_SpecialTopics
     class Program
     {
         #region Static 2D double arrays which correspond to their respective data files
-        static double[,] s002;
-        static double[,] s003;
-        static double[,] s004;
-        static double[,] s005;
-        static double[,] s007;
-        static double[,] s008;
-        static double[,] s010; 
+        static double[,] s002; // User 1
+        static double[,] s003; // User 2
+        static double[,] s004; // User 3
+        static double[,] s005; // User 4
+        static double[,] s007; // User 5
+        static double[,] s008; // User 6
+        static double[,] s010; // User 7
+        static double[,] s011; // User 8
+        static double[,] s012; // User 9
+        static double[,] s013; // User 10
+        static double[,] s014; // User 11
         #endregion
 
         #region Static double arrays that represent the mean vectors of each user which will be used for genuine and impostor calculations
-        static double[] mu_s002;
-        static double[] mu_s003;
-        static double[] mu_s004;
-        static double[] mu_s005;
-        static double[] mu_s007;
-        static double[] mu_s008;
-        static double[] mu_s010; 
+        static double[] mu_s002; // User 1
+        static double[] mu_s003; // User 2
+        static double[] mu_s004; // User 3
+        static double[] mu_s005; // User 4
+        static double[] mu_s007; // User 5
+        static double[] mu_s008; // User 6
+        static double[] mu_s010; // User 7
+        static double[] mu_s011; // User 8
+        static double[] mu_s012; // User 9
+        static double[] mu_s013; // User 10
+        static double[] mu_s014; // User 11
         #endregion
 
         static void Main()
@@ -297,10 +305,100 @@ namespace ProgrammingAssignment1_SpecialTopics
             }
             #endregion
 
+            #region For user 8
+            if (userNumber == "8")
+            {
+                s011 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s011.csv");
+
+                Console.Write("Enter N: The number of samples.  Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine(); 
+
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s011_Samples = ExtractSamples(s011, N);
+
+                    mu_s011 = CalculateTemplateVectors(s011_Samples, N); 
+
+                    for (int i = 0; i < mu_s011.Length; i++)
+                    {
+                        Console.WriteLine(mu_s011[i]); 
+                    }
+                }
+
+                else if (inputN != "100" || inputN != "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey(); 
+                }
+            }
+            #endregion
+
+            #region For user 9
+            if (userNumber == "9")
+            {
+                s012 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s012.csv");
+
+                Console.Write("Enter N: The number of samples.  Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine(); 
+
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s012_Samples = ExtractSamples(s012, N);
+
+                    mu_s012 = CalculateTemplateVectors(s012_Samples, N); 
+
+                    for (int i = 0; i < mu_s012.Length; i++)
+                    {
+                        Console.WriteLine(mu_s012[i]); 
+                    }
+                }
+
+                else if (inputN != "100" || inputN != "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey(); 
+                }
+            }
+            #endregion
+
+            #region For user 10
+            if (userNumber == "10")
+            {
+                s013 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s013.csv");
+
+                Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine(); 
+
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s013_Samples = ExtractSamples(s013, N);
+
+                    mu_s013 = CalculateTemplateVectors(s013_Samples, N); 
+
+                    for (int i = 0; i < mu_s013.Length; i++)
+                    {
+                        Console.WriteLine(mu_s013[i]); 
+                    }
+                }
+
+                else if (inputN != "100" || inputN != "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey(); 
+                }
+            }
+            #endregion
+
             Console.ReadKey(); // Default program termination
         }
 
-        #region Sample extraction
+        #region Extraction of samples based on the value of N
         /// <summary>
         /// This method will be used to extract the samples given the parameter of the sampling size.  
         /// </summary>
@@ -309,15 +407,20 @@ namespace ProgrammingAssignment1_SpecialTopics
         /// <returns>samples - 2D double array which contains the samples from the original data</returns>
         static double[,] ExtractSamples(double[,] s002, int N)
         {
+            // Initialize the 2D double array
             double[,] samples = new double[N, 21]; 
+
+            // Iterating over a nested for loop.
             for (int n = 0; n < N; n++)
             {
                 for (int j = 0; j < s002.GetLength(1); j++)
                 {
+                    // Having the 2D double array being populated. 
                     samples[n, j] = s002[n, j]; 
                 }
             }
 
+            // This is what will be returned and this variable will automatically undergo polymorphism
             return samples; 
         }
         #endregion
