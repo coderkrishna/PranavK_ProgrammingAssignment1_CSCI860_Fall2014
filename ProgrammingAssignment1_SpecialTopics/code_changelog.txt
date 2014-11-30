@@ -32,3 +32,8 @@ Code Changelog
 Accomplishments:
 * Calculated the template vectors correctly
 * Do not need to ensure that the data is being extracted for one user - Already have that printed before
+
+29th November 2014
+* Today I have to write out the code for the other users to extract the data and calculate the template vectors.
+* Next, I will have to code the genuine and impostor calculation methods
+* After that, code the calculations for the impostor pass rate and the false reject rate at various thresholds.

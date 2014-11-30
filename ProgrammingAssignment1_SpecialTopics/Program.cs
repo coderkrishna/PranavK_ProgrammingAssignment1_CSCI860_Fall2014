@@ -12,10 +12,11 @@ using System.Text;
 /// CSCI-860-W01: Biometrics and its Applications in a Networked Society
 /// Instructor: Dr. Kiran Balagani
 /// 
-/// 29th November 2014
-/// * Today I have to write out the code for the other users to extract the data and calculate the template vectors.
-/// * Next, I will have to code the genuine and impostor calculation methods
-/// * After that, code the calculations for the impostor pass rate and the false reject rate at various thresholds. 
+/// 30th November 2014
+/// * Today I am coding the data extraction and template creation of more users.
+/// * Also, I plan to write the method to calculate the genuine scores
+/// * Wrote another method to extract the samples based on the sampling size given by the end user for analysis. Which thereby will make the 
+/// next tasks that are required easier. 
 /// </summary>
 
 namespace ProgrammingAssignment1_SpecialTopics
@@ -28,6 +29,8 @@ namespace ProgrammingAssignment1_SpecialTopics
         static double[,] s004;
         static double[,] s005;
         static double[,] s007;
+        static double[,] s008;
+        static double[,] s010; 
         #endregion
 
         #region Static double arrays that represent the mean vectors of each user which will be used for genuine and impostor calculations
@@ -35,7 +38,9 @@ namespace ProgrammingAssignment1_SpecialTopics
         static double[] mu_s003;
         static double[] mu_s004;
         static double[] mu_s005;
-        static double[] mu_s007; 
+        static double[] mu_s007;
+        static double[] mu_s008;
+        static double[] mu_s010; 
         #endregion
 
         static void Main()
@@ -69,19 +74,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    // Creating a new array called s002_100 which denotes the double 2D array that will be used for the calculations
-                    // of genuine and impostor scores
-                    double[,] s002_Samples = new double[N, 21]; 
-
-                    for (int n = 0; n < N; n++)
-                    {
-                        for (int j = 0; j < s002.GetLength(1); j++)
-                        {
-                            // Making sure that we are able to extract the first 100 samples and then from that 
-                            // we can be able to make the various calculations
-                            s002_Samples[n, j] = s002[n, j]; 
-                        }
-                    }
+                    // Creating a new array called s002_Samples which denotes the double 2D array that will be used for the calculations of genuine and impostor scores
+                    // which becomes populated with a method call as well. 
+                    double[,] s002_Samples = ExtractSamples(s002, N); 
 
                     // Calculates the templates now and stores it in an array which can be used later on. 
                     mu_s002 = CalculateTemplateVectors(s002_Samples, N); 
@@ -117,18 +112,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Creating the integer N, which is the sample size variable
                     int N = int.Parse(inputN);
 
-                    // Again initializing an array of samples
-                    double[,] s003_Samples = new double[N, 21];
-
-                    for (int n = 0; n < N; n++)
-                    {
-                        for (int j = 0; j < s003.GetLength(1); j++)
-                        {
-                            // Making sure that we are able to extract the first 100 samples and then from that 
-                            // we can be able to make the various calculations
-                            s003_Samples[n, j] = s003[n, j];
-                        }
-                    }
+                    // Again initializing an array of samples, again used through a method call. 
+                    double[,] s003_Samples = ExtractSamples(s003, N); 
 
                     // Calling to the method which will calculate the Template Vectors. 
                     mu_s003 = CalculateTemplateVectors(s003_Samples, N); 
@@ -164,16 +149,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // The integer will be parsed from the string
                     int N = int.Parse(inputN);
 
-                    double[,] s004_Samples = new double[N, 21]; 
-
-                    // Nested for loop to store the samples, really this is extracting the data
-                    for (int n = 0; n < N; n++)
-                    {
-                        for(int j = 0; j < s004.GetLength(1); j++)
-                        {
-                            s004_Samples[n, j] = s004[n, j];
-                        }
-                    }
+                    // Populating the 2D double array via method call. 
+                    double[,] s004_Samples = ExtractSamples(s004, N); 
 
                     // Method call to calculate the template vectors
                     mu_s004 = CalculateTemplateVectors(s004_Samples, N); 
@@ -208,16 +185,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     int N = int.Parse(inputN);
 
                     // The local variable will have the extracted data
-                    double[,] s005_Samples = new double[N, 21]; 
-
-                    // Populating the 2D double array with data
-                    for (int n = 0; n < N; n++)
-                    {
-                        for(int j = 0; j < s005.GetLength(1); j++)
-                        {
-                            s005_Samples[n, j] = s005[n, j]; 
-                        }
-                    }
+                    double[,] s005_Samples = ExtractSamples(s005, N); 
 
                     // Making the call to calculate the template vectors
                     mu_s005 = CalculateTemplateVectors(s005_Samples, N);
@@ -250,15 +218,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s007_Samples = new double[N, 21]; 
-
-                    for (int n = 0; n < N; n++)
-                    {
-                        for (int j = 0; j < s007.GetLength(1); j++)
-                        {
-                            s007_Samples[n, j] = s007[n, j]; 
-                        }
-                    }
+                    double[,] s007_Samples = ExtractSamples(s007, N);  
 
                     mu_s007 = CalculateTemplateVectors(s007_Samples, N); 
 
@@ -276,8 +236,91 @@ namespace ProgrammingAssignment1_SpecialTopics
             }
             #endregion
 
+            #region For user 6
+            if (userNumber == "6")
+            {
+                s008 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s008.csv");
+
+                // Prompting the user to enter the number of samples
+                Console.Write("Enter N:  The number of samples. Value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine(); 
+
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s008_Samples = ExtractSamples(s008, N);
+
+                    mu_s008 = CalculateTemplateVectors(s008_Samples, N); 
+
+                    for (int i = 0; i < mu_s008.Length; i++)
+                    {
+                        Console.WriteLine(mu_s008[i]); 
+                    }
+                }
+
+                else if (inputN != "100" || inputN != "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey(); 
+                }
+            }
+            #endregion
+
+            #region For user 7
+            if (userNumber == "7")
+            {
+                s010 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s010.csv");
+
+                Console.Write("Enter N: The number of samples.  Value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine(); 
+
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s010_Samples = ExtractSamples(s010, N);
+
+                    mu_s010 = CalculateTemplateVectors(s010_Samples, N); 
+
+                    for (int i = 0; i < mu_s010.Length; i++)
+                    {
+                        Console.WriteLine(mu_s010[i]); 
+                    }
+                }
+
+                else if (inputN != "100" || inputN != "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey(); 
+                }
+            }
+            #endregion
+
             Console.ReadKey(); // Default program termination
         }
+
+        #region Sample extraction
+        /// <summary>
+        /// This method will be used to extract the samples given the parameter of the sampling size.  
+        /// </summary>
+        /// <param name="s002">The data that is extracted or converted from the CSV file</param>
+        /// <param name="N">Sample size</param>
+        /// <returns>samples - 2D double array which contains the samples from the original data</returns>
+        static double[,] ExtractSamples(double[,] s002, int N)
+        {
+            double[,] samples = new double[N, 21]; 
+            for (int n = 0; n < N; n++)
+            {
+                for (int j = 0; j < s002.GetLength(1); j++)
+                {
+                    samples[n, j] = s002[n, j]; 
+                }
+            }
+
+            return samples; 
+        }
+        #endregion
 
         #region Template vector creation
         /// <summary>
