@@ -6,21 +6,25 @@ using System.Linq;
 using System.Text;
 #endregion
 
-/// <summary>
-/// Pranav Krishnamurthy
-/// Programming Assignment 1
-/// CSCI-860-W01: Biometrics and its Applications in a Networked Society
-/// Instructor: Dr. Kiran Balagani
-/// 
-/// 30th November 2014
-/// * Today I am coding the data extraction and template creation of more users.
-/// * Also, I plan to write the method to calculate the genuine scores
-/// * Wrote another method to extract the samples based on the sampling size given by the end user for analysis. Which thereby will make the 
-/// next tasks that are required easier. 
-/// </summary>
-
 namespace ProgrammingAssignment1_SpecialTopics
 {
+    /// <summary>
+    /// Pranav Krishnamurthy
+    /// Programming Assignment 1
+    /// CSCI-860-W01: Biometrics and its Applications in a Networked Society
+    /// Instructor: Dr. Kiran Balagani
+    /// 
+    /// 30th November 2014
+    /// * Today I am coding the data extraction and template creation of more users.
+    /// * Also, I plan to write the method to calculate the genuine scores
+    /// * Wrote another method to extract the samples based on the sampling size given by the end user for analysis. Which thereby will make the 
+    /// next tasks that are required easier. 
+    /// * <c>ExtractSamples</c> was refactored as <c>ExtractTrainingSamples</c> to make the extraction of the N training samples easier
+    /// 
+    /// Accomplishments:
+    /// * Finished the coding for all 51 users to have the CSV data extracted
+    /// * All the 51 users can now have their template vectors calculated. 
+    /// </summary>
     class Program
     {
         #region Static 2D double arrays which correspond to their respective data files and these are used for training
@@ -164,7 +168,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     // Creating a new array called s002_Samples which denotes the double 2D array that will be used for the calculations of genuine and impostor scores
                     // which becomes populated with a method call as well. 
-                    double[,] s002_Samples = ExtractSamples(s002, N); 
+                    double[,] s002_Samples = ExtractTrainingSamples(s002, N); 
 
                     // Calculates the templates now and stores it in an array which can be used later on. 
                     mu_s002 = CalculateTemplateVectors(s002_Samples, N); 
@@ -173,7 +177,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     for (int i = 0; i < mu_s002.Length; i++)
                     {
                         Console.WriteLine(mu_s002[i]); 
-                    } 
+                    }
+
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -201,7 +206,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     int N = int.Parse(inputN);
 
                     // Again initializing an array of samples, again used through a method call. 
-                    double[,] s003_Samples = ExtractSamples(s003, N); 
+                    double[,] s003_Samples = ExtractTrainingSamples(s003, N); 
 
                     // Calling to the method which will calculate the Template Vectors. 
                     mu_s003 = CalculateTemplateVectors(s003_Samples, N); 
@@ -238,7 +243,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     int N = int.Parse(inputN);
 
                     // Populating the 2D double array via method call. 
-                    double[,] s004_Samples = ExtractSamples(s004, N); 
+                    double[,] s004_Samples = ExtractTrainingSamples(s004, N); 
 
                     // Method call to calculate the template vectors
                     mu_s004 = CalculateTemplateVectors(s004_Samples, N); 
@@ -273,7 +278,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     int N = int.Parse(inputN);
 
                     // The local variable will have the extracted data
-                    double[,] s005_Samples = ExtractSamples(s005, N); 
+                    double[,] s005_Samples = ExtractTrainingSamples(s005, N); 
 
                     // Making the call to calculate the template vectors
                     mu_s005 = CalculateTemplateVectors(s005_Samples, N);
@@ -306,7 +311,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s007_Samples = ExtractSamples(s007, N);  
+                    double[,] s007_Samples = ExtractTrainingSamples(s007, N);  
 
                     mu_s007 = CalculateTemplateVectors(s007_Samples, N); 
 
@@ -337,7 +342,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s008_Samples = ExtractSamples(s008, N);
+                    double[,] s008_Samples = ExtractTrainingSamples(s008, N);
 
                     mu_s008 = CalculateTemplateVectors(s008_Samples, N); 
 
@@ -367,7 +372,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s010_Samples = ExtractSamples(s010, N);
+                    double[,] s010_Samples = ExtractTrainingSamples(s010, N);
 
                     mu_s010 = CalculateTemplateVectors(s010_Samples, N); 
 
@@ -397,7 +402,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s011_Samples = ExtractSamples(s011, N);
+                    double[,] s011_Samples = ExtractTrainingSamples(s011, N);
 
                     mu_s011 = CalculateTemplateVectors(s011_Samples, N); 
 
@@ -427,7 +432,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s012_Samples = ExtractSamples(s012, N);
+                    double[,] s012_Samples = ExtractTrainingSamples(s012, N);
 
                     mu_s012 = CalculateTemplateVectors(s012_Samples, N); 
 
@@ -457,7 +462,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s013_Samples = ExtractSamples(s013, N);
+                    double[,] s013_Samples = ExtractTrainingSamples(s013, N);
 
                     mu_s013 = CalculateTemplateVectors(s013_Samples, N); 
 
@@ -487,7 +492,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s015_Samples = ExtractSamples(s015, N);
+                    double[,] s015_Samples = ExtractTrainingSamples(s015, N);
 
                     mu_s015 = CalculateTemplateVectors(s015_Samples, N); 
 
@@ -517,7 +522,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s016_Samples = ExtractSamples(s016, N);
+                    double[,] s016_Samples = ExtractTrainingSamples(s016, N);
 
                     mu_s016 = CalculateTemplateVectors(s016_Samples, N); 
 
@@ -547,7 +552,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s017_Samples = ExtractSamples(s017, N);
+                    double[,] s017_Samples = ExtractTrainingSamples(s017, N);
 
                     mu_s017 = CalculateTemplateVectors(s017_Samples, N); 
 
@@ -577,7 +582,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s018_Samples = ExtractSamples(s018, N);
+                    double[,] s018_Samples = ExtractTrainingSamples(s018, N);
 
                     mu_s018 = CalculateTemplateVectors(s018_Samples, N);
 
@@ -607,7 +612,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s019_Samples = ExtractSamples(s019, N);
+                    double[,] s019_Samples = ExtractTrainingSamples(s019, N);
 
                     mu_s019 = CalculateTemplateVectors(s019_Samples, N);
 
@@ -637,7 +642,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s020_Samples = ExtractSamples(s020, N);
+                    double[,] s020_Samples = ExtractTrainingSamples(s020, N);
 
                     mu_s020 = CalculateTemplateVectors(s020_Samples, N);
 
@@ -667,7 +672,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s021_Samples = ExtractSamples(s021, N);
+                    double[,] s021_Samples = ExtractTrainingSamples(s021, N);
 
                     mu_s021 = CalculateTemplateVectors(s021_Samples, N);
 
@@ -697,7 +702,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s022_Samples = ExtractSamples(s022, N);
+                    double[,] s022_Samples = ExtractTrainingSamples(s022, N);
 
                     mu_s022 = CalculateTemplateVectors(s022_Samples, N);
 
@@ -727,7 +732,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s024_Samples = ExtractSamples(s024, N);
+                    double[,] s024_Samples = ExtractTrainingSamples(s024, N);
 
                     mu_s024 = CalculateTemplateVectors(s024_Samples, N);
 
@@ -757,7 +762,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s025_Samples = ExtractSamples(s025, N);
+                    double[,] s025_Samples = ExtractTrainingSamples(s025, N);
 
                     mu_s025 = CalculateTemplateVectors(s025_Samples, N);
 
@@ -787,7 +792,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s026_Samples = ExtractSamples(s026, N);
+                    double[,] s026_Samples = ExtractTrainingSamples(s026, N);
 
                     mu_s026 = CalculateTemplateVectors(s026_Samples, N);
 
@@ -817,7 +822,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s027_Samples = ExtractSamples(s027, N);
+                    double[,] s027_Samples = ExtractTrainingSamples(s027, N);
 
                     mu_s027 = CalculateTemplateVectors(s027_Samples, N);
 
@@ -847,7 +852,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s028_Samples = ExtractSamples(s028, N);
+                    double[,] s028_Samples = ExtractTrainingSamples(s028, N);
 
                     mu_s028 = CalculateTemplateVectors(s028_Samples, N);
 
@@ -877,7 +882,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s029_Samples = ExtractSamples(s029, N);
+                    double[,] s029_Samples = ExtractTrainingSamples(s029, N);
 
                     mu_s029 = CalculateTemplateVectors(s029_Samples, N);
 
@@ -907,7 +912,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s030_Samples = ExtractSamples(s030, N);
+                    double[,] s030_Samples = ExtractTrainingSamples(s030, N);
 
                     mu_s030 = CalculateTemplateVectors(s030_Samples, N);
 
@@ -937,7 +942,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s031_Samples = ExtractSamples(s031, N);
+                    double[,] s031_Samples = ExtractTrainingSamples(s031, N);
 
                     mu_s031 = CalculateTemplateVectors(s031_Samples, N);
 
@@ -967,7 +972,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s032_Samples = ExtractSamples(s032, N);
+                    double[,] s032_Samples = ExtractTrainingSamples(s032, N);
 
                     mu_s032 = CalculateTemplateVectors(s032_Samples, N);
 
@@ -997,7 +1002,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s033_Samples = ExtractSamples(s033, N);
+                    double[,] s033_Samples = ExtractTrainingSamples(s033, N);
 
                     mu_s033 = CalculateTemplateVectors(s033_Samples, N);
 
@@ -1027,7 +1032,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s034_Samples = ExtractSamples(s034, N);
+                    double[,] s034_Samples = ExtractTrainingSamples(s034, N);
 
                     mu_s034 = CalculateTemplateVectors(s034_Samples, N);
 
@@ -1057,7 +1062,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s035_Samples = ExtractSamples(s035, N);
+                    double[,] s035_Samples = ExtractTrainingSamples(s035, N);
 
                     mu_s035 = CalculateTemplateVectors(s035_Samples, N);
 
@@ -1087,7 +1092,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s036_Samples = ExtractSamples(s036, N);
+                    double[,] s036_Samples = ExtractTrainingSamples(s036, N);
 
                     mu_s036 = CalculateTemplateVectors(s036_Samples, N);
 
@@ -1117,7 +1122,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s037_Samples = ExtractSamples(s037, N);
+                    double[,] s037_Samples = ExtractTrainingSamples(s037, N);
 
                     mu_s037 = CalculateTemplateVectors(s037_Samples, N);
 
@@ -1147,7 +1152,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s038_Samples = ExtractSamples(s038, N);
+                    double[,] s038_Samples = ExtractTrainingSamples(s038, N);
 
                     mu_s038 = CalculateTemplateVectors(s038_Samples, N);
 
@@ -1177,7 +1182,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s039_Samples = ExtractSamples(s039, N);
+                    double[,] s039_Samples = ExtractTrainingSamples(s039, N);
 
                     mu_s039 = CalculateTemplateVectors(s039_Samples, N);
 
@@ -1207,7 +1212,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s040_Samples = ExtractSamples(s040, N);
+                    double[,] s040_Samples = ExtractTrainingSamples(s040, N);
 
                     mu_s040 = CalculateTemplateVectors(s040_Samples, N);
 
@@ -1237,7 +1242,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s041_Samples = ExtractSamples(s041, N);
+                    double[,] s041_Samples = ExtractTrainingSamples(s041, N);
 
                     mu_s041 = CalculateTemplateVectors(s041_Samples, N);
 
@@ -1267,7 +1272,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s042_Samples = ExtractSamples(s042, N);
+                    double[,] s042_Samples = ExtractTrainingSamples(s042, N);
 
                     mu_s042 = CalculateTemplateVectors(s042_Samples, N);
 
@@ -1297,7 +1302,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s043_Samples = ExtractSamples(s043, N);
+                    double[,] s043_Samples = ExtractTrainingSamples(s043, N);
 
                     mu_s043 = CalculateTemplateVectors(s043_Samples, N);
 
@@ -1327,7 +1332,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s044_Samples = ExtractSamples(s044, N);
+                    double[,] s044_Samples = ExtractTrainingSamples(s044, N);
 
                     mu_s044 = CalculateTemplateVectors(s044_Samples, N);
 
@@ -1357,7 +1362,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s046_Samples = ExtractSamples(s046, N);
+                    double[,] s046_Samples = ExtractTrainingSamples(s046, N);
 
                     mu_s046 = CalculateTemplateVectors(s046_Samples, N);
 
@@ -1387,7 +1392,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s047_Samples = ExtractSamples(s047, N);
+                    double[,] s047_Samples = ExtractTrainingSamples(s047, N);
 
                     mu_s047 = CalculateTemplateVectors(s047_Samples, N);
 
@@ -1417,7 +1422,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s048_Samples = ExtractSamples(s048, N);
+                    double[,] s048_Samples = ExtractTrainingSamples(s048, N);
 
                     mu_s048 = CalculateTemplateVectors(s048_Samples, N);
 
@@ -1447,7 +1452,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s049_Samples = ExtractSamples(s049, N);
+                    double[,] s049_Samples = ExtractTrainingSamples(s049, N);
 
                     mu_s049 = CalculateTemplateVectors(s049_Samples, N);
 
@@ -1477,7 +1482,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s050_Samples = ExtractSamples(s050, N);
+                    double[,] s050_Samples = ExtractTrainingSamples(s050, N);
 
                     mu_s050 = CalculateTemplateVectors(s050_Samples, N);
 
@@ -1507,7 +1512,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s051_Samples = ExtractSamples(s051, N);
+                    double[,] s051_Samples = ExtractTrainingSamples(s051, N);
 
                     mu_s051 = CalculateTemplateVectors(s051_Samples, N);
 
@@ -1537,7 +1542,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s052_Samples = ExtractSamples(s052, N);
+                    double[,] s052_Samples = ExtractTrainingSamples(s052, N);
 
                     mu_s052 = CalculateTemplateVectors(s052_Samples, N);
 
@@ -1567,7 +1572,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s053_Samples = ExtractSamples(s053, N);
+                    double[,] s053_Samples = ExtractTrainingSamples(s053, N);
 
                     mu_s053 = CalculateTemplateVectors(s053_Samples, N);
 
@@ -1597,7 +1602,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s054_Samples = ExtractSamples(s054, N);
+                    double[,] s054_Samples = ExtractTrainingSamples(s054, N);
 
                     mu_s054 = CalculateTemplateVectors(s054_Samples, N);
 
@@ -1627,7 +1632,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s055_Samples = ExtractSamples(s055, N);
+                    double[,] s055_Samples = ExtractTrainingSamples(s055, N);
 
                     mu_s055 = CalculateTemplateVectors(s055_Samples, N);
 
@@ -1657,7 +1662,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s056_Samples = ExtractSamples(s056, N);
+                    double[,] s056_Samples = ExtractTrainingSamples(s056, N);
 
                     mu_s056 = CalculateTemplateVectors(s056_Samples, N);
 
@@ -1687,7 +1692,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     int N = int.Parse(inputN);
 
-                    double[,] s057_Samples = ExtractSamples(s057, N);
+                    double[,] s057_Samples = ExtractTrainingSamples(s057, N);
 
                     mu_s057 = CalculateTemplateVectors(s057_Samples, N);
 
@@ -1708,14 +1713,14 @@ namespace ProgrammingAssignment1_SpecialTopics
             Console.ReadKey(); // Default program termination
         }
 
-        #region Extraction of samples based on the value of N
+        #region Extraction of training samples based on the value of N
         /// <summary>
         /// This method will be used to extract the samples given the parameter of the sampling size.  
         /// </summary>
         /// <param name="s002">The data that is extracted or converted from the CSV file</param>
         /// <param name="N">Sample size</param>
         /// <returns>samples - 2D double array which contains the samples from the original data</returns>
-        static double[,] ExtractSamples(double[,] s002, int N)
+        static double[,] ExtractTrainingSamples(double[,] s002, int N)
         {
             // Initialize the 2D double array
             double[,] samples = new double[N, 21]; 

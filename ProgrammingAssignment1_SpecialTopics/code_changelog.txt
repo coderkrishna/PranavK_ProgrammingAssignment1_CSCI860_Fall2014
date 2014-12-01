@@ -29,9 +29,9 @@ Code Changelog
 * I will adjust the parameters accordingly, and will also have to code the various method calls to extract the data from all of the CSV files. 
 * Making the end useability as seamless and as clear as possible.
 
-Accomplishments:
-* Calculated the template vectors correctly
-* Do not need to ensure that the data is being extracted for one user - Already have that printed before
+	Accomplishments:
+	* Calculated the template vectors correctly
+	* Do not need to ensure that the data is being extracted for one user - Already have that printed before
 
 29th November 2014
 * Today I have to write out the code for the other users to extract the data and calculate the template vectors.
