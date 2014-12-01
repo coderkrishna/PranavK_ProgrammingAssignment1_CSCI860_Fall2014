@@ -24,17 +24,23 @@ namespace ProgrammingAssignment1_SpecialTopics
     class Program
     {
         #region Static 2D double arrays which correspond to their respective data files
-        static double[,] s002; // User 1
-        static double[,] s003; // User 2
-        static double[,] s004; // User 3
-        static double[,] s005; // User 4
-        static double[,] s007; // User 5
-        static double[,] s008; // User 6
-        static double[,] s010; // User 7
-        static double[,] s011; // User 8
-        static double[,] s012; // User 9
-        static double[,] s013; // User 10
-        static double[,] s014; // User 11
+        static double[,] s002; // User 1 - s002.csv
+        static double[,] s003; // User 2 - s003.csv
+        static double[,] s004; // User 3 - s004.csv
+        static double[,] s005; // User 4 - s005.csv
+        static double[,] s007; // User 5 - s007.csv
+        static double[,] s008; // User 6 - s008.csv
+        static double[,] s010; // User 7 - s010.csv
+        static double[,] s011; // User 8 - s011.csv
+        static double[,] s012; // User 9 - s012.csv
+        static double[,] s013; // User 10 - s013.csv
+        static double[,] s015; // User 11 - s015.csv
+        static double[,] s016; // User 12 - s016.csv
+        static double[,] s017; // User 13 - s017.csv
+        static double[,] s018; // User 14 - s018.csv
+        static double[,] s019; // User 15 - s019.csv
+        static double[,] s020; // User 16 - s020.csv
+        static double[,] s021; // User 17 - s021.csv
         #endregion
 
         #region Static double arrays that represent the mean vectors of each user which will be used for genuine and impostor calculations
@@ -48,7 +54,13 @@ namespace ProgrammingAssignment1_SpecialTopics
         static double[] mu_s011; // User 8
         static double[] mu_s012; // User 9
         static double[] mu_s013; // User 10
-        static double[] mu_s014; // User 11
+        static double[] mu_s015; // User 11
+        static double[] mu_s016; // User 12
+        static double[] mu_s017; // User 13
+        static double[] mu_s018; // User 14
+        static double[] mu_s019; // User 15
+        static double[] mu_s020; // User 16
+        static double[] mu_s021; // User 17
         #endregion
 
         static void Main()
@@ -391,6 +403,216 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     Console.WriteLine("Your input sampling is too large, the program will now quit");
                     Console.ReadKey(); 
+                }
+            }
+            #endregion
+
+            #region For user 11
+            if (userNumber == "11")
+            {
+                s015 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s015.csv");
+
+                Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine(); 
+
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s015_Samples = ExtractSamples(s015, N);
+
+                    mu_s015 = CalculateTemplateVectors(s015_Samples, N); 
+
+                    for (int i = 0; i < mu_s015.Length; i++)
+                    {
+                        Console.WriteLine(mu_s015[i]); 
+                    }
+                }
+
+                else if (inputN != "100" || inputN != "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey(); 
+                }
+            }
+            #endregion
+
+            #region For user 12
+            if (userNumber == "12")
+            {
+                s016 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s016.csv");
+
+                Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine(); 
+
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s016_Samples = ExtractSamples(s016, N);
+
+                    mu_s016 = CalculateTemplateVectors(s016_Samples, N); 
+
+                    for (int i = 0; i < mu_s016.Length; i++)
+                    {
+                        Console.WriteLine(mu_s016[i]); 
+                    }
+                }
+
+                else if (inputN != "100" || inputN != "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey();
+                }
+            }
+            #endregion
+
+            #region For user 13
+            if (userNumber == "13")
+            {
+                s017 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s017.csv");
+
+                Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine(); 
+
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s017_Samples = ExtractSamples(s017, N);
+
+                    mu_s017 = CalculateTemplateVectors(s017_Samples, N); 
+
+                    for (int i = 0; i < mu_s017.Length; i++)
+                    {
+                        Console.WriteLine(mu_s017[i]); 
+                    }
+                }
+
+                else if (inputN != "100" || inputN == "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey(); 
+                }
+            }
+            #endregion
+
+            #region For user 14
+            if (userNumber == "14")
+            {
+                s018 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s018.csv");
+
+                Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine();
+
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s018_Samples = ExtractSamples(s018, N);
+
+                    mu_s018 = CalculateTemplateVectors(s018_Samples, N);
+
+                    for (int i = 0; i < mu_s018.Length; i++)
+                    {
+                        Console.WriteLine(mu_s018[i]);
+                    }
+                }
+
+                else if (inputN != "100" || inputN == "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey();
+                }
+            }
+            #endregion
+
+            #region For user 15
+            if (userNumber == "15")
+            {
+                s019 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s019.csv");
+
+                Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine();
+
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s019_Samples = ExtractSamples(s019, N);
+
+                    mu_s019 = CalculateTemplateVectors(s019_Samples, N);
+
+                    for (int i = 0; i < mu_s019.Length; i++)
+                    {
+                        Console.WriteLine(mu_s019[i]);
+                    }
+                }
+
+                else if (inputN != "100" || inputN == "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey();
+                }
+            }
+            #endregion
+
+            #region For user 16
+            if (userNumber == "16")
+            {
+                s020 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s020.csv");
+
+                Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine();
+
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s020_Samples = ExtractSamples(s020, N);
+
+                    mu_s020 = CalculateTemplateVectors(s020_Samples, N);
+
+                    for (int i = 0; i < mu_s020.Length; i++)
+                    {
+                        Console.WriteLine(mu_s020[i]);
+                    }
+                }
+
+                else if (inputN != "100" || inputN == "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey();
+                }
+            }
+            #endregion
+
+            #region For user 17
+            if (userNumber == "17")
+            {
+                s021 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s021.csv");
+
+                Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
+                string inputN = Console.ReadLine();
+
+                if (inputN == "100" || inputN == "200" || inputN == "300")
+                {
+                    int N = int.Parse(inputN);
+
+                    double[,] s021_Samples = ExtractSamples(s021, N);
+
+                    mu_s021 = CalculateTemplateVectors(s021_Samples, N);
+
+                    for (int i = 0; i < mu_s021.Length; i++)
+                    {
+                        Console.WriteLine(mu_s021[i]);
+                    }
+                }
+
+                else if (inputN != "100" || inputN == "200" || inputN != "300")
+                {
+                    Console.WriteLine("Your input sampling is too large, the program will now quit");
+                    Console.ReadKey();
                 }
             }
             #endregion
