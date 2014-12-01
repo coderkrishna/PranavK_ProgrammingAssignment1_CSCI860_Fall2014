@@ -37,3 +37,13 @@ Code Changelog
 * Today I have to write out the code for the other users to extract the data and calculate the template vectors.
 * Next, I will have to code the genuine and impostor calculation methods
 * After that, code the calculations for the impostor pass rate and the false reject rate at various thresholds.
+
+30th November 2014
+* Today I am coding the data extraction and template creation of more users.
+* Also, I plan to write the method to calculate the genuine scores
+* Wrote another method to extract the samples based on the sampling size given by the end user for analysis. Which thereby will make the next tasks that are required easier. 
+* <c>ExtractSamples</c> was refactored as <c>ExtractTrainingSamples</c> to make the extraction of the N training samples easier
+  
+  Accomplishments:
+  * Finished the coding for all 51 users to have the CSV data extracted
+  * All the 51 users can now have their template vectors calculated. 

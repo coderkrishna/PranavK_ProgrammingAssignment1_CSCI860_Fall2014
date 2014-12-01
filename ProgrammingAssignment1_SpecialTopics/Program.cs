@@ -13,18 +13,7 @@ namespace ProgrammingAssignment1_SpecialTopics
     /// Programming Assignment 1
     /// CSCI-860-W01: Biometrics and its Applications in a Networked Society
     /// Instructor: Dr. Kiran Balagani
-    /// 
-    /// 30th November 2014
-    /// * Today I am coding the data extraction and template creation of more users.
-    /// * Also, I plan to write the method to calculate the genuine scores
-    /// * Wrote another method to extract the samples based on the sampling size given by the end user for analysis. Which thereby will make the 
-    /// next tasks that are required easier. 
-    /// * <c>ExtractSamples</c> was refactored as <c>ExtractTrainingSamples</c> to make the extraction of the N training samples easier
-    /// 
-    /// Accomplishments:
-    /// * Finished the coding for all 51 users to have the CSV data extracted
-    /// * All the 51 users can now have their template vectors calculated. 
-    /// 
+    ///  
     /// 1st December 2014
     /// * Got the method of extracting test samples working
     /// * Have to finish off this project and code the genuine score and impostor score methods
@@ -190,6 +179,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                         Console.Write(Environment.NewLine); 
                     }
 
+                    // Useing the following line of code to be able to pause the output in order to verify all the steps that are going on. 
                     Console.ReadLine(); 
 
                     // Calculates the templates now and stores it in an array which can be used later on. 
@@ -206,7 +196,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // This is the trouble spot for me - but almost there!!
                     double[,] s002_Test = ExtractTestSamples(s002, N);
 
-                    // Printing out
+                    // Printing out the test vectors
                     for (int i = 0; i < s002_Test.GetLength(0); i++)
                     {
                         for (int j = 0; j < s002_Test.GetLength(1); j++)
@@ -215,6 +205,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                         }
                         Console.Write(Environment.NewLine);
                     }
+
+                    Console.ReadLine(); 
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -252,6 +244,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s003[i]); 
                     }
+
+                    Console.ReadLine(); // Pausing the output here
+
+                    double[,] s003_Test = ExtractTestSamples(s003, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN !="300")
@@ -1759,17 +1755,52 @@ namespace ProgrammingAssignment1_SpecialTopics
         /// <returns>The 2D array known as testSamples</returns>
         static double[,] ExtractTestSamples(double[,] s002, int N)
         {
-            double[,] test = new double[300,21]; 
-
-            for (int i = 0; i < 299; i++)
+            if (N == 100)
             {
-                for (int j = 0; j < test.GetLength(1); j++)
+                double[,] test100 = new double[300, 21];
+
+                for (int i = 0; i < 299; i++)
                 {
-                    // i = M;
-                    test[i, j] = s002[100+i, j];
+                    for (int j = 0; j < test100.GetLength(1); j++)
+                    {
+                        // i = M;
+                        test100[i, j] = s002[100 + i, j];
+                    }
                 }
+                return test100; 
             }
-            return test; 
+
+            else if (N == 200)
+            {
+                double[,] test200 = new double[200, 21];
+
+                for (int i = 0; i < 199; i++)
+                {
+                    for (int j = 0; j < test200.GetLength(1); j++)
+                    {
+                        // i = M;
+                        test200[i, j] = s002[200 + i, j];
+                    }
+                }
+                return test200; 
+            }
+
+            else if (N == 300)
+            {
+                double[,] test300 = new double[100, 21];
+
+                for (int i = 0; i < 99; i++)
+                {
+                    for (int j = 0; j < test300.GetLength(1); j++)
+                    {
+                        // i = M;
+                        test300[i, j] = s002[300 + i, j];
+                    }
+                }
+                return test300; 
+            }
+
+            return s002; // Default return statement
         }
         #endregion
 
