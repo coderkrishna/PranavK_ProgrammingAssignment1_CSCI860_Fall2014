@@ -24,6 +24,12 @@ namespace ProgrammingAssignment1_SpecialTopics
     /// Accomplishments:
     /// * Finished the coding for all 51 users to have the CSV data extracted
     /// * All the 51 users can now have their template vectors calculated. 
+    /// 
+    /// 1st December 2014
+    /// * Got the method of extracting test samples working
+    /// * Have to finish off this project and code the genuine score and impostor score methods
+    /// * Finally have to code the method to calculate the Impostor Pass Rate and False Reject Rates 
+    /// given a Threshold T. 
     /// </summary>
     class Program
     {
@@ -170,7 +176,21 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     // Creating a new array called s002_Samples which denotes the double 2D array that will be used for the calculations of genuine and impostor scores
                     // which becomes populated with a method call as well. 
-                    double[,] s002_Samples = ExtractTrainingSamples(s002, N); 
+                    double[,] s002_Samples = ExtractTrainingSamples(s002, N);
+
+                    Console.WriteLine("==================================Training Vector========================================"); 
+
+                    // Printing out the training vector
+                    for (int m = 0; m < s002_Samples.GetLength(0); m++)
+                    {
+                        for  (int n = 0; n < s002_Samples.GetLength(1); n++)
+                        {
+                            Console.Write(string.Format("{0} ", s002_Samples[m, n]));
+                        }
+                        Console.Write(Environment.NewLine); 
+                    }
+
+                    Console.ReadLine(); 
 
                     // Calculates the templates now and stores it in an array which can be used later on. 
                     mu_s002 = CalculateTemplateVectors(s002_Samples, N); 
@@ -181,18 +201,20 @@ namespace ProgrammingAssignment1_SpecialTopics
                         Console.WriteLine(mu_s002[i]); 
                     }
 
-                    // This is the trouble spot for me - TODO
-                    double[,] s002_Test = ExtractTestSamples(s002, M);
+                    Console.ReadLine(); 
+
+                    // This is the trouble spot for me - but almost there!!
+                    double[,] s002_Test = ExtractTestSamples(s002, N);
 
                     // Printing out
-                    //for (int i = 0; i < s002_Test.GetLength(0); i++)
-                    //{
-                    //    for (int j = 0; j < s002_Test.GetLength(1); j++)
-                    //    {
-                    //        Console.Write(string.Format("{0} ", s002_Test[i, j])); 
-                    //    }
-                    //    Console.Write(Environment.NewLine); 
-                    //}
+                    for (int i = 0; i < s002_Test.GetLength(0); i++)
+                    {
+                        for (int j = 0; j < s002_Test.GetLength(1); j++)
+                        {
+                            Console.Write(string.Format("{0} ", s002_Test[i, j]));
+                        }
+                        Console.Write(Environment.NewLine);
+                    }
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -1727,7 +1749,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             Console.ReadKey(); // Default program termination
         }
 
-        #region The Test Sample extraction - TODO!
+        #region The Test Sample extraction, got that done
         /// <summary>
         /// This method should be able to take the existing 2D double array
         /// and extract the test samples.  However, I am unable to do so
@@ -1735,20 +1757,19 @@ namespace ProgrammingAssignment1_SpecialTopics
         /// <param name="s002">The input array</param>
         /// <param name="M">The value which is calculated from 400 - N</param>
         /// <returns>The 2D array known as testSamples</returns>
-        static double[,] ExtractTestSamples(double[,] s002, int M)
+        static double[,] ExtractTestSamples(double[,] s002, int N)
         {
-            double[,] testSamples = new double[M, 21]; 
+            double[,] test = new double[300,21]; 
 
-            for (int n = 0; n <= M; n++)
+            for (int i = 0; i < 299; i++)
             {
-                Console.Write(n + Environment.NewLine);
-                for (int k = 0; k < 20; k++)
+                for (int j = 0; j < test.GetLength(1); j++)
                 {
-                    testSamples[n, k] = s002[n, k];
-                    // Console.Write(j + Environment.NewLine);
+                    // i = M;
+                    test[i, j] = s002[100+i, j];
                 }
             }
-            return testSamples; 
+            return test; 
         }
         #endregion
 
@@ -1765,9 +1786,9 @@ namespace ProgrammingAssignment1_SpecialTopics
             double[,] samples = new double[N, 21]; 
 
             // Iterating over a nested for loop.
-            for (int n = 0; n < N - 1; n++)
+            for (int n = 0; n <= N - 1; n++)
             {
-                for (int j = 0; j < 20; j++)
+                for (int j = 0; j < s002.GetLength(1); j++)
                 {
                     // Having the 2D double array being populated. 
                     samples[n, j] = s002[n, j]; 
