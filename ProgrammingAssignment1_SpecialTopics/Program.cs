@@ -164,6 +164,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 // Extracting either 100, 200, or 300 samples from the specified user
                 if (inputN == "100" || inputN == "200" || inputN == "300")
                 {
+                    // N represents the number of training samples
                     int N = int.Parse(inputN);
                     int M = 400 - N; 
 
@@ -182,6 +183,16 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     // This is the trouble spot for me - TODO
                     double[,] s002_Test = ExtractTestSamples(s002, M);
+
+                    // Printing out
+                    //for (int i = 0; i < s002_Test.GetLength(0); i++)
+                    //{
+                    //    for (int j = 0; j < s002_Test.GetLength(1); j++)
+                    //    {
+                    //        Console.Write(string.Format("{0} ", s002_Test[i, j])); 
+                    //    }
+                    //    Console.Write(Environment.NewLine); 
+                    //}
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -1728,11 +1739,13 @@ namespace ProgrammingAssignment1_SpecialTopics
         {
             double[,] testSamples = new double[M, 21]; 
 
-            for (int n = M+1; n < 400; n++)
+            for (int n = 0; n <= M; n++)
             {
-                for (int j = 0; j < s002.GetLength(1); j++)
+                Console.Write(n + Environment.NewLine);
+                for (int k = 0; k < 20; k++)
                 {
-                    testSamples[n, j] = s002[n, j]; 
+                    testSamples[n, k] = s002[n, k];
+                    // Console.Write(j + Environment.NewLine);
                 }
             }
             return testSamples; 
@@ -1752,9 +1765,9 @@ namespace ProgrammingAssignment1_SpecialTopics
             double[,] samples = new double[N, 21]; 
 
             // Iterating over a nested for loop.
-            for (int n = 0; n < N; n++)
+            for (int n = 0; n < N - 1; n++)
             {
-                for (int j = 0; j < s002.GetLength(1); j++)
+                for (int j = 0; j < 20; j++)
                 {
                     // Having the 2D double array being populated. 
                     samples[n, j] = s002[n, j]; 
