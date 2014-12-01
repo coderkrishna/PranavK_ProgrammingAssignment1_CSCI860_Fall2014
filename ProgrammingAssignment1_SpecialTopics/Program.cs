@@ -165,6 +165,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 if (inputN == "100" || inputN == "200" || inputN == "300")
                 {
                     int N = int.Parse(inputN);
+                    int M = 400 - N; 
 
                     // Creating a new array called s002_Samples which denotes the double 2D array that will be used for the calculations of genuine and impostor scores
                     // which becomes populated with a method call as well. 
@@ -179,6 +180,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                         Console.WriteLine(mu_s002[i]); 
                     }
 
+                    // This is the trouble spot for me - TODO
+                    double[,] s002_Test = ExtractTestSamples(s002, M);
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -1713,6 +1716,29 @@ namespace ProgrammingAssignment1_SpecialTopics
             Console.ReadKey(); // Default program termination
         }
 
+        #region The Test Sample extraction - TODO!
+        /// <summary>
+        /// This method should be able to take the existing 2D double array
+        /// and extract the test samples.  However, I am unable to do so
+        /// </summary>
+        /// <param name="s002">The input array</param>
+        /// <param name="M">The value which is calculated from 400 - N</param>
+        /// <returns>The 2D array known as testSamples</returns>
+        static double[,] ExtractTestSamples(double[,] s002, int M)
+        {
+            double[,] testSamples = new double[M, 21]; 
+
+            for (int n = M+1; n < 400; n++)
+            {
+                for (int j = 0; j < s002.GetLength(1); j++)
+                {
+                    testSamples[n, j] = s002[n, j]; 
+                }
+            }
+            return testSamples; 
+        }
+        #endregion
+
         #region Extraction of training samples based on the value of N
         /// <summary>
         /// This method will be used to extract the samples given the parameter of the sampling size.  
@@ -1813,7 +1839,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             }
 
             // Outputs the 2D double array called values, which in turn becomes the 
-            // 2D double array called 
+            // 2D double that is automatically named due to polymorphism. 
             return values;
         }
         #endregion
