@@ -232,6 +232,19 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Here is the method call to extract the 400 - N test samples that will be used to calculate both the
                     // genuine and impostor scores
                     s002_Test = ExtractTestingSamples(s002, N);
+
+                    Console.ReadLine(); // Pause this right here
+
+                    double[,] s002_Genuine = CalculateGenuineScores(s002_Test, mu_s002, N);
+
+                    for (int i = 0; i < s002_Genuine.GetLength(0); i++)
+                    {
+                        for (int j = 0; j < s002_Genuine.GetLength(1); j++)
+                        {
+                            Console.Write(string.Format("{0} ", s002_Genuine[i, j]));
+                        }
+                        Console.Write(Environment.NewLine); 
+                    }
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -272,7 +285,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s003_Test = ExtractTestingSamples(s003, N);
 
-                    CalculateGenuineScores(s002_Test, mu_s002, N); 
+                    double[,] genuine_s003 = CalculateGenuineScores(s003_Test, mu_s003, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN !="300")
@@ -1904,9 +1917,19 @@ namespace ProgrammingAssignment1_SpecialTopics
         /// <param name="s002_Test">The test vector that contains 400 - N samples</param>
         /// <param name="mu_s002">This is the mean or template vector of the first N samples</param>
         /// <param name="N">Static (fixed) integer value which contains the first N samples upon which analysis will be conducted</param>
-        private static void CalculateGenuineScores(double[,] s002_Test, double[] mu_s002, int N)
+        static double[,] CalculateGenuineScores(double[,] s002_Test, double[] mu_s002, int N)
         {
-            // TODO: Make sure to code this method tomorrow morning!  (FIRST THING)!
+            double[,] difference = new double[20, 20];
+
+            for (int i = 0; i < 19; i++)
+            {
+                for (int j = 0; j < 19; j++)
+                {
+                    difference[i,j] += Math.Abs(s002_Test[i, j] - mu_s002[i]); 
+                }
+            }
+
+            return difference; 
         }
 
         #region The Test Sample extraction, got that done
