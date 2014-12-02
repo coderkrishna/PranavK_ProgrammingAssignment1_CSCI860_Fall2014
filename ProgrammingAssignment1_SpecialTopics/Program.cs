@@ -14,11 +14,12 @@ namespace ProgrammingAssignment1_SpecialTopics
     /// CSCI-860-W01: Biometrics and its Applications in a Networked Society
     /// Instructor: Dr. Kiran Balagani
     ///  
-    /// 1st December 2014
-    /// * Got the method of extracting test samples working
-    /// * Have to finish off this project and code the genuine score and impostor score methods
-    /// * Finally have to code the method to calculate the Impostor Pass Rate and False Reject Rates 
-    /// given a Threshold T. 
+    /// 2nd December 2014 - Deadline/Submission date
+    /// Here are the following that I tasks that I need to get done today:
+    /// * Finish the genuine score calculations
+    /// * Code and execute all the impostor scores
+    /// * Find a way that I can begin to report the FAR and FRR
+    /// * Compile the report
     /// </summary>
     class Program
     {

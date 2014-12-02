@@ -47,3 +47,8 @@ Code Changelog
   Accomplishments:
   * Finished the coding for all 51 users to have the CSV data extracted
   * All the 51 users can now have their template vectors calculated. 
+
+1st December 2014
+* Got the method of extracting test samples working
+* Have to finish off this project and code the genuine score and impostor score methods
+* Finally have to code the method to calculate the Impostor Pass Rate and False Reject Rates given a Threshold T. 
