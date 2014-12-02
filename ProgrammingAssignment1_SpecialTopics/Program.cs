@@ -224,26 +224,11 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Calculates the templates now and stores it in an array which can be used later on. 
                     mu_s002 = CalculateTemplateVectors(s002_Samples, N); 
 
-                    // Printing out the template calculations
-                    for (int i = 0; i < mu_s002.Length; i++)
-                    {
-                        Console.WriteLine(mu_s002[i]); 
-                    }
-
-                    Console.Write(Environment.NewLine); 
-
                     // Here is the method call to extract the 400 - N test samples that will be used to calculate both the
                     // genuine and impostor scores
                     s002_Test = ExtractTestingSamples(s002, N);
 
                     double[] s002_Genuine = CalculateGenuineScores(s002_Test, mu_s002, N);
-
-                    for (int i = 0; i < s002_Genuine.Length; i++)
-                    {
-                        Console.WriteLine(s002_Genuine[i]); 
-                    }
-
-                    Console.ReadLine(); // Pausing 
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -284,7 +269,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s003_Test = ExtractTestingSamples(s003, N);
 
-                    double[] genuine_s003 = CalculateGenuineScores(s003_Test, mu_s003, N);
+                    double[] s003_Genuine = CalculateGenuineScores(s003_Test, mu_s003, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN !="300")
@@ -317,7 +302,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Method call to calculate the template vectors
                     mu_s004 = CalculateTemplateVectors(s004_Samples, N); 
 
-                    s004_Test = ExtractTestingSamples(s004, N); 
+                    s004_Test = ExtractTestingSamples(s004, N);
+
+                    double[] s004_Genuine = CalculateGenuineScores(s004_Test, mu_s004, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -348,12 +335,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Making the call to calculate the template vectors
                     mu_s005 = CalculateTemplateVectors(s005_Samples, N);
  
-                    for(int i = 0; i < mu_s005.Length; i++)
-                    {
-                        Console.WriteLine(mu_s005[i]); 
-                    }
+                    s005_Test = ExtractTestingSamples(s005, N);
 
-                    s005_Test = ExtractTestingSamples(s005, N); 
+                    double[] s005_Genuine = CalculateGenuineScores(s005_Test, mu_s005, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -382,12 +366,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s007 = CalculateTemplateVectors(s007_Samples, N); 
 
-                    for (int i = 0; i < mu_s007.Length; i++)
-                    {
-                        Console.WriteLine(mu_s007[i]); 
-                    }
+                    s007_Test = ExtractTestingSamples(s007, N);
 
-                    s007_Test = ExtractTestingSamples(s007, N); 
+                    double[] s007_Genuine = CalculateGenuineScores(s007_Test, mu_s007, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -415,12 +396,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s008 = CalculateTemplateVectors(s008_Samples, N); 
 
-                    for (int i = 0; i < mu_s008.Length; i++)
-                    {
-                        Console.WriteLine(mu_s008[i]); 
-                    }
+                    s008_Test = ExtractTestingSamples(s008, N);
 
-                    s008_Test = ExtractTestingSamples(s008, N); 
+                    double[] s008_Genuine = CalculateGenuineScores(s008_Test, mu_s008, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -447,12 +425,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s010 = CalculateTemplateVectors(s010_Samples, N); 
 
-                    for (int i = 0; i < mu_s010.Length; i++)
-                    {
-                        Console.WriteLine(mu_s010[i]); 
-                    }
+                    s010_Test = ExtractTestingSamples(s010, N);
 
-                    s010_Test = ExtractTestingSamples(s010, N); 
+                    double[] s010_Genuine = CalculateGenuineScores(s010_Test, mu_s010, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -479,12 +454,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s011 = CalculateTemplateVectors(s011_Samples, N); 
 
-                    for (int i = 0; i < mu_s011.Length; i++)
-                    {
-                        Console.WriteLine(mu_s011[i]); 
-                    }
+                    s011_Test = ExtractTestingSamples(s011, N);
 
-                    s011_Test = ExtractTestingSamples(s011, N); 
+                    double[] s011_Genuine = CalculateGenuineScores(s011_Test, mu_s011, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -511,12 +483,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s012 = CalculateTemplateVectors(s012_Samples, N); 
 
-                    for (int i = 0; i < mu_s012.Length; i++)
-                    {
-                        Console.WriteLine(mu_s012[i]); 
-                    }
+                    s012_Test = ExtractTestingSamples(s012, N);
 
-                    s012_Test = ExtractTestingSamples(s012, N); 
+                    double[] s012_Genuine = CalculateGenuineScores(s012_Test, mu_s012, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -543,14 +512,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s013 = CalculateTemplateVectors(s013_Samples, N); 
 
-                    for (int i = 0; i < mu_s013.Length; i++)
-                    {
-                        Console.WriteLine(mu_s013[i]); 
-                    }
+                    s013_Test = ExtractTestingSamples(s013, N);
 
-                    Console.ReadLine();
-
-                    s013_Test = ExtractTestingSamples(s013, N); 
+                    double[] s013_Genuine = CalculateGenuineScores(s013_Test, mu_s013, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -577,14 +541,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s015 = CalculateTemplateVectors(s015_Samples, N); 
 
-                    for (int i = 0; i < mu_s015.Length; i++)
-                    {
-                        Console.WriteLine(mu_s015[i]); 
-                    }
+                    s015_Test = ExtractTestingSamples(s015, N);
 
-                    Console.ReadLine();
-
-                    s015_Test = ExtractTestingSamples(s015, N); 
+                    double[] s015_Genuine = CalculateGenuineScores(s015_Test, mu_s015, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -611,14 +570,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s016 = CalculateTemplateVectors(s016_Samples, N); 
 
-                    for (int i = 0; i < mu_s016.Length; i++)
-                    {
-                        Console.WriteLine(mu_s016[i]); 
-                    }
+                    s016_Test = ExtractTestingSamples(s016, N);
 
-                    Console.ReadLine();
-
-                    s016_Test = ExtractTestingSamples(s016, N); 
+                    double[] s016_Genuine = CalculateGenuineScores(s016_Test, mu_s016, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -645,14 +599,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s017 = CalculateTemplateVectors(s017_Samples, N); 
 
-                    for (int i = 0; i < mu_s017.Length; i++)
-                    {
-                        Console.WriteLine(mu_s017[i]); 
-                    }
+                    s017_Test = ExtractTestingSamples(s017, N);
 
-                    Console.ReadLine();
-
-                    s017_Test = ExtractTestingSamples(s017, N); 
+                    double[] s017_Genuine = CalculateGenuineScores(s017_Test, mu_s017, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -679,14 +628,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s018 = CalculateTemplateVectors(s018_Samples, N);
 
-                    for (int i = 0; i < mu_s018.Length; i++)
-                    {
-                        Console.WriteLine(mu_s018[i]);
-                    }
+                    s018_Test = ExtractTestingSamples(s018, N);
 
-                    Console.ReadLine();
-
-                    s018_Test = ExtractTestingSamples(s018, N); 
+                    double[] s018_Genuine = CalculateGenuineScores(s018_Test, mu_s018, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -713,14 +657,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s019 = CalculateTemplateVectors(s019_Samples, N);
 
-                    for (int i = 0; i < mu_s019.Length; i++)
-                    {
-                        Console.WriteLine(mu_s019[i]);
-                    }
+                    s019_Test = ExtractTestingSamples(s019, N);
 
-                    Console.ReadLine();
-
-                    s019_Test = ExtractTestingSamples(s019, N); 
+                    double[] s019_Genuine = CalculateGenuineScores(s019_Test, mu_s019, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -747,14 +686,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s020 = CalculateTemplateVectors(s020_Samples, N);
 
-                    for (int i = 0; i < mu_s020.Length; i++)
-                    {
-                        Console.WriteLine(mu_s020[i]);
-                    }
+                    s020_Test = ExtractTestingSamples(s020, N);
 
-                    Console.ReadLine();
-
-                    s020_Test = ExtractTestingSamples(s020, N); 
+                    double[] s020_Genuine = CalculateGenuineScores(s020_Test, mu_s020, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -781,14 +715,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s021 = CalculateTemplateVectors(s021_Samples, N);
 
-                    for (int i = 0; i < mu_s021.Length; i++)
-                    {
-                        Console.WriteLine(mu_s021[i]);
-                    }
+                    s021_Test = ExtractTestingSamples(s021, N);
 
-                    Console.ReadLine();
-
-                    s021_Test = ExtractTestingSamples(s021, N); 
+                    double[] s021_Genuine = CalculateGenuineScores(s021_Test, mu_s021, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -815,14 +744,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s022 = CalculateTemplateVectors(s022_Samples, N);
 
-                    for (int i = 0; i < mu_s022.Length; i++)
-                    {
-                        Console.WriteLine(mu_s022[i]);
-                    }
+                    s022_Test = ExtractTestingSamples(s022, N);
 
-                    Console.ReadLine();
-
-                    s022_Test = ExtractTestingSamples(s022, N); 
+                    double[] s022_Genuine = CalculateGenuineScores(s022_Test, mu_s022, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -849,14 +773,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s024 = CalculateTemplateVectors(s024_Samples, N);
 
-                    for (int i = 0; i < mu_s024.Length; i++)
-                    {
-                        Console.WriteLine(mu_s024[i]);
-                    }
+                    s024_Test = ExtractTestingSamples(s024, N);
 
-                    Console.ReadLine();
-
-                    s024_Test = ExtractTestingSamples(s024, N); 
+                    double[] s024_Genuine = CalculateGenuineScores(s024_Test, mu_s024, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -883,14 +802,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s025 = CalculateTemplateVectors(s025_Samples, N);
 
-                    for (int i = 0; i < mu_s025.Length; i++)
-                    {
-                        Console.WriteLine(mu_s025[i]);
-                    }
+                    s025_Test = ExtractTestingSamples(s025, N);
 
-                    Console.ReadLine();
-
-                    s025_Test = ExtractTestingSamples(s025, N); 
+                    double[] s025_Genuine = CalculateGenuineScores(s025_Test, mu_s025, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -917,14 +831,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s026 = CalculateTemplateVectors(s026_Samples, N);
 
-                    for (int i = 0; i < mu_s026.Length; i++)
-                    {
-                        Console.WriteLine(mu_s026[i]);
-                    }
+                    s026_Test = ExtractTestingSamples(s026, N);
 
-                    Console.ReadLine();
-
-                    s026_Test = ExtractTestingSamples(s026, N); 
+                    double[] s026_Genuine = CalculateGenuineScores(s026_Test, mu_s026, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -951,14 +860,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s027 = CalculateTemplateVectors(s027_Samples, N);
 
-                    for (int i = 0; i < mu_s027.Length; i++)
-                    {
-                        Console.WriteLine(mu_s027[i]);
-                    }
+                    s027_Test = ExtractTestingSamples(s027, N);
 
-                    Console.ReadLine();
-
-                    s027_Test = ExtractTestingSamples(s027, N); 
+                    double[] s027_Genuine = CalculateGenuineScores(s027_Test, mu_s027, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -985,14 +889,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s028 = CalculateTemplateVectors(s028_Samples, N);
 
-                    for (int i = 0; i < mu_s028.Length; i++)
-                    {
-                        Console.WriteLine(mu_s028[i]);
-                    }
+                    s028_Test = ExtractTestingSamples(s028, N);
 
-                    Console.ReadLine();
-
-                    s028_Test = ExtractTestingSamples(s028, N); 
+                    double[] s028_Genuine = CalculateGenuineScores(s028_Test, mu_s028, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1019,14 +918,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s029 = CalculateTemplateVectors(s029_Samples, N);
 
-                    for (int i = 0; i < mu_s029.Length; i++)
-                    {
-                        Console.WriteLine(mu_s029[i]);
-                    }
+                    s029_Test = ExtractTestingSamples(s029, N);
 
-                    Console.ReadLine();
-
-                    s029_Test = ExtractTestingSamples(s029, N); 
+                    double[] s029_Genuine = CalculateGenuineScores(s029_Test, mu_s029, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1053,14 +947,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s030 = CalculateTemplateVectors(s030_Samples, N);
 
-                    for (int i = 0; i < mu_s030.Length; i++)
-                    {
-                        Console.WriteLine(mu_s030[i]);
-                    }
+                    s030_Test = ExtractTestingSamples(s030, N);
 
-                    Console.ReadLine();
-
-                    s030_Test = ExtractTestingSamples(s030, N); 
+                    double[] s030_Genuine = CalculateGenuineScores(s030_Test, mu_s030, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1087,14 +976,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s031 = CalculateTemplateVectors(s031_Samples, N);
 
-                    for (int i = 0; i < mu_s031.Length; i++)
-                    {
-                        Console.WriteLine(mu_s031[i]);
-                    }
+                    s031_Test = ExtractTestingSamples(s031, N);
 
-                    Console.ReadLine();
-
-                    s031_Test = ExtractTestingSamples(s031, N); 
+                    double[] s031_Genuine = CalculateGenuineScores(s031_Test, mu_s031, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1121,14 +1005,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s032 = CalculateTemplateVectors(s032_Samples, N);
 
-                    for (int i = 0; i < mu_s032.Length; i++)
-                    {
-                        Console.WriteLine(mu_s032[i]);
-                    }
+                    s032_Test = ExtractTestingSamples(s032, N);
 
-                    Console.ReadLine();
-
-                    s032_Test = ExtractTestingSamples(s032, N); 
+                    double[] s032_Genuine = CalculateGenuineScores(s032_Test, mu_s032, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1155,12 +1034,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s033 = CalculateTemplateVectors(s033_Samples, N);
 
-                    for (int i = 0; i < mu_s033.Length; i++)
-                    {
-                        Console.WriteLine(mu_s033[i]);
-                    }
+                    s033_Test = ExtractTestingSamples(s033, N);
 
-                    s033_Test = ExtractTestingSamples(s033, N); 
+                    double[] s033_Genuine = CalculateGenuineScores(s033_Test, mu_s033, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1187,12 +1063,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s034 = CalculateTemplateVectors(s034_Samples, N);
 
-                    for (int i = 0; i < mu_s034.Length; i++)
-                    {
-                        Console.WriteLine(mu_s034[i]);
-                    }
+                    s034_Test = ExtractTestingSamples(s034, N);
 
-                    s034_Test = ExtractTestingSamples(s034, N); 
+                    double[] s034_Genuine = CalculateGenuineScores(s034_Test, mu_s034, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1219,12 +1092,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s035 = CalculateTemplateVectors(s035_Samples, N);
 
-                    for (int i = 0; i < mu_s035.Length; i++)
-                    {
-                        Console.WriteLine(mu_s035[i]);
-                    }
+                    s035_Test = ExtractTestingSamples(s035, N);
 
-                    s035_Test = ExtractTestingSamples(s035, N); 
+                    double[] s035_Genuine = CalculateGenuineScores(s035_Test, mu_s035, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1251,12 +1121,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s036 = CalculateTemplateVectors(s036_Samples, N);
 
-                    for (int i = 0; i < mu_s036.Length; i++)
-                    {
-                        Console.WriteLine(mu_s036[i]);
-                    }
+                    s036_Test = ExtractTestingSamples(s036, N);
 
-                    s036_Test = ExtractTestingSamples(s036, N); 
+                    double[] s036_Genuine = CalculateGenuineScores(s036_Test, mu_s036, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1283,12 +1150,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s037 = CalculateTemplateVectors(s037_Samples, N);
 
-                    for (int i = 0; i < mu_s037.Length; i++)
-                    {
-                        Console.WriteLine(mu_s037[i]);
-                    }
+                    s037_Test = ExtractTestingSamples(s037, N);
 
-                    s037_Test = ExtractTestingSamples(s037, N); 
+                    double[] s037_Genuine = CalculateGenuineScores(s037_Test, mu_s037, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1315,12 +1179,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s038 = CalculateTemplateVectors(s038_Samples, N);
 
-                    for (int i = 0; i < mu_s038.Length; i++)
-                    {
-                        Console.WriteLine(mu_s038[i]);
-                    }
+                    s038_Test = ExtractTestingSamples(s038, N);
 
-                    s038_Test = ExtractTestingSamples(s038, N); 
+                    double[] s038_Genuine = CalculateGenuineScores(s039_Test, mu_s038, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1347,12 +1208,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s039 = CalculateTemplateVectors(s039_Samples, N);
 
-                    for (int i = 0; i < mu_s039.Length; i++)
-                    {
-                        Console.WriteLine(mu_s039[i]);
-                    }
+                    s039_Test = ExtractTestingSamples(s039, N);
 
-                    s039_Test = ExtractTestingSamples(s039, N); 
+                    double[] s039_Genuine = CalculateGenuineScores(s039_Test, mu_s039, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1379,12 +1237,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s040 = CalculateTemplateVectors(s040_Samples, N);
 
-                    for (int i = 0; i < mu_s040.Length; i++)
-                    {
-                        Console.WriteLine(mu_s040[i]);
-                    }
+                    s040_Test = ExtractTestingSamples(s040, N);
 
-                    s040_Test = ExtractTestingSamples(s040, N); 
+                    double[] s040_Genuine = CalculateGenuineScores(s040_Test, mu_s040, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1411,12 +1266,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s041 = CalculateTemplateVectors(s041_Samples, N);
 
-                    for (int i = 0; i < mu_s041.Length; i++)
-                    {
-                        Console.WriteLine(mu_s041[i]);
-                    }
+                    s041_Test = ExtractTestingSamples(s041, N);
 
-                    s041_Test = ExtractTestingSamples(s041, N); 
+                    double[] s041_Genuine = CalculateGenuineScores(s041_Test, mu_s041, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1443,12 +1295,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s042 = CalculateTemplateVectors(s042_Samples, N);
 
-                    for (int i = 0; i < mu_s042.Length; i++)
-                    {
-                        Console.WriteLine(mu_s042[i]);
-                    }
+                    s042_Test = ExtractTestingSamples(s042, N);
 
-                    s042_Test = ExtractTestingSamples(s042, N); 
+                    double[] s042_Genuine = CalculateGenuineScores(s042_Test, mu_s042, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1475,12 +1324,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s043 = CalculateTemplateVectors(s043_Samples, N);
 
-                    for (int i = 0; i < mu_s043.Length; i++)
-                    {
-                        Console.WriteLine(mu_s043[i]);
-                    }
+                    s043_Test = ExtractTestingSamples(s043, N);
 
-                    s043_Test = ExtractTestingSamples(s043, N); 
+                    double[] s043_Genuine = CalculateGenuineScores(s043_Test, mu_s043, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1507,12 +1353,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s044 = CalculateTemplateVectors(s044_Samples, N);
 
-                    for (int i = 0; i < mu_s044.Length; i++)
-                    {
-                        Console.WriteLine(mu_s044[i]);
-                    }
+                    s044_Test = ExtractTestingSamples(s044, N);
 
-                    s044_Test = ExtractTestingSamples(s044, N); 
+                    double[] s044_Genuine = CalculateGenuineScores(s004_Test, mu_s044, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1539,12 +1382,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s046 = CalculateTemplateVectors(s046_Samples, N);
 
-                    for (int i = 0; i < mu_s046.Length; i++)
-                    {
-                        Console.WriteLine(mu_s046[i]);
-                    }
-
                     s046_Test = ExtractTestingSamples(s046, N);
+
+                    double[] s046_Genuine = CalculateGenuineScores(s046_Test, mu_s046, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1571,12 +1411,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s047 = CalculateTemplateVectors(s047_Samples, N);
 
-                    for (int i = 0; i < mu_s047.Length; i++)
-                    {
-                        Console.WriteLine(mu_s047[i]);
-                    }
+                    s047_Test = ExtractTestingSamples(s047, N);
 
-                    s047_Test = ExtractTestingSamples(s047, N); 
+                    double[] s047_Genuine = CalculateGenuineScores(s047_Test, mu_s047, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1603,12 +1440,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s048 = CalculateTemplateVectors(s048_Samples, N);
 
-                    for (int i = 0; i < mu_s048.Length; i++)
-                    {
-                        Console.WriteLine(mu_s048[i]);
-                    }
+                    s048_Test = ExtractTestingSamples(s048, N);
 
-                    s048_Test = ExtractTestingSamples(s048, N); 
+                    double[] s048_Genuine = CalculateGenuineScores(s048_Test, mu_s048, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1635,12 +1469,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s049 = CalculateTemplateVectors(s049_Samples, N);
 
-                    for (int i = 0; i < mu_s049.Length; i++)
-                    {
-                        Console.WriteLine(mu_s049[i]);
-                    }
+                    s049_Test = ExtractTestingSamples(s049, N);
 
-                    s049_Test = ExtractTestingSamples(s049, N); 
+                    double[] s049_Genuine = CalculateGenuineScores(s049_Test, mu_s049, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1667,12 +1498,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s050 = CalculateTemplateVectors(s050_Samples, N);
 
-                    for (int i = 0; i < mu_s050.Length; i++)
-                    {
-                        Console.WriteLine(mu_s050[i]);
-                    }
+                    s050_Test = ExtractTestingSamples(s050, N);
 
-                    s050_Test = ExtractTestingSamples(s050, N); 
+                    double[] s050_Genuine = CalculateGenuineScores(s050_Test, mu_s050, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1699,12 +1527,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s051 = CalculateTemplateVectors(s051_Samples, N);
 
-                    for (int i = 0; i < mu_s051.Length; i++)
-                    {
-                        Console.WriteLine(mu_s051[i]);
-                    }
+                    s051_Test = ExtractTestingSamples(s051, N);
 
-                    s051_Test = ExtractTestingSamples(s051, N); 
+                    double[] s051_Genuine = CalculateGenuineScores(s051_Test, mu_s051, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1731,12 +1556,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s052 = CalculateTemplateVectors(s052_Samples, N);
 
-                    for (int i = 0; i < mu_s049.Length; i++)
-                    {
-                        Console.WriteLine(mu_s049[i]);
-                    }
+                    s052_Test = ExtractTestingSamples(s052, N);
 
-                    s052_Test = ExtractTestingSamples(s052, N); 
+                    double[] s052_Genuine = CalculateGenuineScores(s052_Test, mu_s052, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1763,12 +1585,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s053 = CalculateTemplateVectors(s053_Samples, N);
 
-                    for (int i = 0; i < mu_s047.Length; i++)
-                    {
-                        Console.WriteLine(mu_s047[i]);
-                    }
+                    s053_Test = ExtractTestingSamples(s053, N);
 
-                    s053_Test = ExtractTestingSamples(s053, N); 
+                    double[] s053_Genuine = CalculateGenuineScores(s053_Test, mu_s053, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1795,12 +1614,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s054 = CalculateTemplateVectors(s054_Samples, N);
 
-                    for (int i = 0; i < mu_s054.Length; i++)
-                    {
-                        Console.WriteLine(mu_s054[i]);
-                    }
+                    s054_Test = ExtractTestingSamples(s054, N);
 
-                    s054_Test = ExtractTestingSamples(s054, N); 
+                    double[] s054_Genuine = CalculateGenuineScores(s054_Test, mu_s054, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1827,12 +1643,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s055 = CalculateTemplateVectors(s055_Samples, N);
 
-                    for (int i = 0; i < mu_s055.Length; i++)
-                    {
-                        Console.WriteLine(mu_s055[i]);
-                    }
+                    s055_Test = ExtractTestingSamples(s055, N);
 
-                    s055_Test = ExtractTestingSamples(s055, N); 
+                    double[] s055_Genuine = CalculateGenuineScores(s055_Test, mu_s055, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1859,12 +1672,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s056 = CalculateTemplateVectors(s056_Samples, N);
 
-                    for (int i = 0; i < mu_s056.Length; i++)
-                    {
-                        Console.WriteLine(mu_s056[i]);
-                    }
+                    s056_Test = ExtractTestingSamples(s056, N);
 
-                    s056_Test = ExtractTestingSamples(s056, N); 
+                    double[] s056_Genuine = CalculateGenuineScores(s056_Test, mu_s056, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1891,12 +1701,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     mu_s057 = CalculateTemplateVectors(s057_Samples, N);
 
-                    for (int i = 0; i < mu_s057.Length; i++)
-                    {
-                        Console.WriteLine(mu_s057[i]);
-                    }
+                    s057_Test = ExtractTestingSamples(s057, N);
 
-                    s057_Test = ExtractTestingSamples(s057, N); 
+                    double[] s057_Genuine = CalculateGenuineScores(s057_Test, mu_s057, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
