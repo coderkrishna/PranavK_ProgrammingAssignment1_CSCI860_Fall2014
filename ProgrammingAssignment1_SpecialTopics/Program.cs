@@ -241,8 +241,6 @@ namespace ProgrammingAssignment1_SpecialTopics
         static double[] s057_Genuine;
         #endregion
 
-
-
         static void Main()
         {
             #region Header
@@ -288,6 +286,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     // Making the method call to generate the various genuine scores for user 1
                     s002_Genuine = CalculateGenuineScores(s002_Test, mu_s002, N);
+
+                    // Pulling all the test vectors from the other users and calculating the zero-effort impostor scores
+                    CalculateImpostorScores(mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N); 
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -1771,6 +1772,23 @@ namespace ProgrammingAssignment1_SpecialTopics
         }
 
         #region This is the in class/ in code API (almost)
+        private static void CalculateImpostorScores(double[] mu_s002, double[,] s003_Test, double[,] s004_Test, double[,] s005_Test, double[,] s007_Test, double[,] s008_Test, double[,] s010_Test, double[,] s011_Test, double[,] s012_Test, double[,] s013_Test, double[,] s015_Test, double[,] s017_Test, double[,] s018_Test, double[,] s019_Test, double[,] s020_Test, double[,] s021_Test, double[,] s022_Test, double[,] s024_Test, double[,] s025_Test, double[,] s026_Test, double[,] s027_Test, double[,] s028_Test, double[,] s029_Test, double[,] s030_Test, double[,] s031_Test, double[,] s032_Test, double[,] s033_Test, double[,] s034_Test, double[,] s035_Test, double[,] s036_Test, double[,] s037_Test, double[,] s038_Test, double[,] s039_Test, double[,] s040_Test, double[,] s041_Test, double[,] s042_Test, double[,] s043_Test, double[,] s044_Test, double[,] s046_Test, double[,] s047_Test, double[,] s048_Test, double[,] s049_Test, double[,] s050_Test, double[,] s051_Test, double[,] s052_Test, double[,] s053_Test, double[,] s054_Test, double[,] s055_Test, double[,] s056_Test, double[,] s057_Test, int N)
+        {
+            #region Declaring 50 1D impostor arrays here
+            
+            #endregion
+
+            int M = 400 - N; 
+            Console.Write("The number of samples are " + N + " and the number of samples to calculate the impostor scores are " + M);
+
+            for (int i = 0; i < M; i++)
+            {
+                for (int j = 0; j < s003_Test.GetLength(1); j++)
+                {
+
+                }
+            }
+        }
         #region This method will calculate the genuine scores
         /// <summary>
         /// Here, this method will be calculating the genuine scores
