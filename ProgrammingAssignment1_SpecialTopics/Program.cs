@@ -130,6 +130,26 @@ namespace ProgrammingAssignment1_SpecialTopics
         static double[] mu_s057; // User 51
         #endregion
 
+        #region Static 2D double arrays that will be used for genuine and impostor score calculations
+        static double[,] s002_Test; // User 1
+        static double[,] s003_Test; // User 2
+        static double[,] s004_Test; // User 3
+        static double[,] s005_Test; // User 4
+        static double[,] s007_Test; // User 5
+        static double[,] s008_Test; // User 6
+        static double[,] s010_Test; // User 7
+        static double[,] s011_Test; // User 8
+        static double[,] s012_Test; // User 9
+        static double[,] s013_Test; // User 10
+        static double[,] s015_Test; // User 11
+        static double[,] s016_Test; // User 12
+        static double[,] s017_Test; // User 13
+        static double[,] s018_Test; // User 14
+        static double[,] s019_Test; // User 15
+        static double[,] s020_Test; // User 16
+        static double[,] s021_Test; // User 17
+        #endregion
+
         static void Main()
         {
             #region Header
@@ -169,7 +189,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     Console.WriteLine("==================================Training Vector========================================"); 
 
-                    // Printing out the training vector
+                    // Printing out the first N samples which will be used for the template vectors
                     for (int m = 0; m < s002_Samples.GetLength(0); m++)
                     {
                         for  (int n = 0; n < s002_Samples.GetLength(1); n++)
@@ -193,8 +213,8 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     Console.ReadLine(); 
 
-                    // This is the trouble spot for me - but almost there!!
-                    double[,] s002_Test = ExtractTestSamples(s002, N);
+                    // This is the trouble spot for me - but now done!
+                    s002_Test = ExtractTestingSamples(s002, N);
 
                     // Printing out the test vectors
                     for (int i = 0; i < s002_Test.GetLength(0); i++)
@@ -239,20 +259,14 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Calling to the method which will calculate the Template Vectors. 
                     mu_s003 = CalculateTemplateVectors(s003_Samples, N); 
 
-                    // Printing out the average vector given the value of N
-                    for (int i = 0; i < mu_s003.Length; i++)
-                    {
-                        Console.WriteLine(mu_s003[i]); 
-                    }
-
                     Console.ReadLine(); // Pausing the output here
 
-                    double[,] s003_Test = ExtractTestSamples(s003, N); 
+                    s003_Test = ExtractTestingSamples(s003, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN !="300")
                 {
-                    Console.Write("The sample size that you requested is too large.");
+                    Console.Write("The sample size that you requested is too large, the program will now quit");
                     Console.ReadKey(); 
                 }
             }
@@ -280,11 +294,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Method call to calculate the template vectors
                     mu_s004 = CalculateTemplateVectors(s004_Samples, N); 
 
-                    // Printing out the template vector
-                    for (int i = 0; i < mu_s004.Length; i++)
-                    {
-                        Console.WriteLine(mu_s004[i]); 
-                    }
+                    Console.ReadLine(); // Serving as a pausing mechanism
+
+                    double[,] s004_Test = ExtractTestingSamples(s004, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -319,6 +331,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s005[i]); 
                     }
+
+                    double[,] s005_Test = ExtractTestingSamples(s005, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -351,6 +365,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s007[i]); 
                     }
+
+                    Console.ReadLine(); 
+
+
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -1753,7 +1771,7 @@ namespace ProgrammingAssignment1_SpecialTopics
         /// <param name="s002">The input array</param>
         /// <param name="M">The value which is calculated from 400 - N</param>
         /// <returns>The 2D array known as testSamples</returns>
-        static double[,] ExtractTestSamples(double[,] s002, int N)
+        static double[,] ExtractTestingSamples(double[,] s002, int N)
         {
             if (N == 100)
             {
