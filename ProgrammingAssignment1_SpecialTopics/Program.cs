@@ -152,6 +152,36 @@ namespace ProgrammingAssignment1_SpecialTopics
         static double[,] s024_Test; // User 19
         static double[,] s025_Test; // User 20
         static double[,] s026_Test; // User 21
+        static double[,] s027_Test; // User 22
+        static double[,] s028_Test; // User 23
+        static double[,] s029_Test; // User 24
+        static double[,] s030_Test; // User 25
+        static double[,] s031_Test; // User 26
+        static double[,] s032_Test; // User 27
+        static double[,] s033_Test; // User 28
+        static double[,] s034_Test; // User 29
+        static double[,] s035_Test; // User 30
+        static double[,] s036_Test; // User 31
+        static double[,] s037_Test; // User 32
+        static double[,] s038_Test; // User 33
+        static double[,] s039_Test; // User 34
+        static double[,] s040_Test; // User 35
+        static double[,] s041_Test; // User 36
+        static double[,] s042_Test; // User 37
+        static double[,] s043_Test; // User 38
+        static double[,] s044_Test; // User 39
+        static double[,] s046_Test; // User 40
+        static double[,] s047_Test; // User 41
+        static double[,] s048_Test; // User 42
+        static double[,] s049_Test; // User 43
+        static double[,] s050_Test; // User 44
+        static double[,] s051_Test; // User 45
+        static double[,] s052_Test; // User 46
+        static double[,] s053_Test; // User 47
+        static double[,] s054_Test; // User 48
+        static double[,] s055_Test; // User 49
+        static double[,] s056_Test; // User 50
+        static double[,] s057_Test; // User 51
         #endregion
 
         static void Main()
@@ -185,26 +215,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     // N represents the number of training samples
                     int N = int.Parse(inputN);
-                    int M = 400 - N; 
-
+                    
                     // Creating a new array called s002_Samples which denotes the double 2D array that will be used for the calculations of genuine and impostor scores
                     // which becomes populated with a method call as well. 
                     double[,] s002_Samples = ExtractTrainingSamples(s002, N);
-
-                    Console.WriteLine("==================================Training Vector========================================"); 
-
-                    // Printing out the first N samples which will be used for the template vectors
-                    for (int m = 0; m < s002_Samples.GetLength(0); m++)
-                    {
-                        for  (int n = 0; n < s002_Samples.GetLength(1); n++)
-                        {
-                            Console.Write(string.Format("{0} ", s002_Samples[m, n]));
-                        }
-                        Console.Write(Environment.NewLine); 
-                    }
-
-                    // Useing the following line of code to be able to pause the output in order to verify all the steps that are going on. 
-                    Console.ReadLine(); 
 
                     // Calculates the templates now and stores it in an array which can be used later on. 
                     mu_s002 = CalculateTemplateVectors(s002_Samples, N); 
@@ -215,22 +229,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                         Console.WriteLine(mu_s002[i]); 
                     }
 
-                    Console.ReadLine(); 
-
-                    // This is the trouble spot for me - but now done!
+                    // Here is the method call to extract the 400 - N test samples that will be used to calculate both the
+                    // genuine and impostor scores
                     s002_Test = ExtractTestingSamples(s002, N);
-
-                    // Printing out the test vectors
-                    for (int i = 0; i < s002_Test.GetLength(0); i++)
-                    {
-                        for (int j = 0; j < s002_Test.GetLength(1); j++)
-                        {
-                            Console.Write(string.Format("{0} ", s002_Test[i, j]));
-                        }
-                        Console.Write(Environment.NewLine);
-                    }
-
-                    Console.ReadLine(); 
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -262,8 +263,6 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     // Calling to the method which will calculate the Template Vectors. 
                     mu_s003 = CalculateTemplateVectors(s003_Samples, N); 
-
-                    Console.ReadLine(); // Pausing the output here
 
                     s003_Test = ExtractTestingSamples(s003, N);
                 }
@@ -298,9 +297,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Method call to calculate the template vectors
                     mu_s004 = CalculateTemplateVectors(s004_Samples, N); 
 
-                    Console.ReadLine(); // Serving as a pausing mechanism
-
-                    double[,] s004_Test = ExtractTestingSamples(s004, N); 
+                    s004_Test = ExtractTestingSamples(s004, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -336,7 +333,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                         Console.WriteLine(mu_s005[i]); 
                     }
 
-                    double[,] s005_Test = ExtractTestingSamples(s005, N); 
+                    s005_Test = ExtractTestingSamples(s005, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -370,9 +367,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                         Console.WriteLine(mu_s007[i]); 
                     }
 
-                    Console.ReadLine(); 
-
-
+                    s007_Test = ExtractTestingSamples(s007, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -404,6 +399,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s008[i]); 
                     }
+
+                    s008_Test = ExtractTestingSamples(s008, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -434,6 +431,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s010[i]); 
                     }
+
+                    s010_Test = ExtractTestingSamples(s010, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -464,6 +463,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s011[i]); 
                     }
+
+                    s011_Test = ExtractTestingSamples(s011, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -494,6 +495,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s012[i]); 
                     }
+
+                    s012_Test = ExtractTestingSamples(s012, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -524,6 +527,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s013[i]); 
                     }
+
+                    Console.ReadLine();
+
+                    s013_Test = ExtractTestingSamples(s013, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -554,6 +561,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s015[i]); 
                     }
+
+                    Console.ReadLine();
+
+                    s015_Test = ExtractTestingSamples(s015, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -584,6 +595,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s016[i]); 
                     }
+
+                    Console.ReadLine();
+
+                    s016_Test = ExtractTestingSamples(s016, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -614,6 +629,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s017[i]); 
                     }
+
+                    Console.ReadLine();
+
+                    s017_Test = ExtractTestingSamples(s017, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -644,6 +663,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s018[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s018_Test = ExtractTestingSamples(s018, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -674,6 +697,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s019[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s019_Test = ExtractTestingSamples(s019, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -704,6 +731,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s020[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s020_Test = ExtractTestingSamples(s020, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -734,6 +765,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s021[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s021_Test = ExtractTestingSamples(s021, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -764,6 +799,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s022[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s022_Test = ExtractTestingSamples(s022, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -794,6 +833,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s024[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s024_Test = ExtractTestingSamples(s024, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -824,6 +867,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s025[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s025_Test = ExtractTestingSamples(s025, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -854,6 +901,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s026[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s026_Test = ExtractTestingSamples(s026, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -884,6 +935,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s027[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s027_Test = ExtractTestingSamples(s027, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -914,6 +969,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s028[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s028_Test = ExtractTestingSamples(s028, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -944,6 +1003,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s029[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s029_Test = ExtractTestingSamples(s029, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -974,6 +1037,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s030[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s030_Test = ExtractTestingSamples(s030, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1004,6 +1071,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s031[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s031_Test = ExtractTestingSamples(s031, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1034,6 +1105,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s032[i]);
                     }
+
+                    Console.ReadLine();
+
+                    s032_Test = ExtractTestingSamples(s032, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1064,6 +1139,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s033[i]);
                     }
+
+                    s033_Test = ExtractTestingSamples(s033, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1094,6 +1171,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s034[i]);
                     }
+
+                    s034_Test = ExtractTestingSamples(s034, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1124,6 +1203,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s035[i]);
                     }
+
+                    s035_Test = ExtractTestingSamples(s035, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1154,6 +1235,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s036[i]);
                     }
+
+                    s036_Test = ExtractTestingSamples(s036, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1184,6 +1267,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s037[i]);
                     }
+
+                    s037_Test = ExtractTestingSamples(s037, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1214,6 +1299,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s038[i]);
                     }
+
+                    s038_Test = ExtractTestingSamples(s038, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1244,6 +1331,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s039[i]);
                     }
+
+                    s039_Test = ExtractTestingSamples(s039, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1274,6 +1363,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s040[i]);
                     }
+
+                    s040_Test = ExtractTestingSamples(s040, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1304,6 +1395,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s041[i]);
                     }
+
+                    s041_Test = ExtractTestingSamples(s041, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1334,6 +1427,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s042[i]);
                     }
+
+                    s042_Test = ExtractTestingSamples(s042, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1364,6 +1459,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s043[i]);
                     }
+
+                    s043_Test = ExtractTestingSamples(s043, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1394,6 +1491,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s044[i]);
                     }
+
+                    s044_Test = ExtractTestingSamples(s044, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1424,6 +1523,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s046[i]);
                     }
+
+                    s046_Test = ExtractTestingSamples(s046, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1454,6 +1555,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s047[i]);
                     }
+
+                    s047_Test = ExtractTestingSamples(s047, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1484,6 +1587,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s048[i]);
                     }
+
+                    s048_Test = ExtractTestingSamples(s048, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1514,6 +1619,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s049[i]);
                     }
+
+                    s049_Test = ExtractTestingSamples(s049, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1544,6 +1651,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s050[i]);
                     }
+
+                    s050_Test = ExtractTestingSamples(s050, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1574,6 +1683,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s051[i]);
                     }
+
+                    s051_Test = ExtractTestingSamples(s051, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1604,6 +1715,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s049[i]);
                     }
+
+                    s052_Test = ExtractTestingSamples(s052, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1634,6 +1747,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s047[i]);
                     }
+
+                    s053_Test = ExtractTestingSamples(s053, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1664,6 +1779,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s054[i]);
                     }
+
+                    s054_Test = ExtractTestingSamples(s054, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1694,6 +1811,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s055[i]);
                     }
+
+                    s055_Test = ExtractTestingSamples(s055, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1724,6 +1843,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s056[i]);
                     }
+
+                    s056_Test = ExtractTestingSamples(s056, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1754,6 +1875,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     {
                         Console.WriteLine(mu_s057[i]);
                     }
+
+                    s057_Test = ExtractTestingSamples(s057, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
