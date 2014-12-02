@@ -19,7 +19,7 @@ namespace ProgrammingAssignment1_SpecialTopics
     /// * Finish the genuine score calculations
     /// * Code and execute all the impostor scores
     /// * Find a way that I can begin to report the FAR and FRR
-    /// * Compile the report
+    /// * Compile the report - Started
     /// </summary>
     class Program
     {
@@ -230,22 +230,20 @@ namespace ProgrammingAssignment1_SpecialTopics
                         Console.WriteLine(mu_s002[i]); 
                     }
 
+                    Console.Write(Environment.NewLine); 
+
                     // Here is the method call to extract the 400 - N test samples that will be used to calculate both the
                     // genuine and impostor scores
                     s002_Test = ExtractTestingSamples(s002, N);
 
-                    Console.ReadLine(); // Pause this right here
+                    double[] s002_Genuine = CalculateGenuineScores(s002_Test, mu_s002, N);
 
-                    double[,] s002_Genuine = CalculateGenuineScores(s002_Test, mu_s002, N);
-
-                    for (int i = 0; i < s002_Genuine.GetLength(0); i++)
+                    for (int i = 0; i < s002_Genuine.Length; i++)
                     {
-                        for (int j = 0; j < s002_Genuine.GetLength(1); j++)
-                        {
-                            Console.Write(string.Format("{0} ", s002_Genuine[i, j]));
-                        }
-                        Console.Write(Environment.NewLine); 
+                        Console.WriteLine(s002_Genuine[i]); 
                     }
+
+                    Console.ReadLine(); // Pausing 
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -286,7 +284,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s003_Test = ExtractTestingSamples(s003, N);
 
-                    double[,] genuine_s003 = CalculateGenuineScores(s003_Test, mu_s003, N);
+                    double[] genuine_s003 = CalculateGenuineScores(s003_Test, mu_s003, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN !="300")
@@ -1912,26 +1910,33 @@ namespace ProgrammingAssignment1_SpecialTopics
             Console.ReadKey(); // Default program termination
         }
 
+        #region This method will calculate the genuine scores
         /// <summary>
         /// Here, this method will be calculating the genuine scores
         /// </summary>
         /// <param name="s002_Test">The test vector that contains 400 - N samples</param>
         /// <param name="mu_s002">This is the mean or template vector of the first N samples</param>
         /// <param name="N">Static (fixed) integer value which contains the first N samples upon which analysis will be conducted</param>
-        static double[,] CalculateGenuineScores(double[,] s002_Test, double[] mu_s002, int N)
+        /// <note>Please note that I am making the assumption that for the Manhattan Verifier is being used with the value of n as the number of samples (N)</note>
+        static double[] CalculateGenuineScores(double[,] s002_Test, double[] mu_s002, int N)
         {
-            double[,] difference = new double[20, 20];
+            // Initialize the 1D double array
+            double[] difference = new double[21];
 
-            for (int i = 0; i < 19; i++)
+            // Iterating over the nested for loop and making column wise calculations
+            for (int i = 0; i < s002_Test.GetLength(0); i++)
             {
-                for (int j = 0; j < 19; j++)
+                for (int j = 0; j < s002_Test.GetLength(1) ; j++)
                 {
-                    difference[i,j] += Math.Abs(s002_Test[i, j] - mu_s002[i]); 
+                    // This is the first part to the Manhattan Distance verifier
+                    difference[j] += Math.Abs(s002_Test[i, j] - mu_s002[j]); 
                 }
             }
 
+            // Returns the difference
             return difference; 
         }
+        #endregion
 
         #region The Test Sample extraction, got that done
         /// <summary>
