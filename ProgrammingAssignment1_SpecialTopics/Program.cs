@@ -148,6 +148,10 @@ namespace ProgrammingAssignment1_SpecialTopics
         static double[,] s019_Test; // User 15
         static double[,] s020_Test; // User 16
         static double[,] s021_Test; // User 17
+        static double[,] s022_Test; // User 18
+        static double[,] s024_Test; // User 19
+        static double[,] s025_Test; // User 20
+        static double[,] s026_Test; // User 21
         #endregion
 
         static void Main()
