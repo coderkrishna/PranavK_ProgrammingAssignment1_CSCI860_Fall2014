@@ -16,10 +16,12 @@ namespace ProgrammingAssignment1_SpecialTopics
     ///  
     /// 2nd December 2014 - Deadline/Submission date
     /// Here are the following that I tasks that I need to get done today:
-    /// * Finish the genuine score calculations
     /// * Code and execute all the impostor scores
     /// * Find a way that I can begin to report the FAR and FRR
     /// * Compile the report - Started
+    /// 
+    /// Accomplishments: 
+    /// * Genuine score - Coded and function calls made
     /// </summary>
     class Program
     {
@@ -77,7 +79,7 @@ namespace ProgrammingAssignment1_SpecialTopics
         static double[,] s057; // User 51 - s057.csv
         #endregion
 
-        #region Static double arrays that represent the mean vectors of each user which will be used for genuine and impostor calculations
+        #region Static double arrays that represent the mean vectors of each user which will be used for genuine and zero effort impostor calculations
         static double[] mu_s002; // User 1
         static double[] mu_s003; // User 2
         static double[] mu_s004; // User 3
@@ -185,6 +187,62 @@ namespace ProgrammingAssignment1_SpecialTopics
         static double[,] s057_Test; // User 51
         #endregion
 
+        #region Static double arrays that represent the genuine vectors
+        static double[] s002_Genuine;
+        static double[] s003_Genuine;
+        static double[] s004_Genuine;
+        static double[] s005_Genuine;
+        static double[] s007_Genuine;
+        static double[] s008_Genuine;
+        static double[] s010_Genuine;
+        static double[] s011_Genuine;
+        static double[] s012_Genuine;
+        static double[] s013_Genuine;
+        static double[] s015_Genuine;
+        static double[] s016_Genuine;
+        static double[] s017_Genuine;
+        static double[] s018_Genuine;
+        static double[] s019_Genuine;
+        static double[] s020_Genuine;
+        static double[] s021_Genuine;
+        static double[] s022_Genuine;
+        static double[] s024_Genuine;
+        static double[] s025_Genuine;
+        static double[] s026_Genuine;
+        static double[] s027_Genuine;
+        static double[] s028_Genuine;
+        static double[] s029_Genuine;
+        static double[] s030_Genuine;
+        static double[] s031_Genuine;
+        static double[] s032_Genuine;
+        static double[] s033_Genuine;
+        static double[] s034_Genuine;
+        static double[] s035_Genuine;
+        static double[] s036_Genuine;
+        static double[] s037_Genuine;
+        static double[] s038_Genuine;
+        static double[] s039_Genuine;
+        static double[] s040_Genuine;
+        static double[] s041_Genuine;
+        static double[] s042_Genuine;
+        static double[] s043_Genuine;
+        static double[] s044_Genuine;
+        static double[] s046_Genuine;
+        static double[] s047_Genuine;
+        static double[] s048_Genuine;
+        static double[] s049_Genuine;
+        static double[] s050_Genuine;
+        static double[] s051_Genuine;
+        static double[] s052_Genuine;
+        static double[] s053_Genuine;
+        static double[] s054_Genuine;
+        static double[] s055_Genuine;
+        static double[] s056_Genuine;
+        static double[] s057_Genuine;
+        #endregion
+
+
+
         static void Main()
         {
             #region Header
@@ -228,7 +286,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // genuine and impostor scores
                     s002_Test = ExtractTestingSamples(s002, N);
 
-                    double[] s002_Genuine = CalculateGenuineScores(s002_Test, mu_s002, N);
+                    // Making the method call to generate the various genuine scores for user 1
+                    s002_Genuine = CalculateGenuineScores(s002_Test, mu_s002, N);
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -261,15 +320,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Calling to the method which will calculate the Template Vectors. 
                     mu_s003 = CalculateTemplateVectors(s003_Samples, N); 
 
-                    // Printing out the mean vector
-                    for (int i = 0; i < mu_s003.Length; i++)
-                    {
-                        Console.WriteLine(mu_s003[i]); 
-                    }
-
                     s003_Test = ExtractTestingSamples(s003, N);
 
-                    double[] s003_Genuine = CalculateGenuineScores(s003_Test, mu_s003, N);
+                    s003_Genuine = CalculateGenuineScores(s003_Test, mu_s003, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN !="300")
@@ -304,7 +357,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s004_Test = ExtractTestingSamples(s004, N);
 
-                    double[] s004_Genuine = CalculateGenuineScores(s004_Test, mu_s004, N); 
+                    s004_Genuine = CalculateGenuineScores(s004_Test, mu_s004, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -337,7 +390,7 @@ namespace ProgrammingAssignment1_SpecialTopics
  
                     s005_Test = ExtractTestingSamples(s005, N);
 
-                    double[] s005_Genuine = CalculateGenuineScores(s005_Test, mu_s005, N);
+                    s005_Genuine = CalculateGenuineScores(s005_Test, mu_s005, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -368,7 +421,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s007_Test = ExtractTestingSamples(s007, N);
 
-                    double[] s007_Genuine = CalculateGenuineScores(s007_Test, mu_s007, N); 
+                    s007_Genuine = CalculateGenuineScores(s007_Test, mu_s007, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -398,7 +451,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s008_Test = ExtractTestingSamples(s008, N);
 
-                    double[] s008_Genuine = CalculateGenuineScores(s008_Test, mu_s008, N); 
+                    s008_Genuine = CalculateGenuineScores(s008_Test, mu_s008, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -427,7 +480,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s010_Test = ExtractTestingSamples(s010, N);
 
-                    double[] s010_Genuine = CalculateGenuineScores(s010_Test, mu_s010, N); 
+                    s010_Genuine = CalculateGenuineScores(s010_Test, mu_s010, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -456,7 +509,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s011_Test = ExtractTestingSamples(s011, N);
 
-                    double[] s011_Genuine = CalculateGenuineScores(s011_Test, mu_s011, N); 
+                    s011_Genuine = CalculateGenuineScores(s011_Test, mu_s011, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -485,7 +538,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s012_Test = ExtractTestingSamples(s012, N);
 
-                    double[] s012_Genuine = CalculateGenuineScores(s012_Test, mu_s012, N); 
+                    s012_Genuine = CalculateGenuineScores(s012_Test, mu_s012, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -514,7 +567,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s013_Test = ExtractTestingSamples(s013, N);
 
-                    double[] s013_Genuine = CalculateGenuineScores(s013_Test, mu_s013, N);
+                    s013_Genuine = CalculateGenuineScores(s013_Test, mu_s013, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -543,7 +596,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s015_Test = ExtractTestingSamples(s015, N);
 
-                    double[] s015_Genuine = CalculateGenuineScores(s015_Test, mu_s015, N);
+                    s015_Genuine = CalculateGenuineScores(s015_Test, mu_s015, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -572,7 +625,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s016_Test = ExtractTestingSamples(s016, N);
 
-                    double[] s016_Genuine = CalculateGenuineScores(s016_Test, mu_s016, N);
+                    s016_Genuine = CalculateGenuineScores(s016_Test, mu_s016, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -601,7 +654,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s017_Test = ExtractTestingSamples(s017, N);
 
-                    double[] s017_Genuine = CalculateGenuineScores(s017_Test, mu_s017, N);
+                    s017_Genuine = CalculateGenuineScores(s017_Test, mu_s017, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -630,7 +683,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s018_Test = ExtractTestingSamples(s018, N);
 
-                    double[] s018_Genuine = CalculateGenuineScores(s018_Test, mu_s018, N); 
+                    s018_Genuine = CalculateGenuineScores(s018_Test, mu_s018, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -659,7 +712,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s019_Test = ExtractTestingSamples(s019, N);
 
-                    double[] s019_Genuine = CalculateGenuineScores(s019_Test, mu_s019, N); 
+                    s019_Genuine = CalculateGenuineScores(s019_Test, mu_s019, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -688,7 +741,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s020_Test = ExtractTestingSamples(s020, N);
 
-                    double[] s020_Genuine = CalculateGenuineScores(s020_Test, mu_s020, N); 
+                    s020_Genuine = CalculateGenuineScores(s020_Test, mu_s020, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -717,7 +770,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s021_Test = ExtractTestingSamples(s021, N);
 
-                    double[] s021_Genuine = CalculateGenuineScores(s021_Test, mu_s021, N); 
+                    s021_Genuine = CalculateGenuineScores(s021_Test, mu_s021, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -746,7 +799,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s022_Test = ExtractTestingSamples(s022, N);
 
-                    double[] s022_Genuine = CalculateGenuineScores(s022_Test, mu_s022, N); 
+                    s022_Genuine = CalculateGenuineScores(s022_Test, mu_s022, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -775,7 +828,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s024_Test = ExtractTestingSamples(s024, N);
 
-                    double[] s024_Genuine = CalculateGenuineScores(s024_Test, mu_s024, N); 
+                    s024_Genuine = CalculateGenuineScores(s024_Test, mu_s024, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -804,7 +857,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s025_Test = ExtractTestingSamples(s025, N);
 
-                    double[] s025_Genuine = CalculateGenuineScores(s025_Test, mu_s025, N); 
+                    s025_Genuine = CalculateGenuineScores(s025_Test, mu_s025, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -833,7 +886,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s026_Test = ExtractTestingSamples(s026, N);
 
-                    double[] s026_Genuine = CalculateGenuineScores(s026_Test, mu_s026, N); 
+                    s026_Genuine = CalculateGenuineScores(s026_Test, mu_s026, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -862,7 +915,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s027_Test = ExtractTestingSamples(s027, N);
 
-                    double[] s027_Genuine = CalculateGenuineScores(s027_Test, mu_s027, N); 
+                    s027_Genuine = CalculateGenuineScores(s027_Test, mu_s027, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -891,7 +944,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s028_Test = ExtractTestingSamples(s028, N);
 
-                    double[] s028_Genuine = CalculateGenuineScores(s028_Test, mu_s028, N); 
+                    s028_Genuine = CalculateGenuineScores(s028_Test, mu_s028, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -920,7 +973,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s029_Test = ExtractTestingSamples(s029, N);
 
-                    double[] s029_Genuine = CalculateGenuineScores(s029_Test, mu_s029, N);
+                    s029_Genuine = CalculateGenuineScores(s029_Test, mu_s029, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -949,7 +1002,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s030_Test = ExtractTestingSamples(s030, N);
 
-                    double[] s030_Genuine = CalculateGenuineScores(s030_Test, mu_s030, N); 
+                    s030_Genuine = CalculateGenuineScores(s030_Test, mu_s030, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -978,7 +1031,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s031_Test = ExtractTestingSamples(s031, N);
 
-                    double[] s031_Genuine = CalculateGenuineScores(s031_Test, mu_s031, N); 
+                    s031_Genuine = CalculateGenuineScores(s031_Test, mu_s031, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1007,7 +1060,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s032_Test = ExtractTestingSamples(s032, N);
 
-                    double[] s032_Genuine = CalculateGenuineScores(s032_Test, mu_s032, N); 
+                    s032_Genuine = CalculateGenuineScores(s032_Test, mu_s032, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1036,7 +1089,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s033_Test = ExtractTestingSamples(s033, N);
 
-                    double[] s033_Genuine = CalculateGenuineScores(s033_Test, mu_s033, N); 
+                    s033_Genuine = CalculateGenuineScores(s033_Test, mu_s033, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1065,7 +1118,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s034_Test = ExtractTestingSamples(s034, N);
 
-                    double[] s034_Genuine = CalculateGenuineScores(s034_Test, mu_s034, N); 
+                    s034_Genuine = CalculateGenuineScores(s034_Test, mu_s034, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1094,7 +1147,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s035_Test = ExtractTestingSamples(s035, N);
 
-                    double[] s035_Genuine = CalculateGenuineScores(s035_Test, mu_s035, N); 
+                    s035_Genuine = CalculateGenuineScores(s035_Test, mu_s035, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1123,7 +1176,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s036_Test = ExtractTestingSamples(s036, N);
 
-                    double[] s036_Genuine = CalculateGenuineScores(s036_Test, mu_s036, N); 
+                    s036_Genuine = CalculateGenuineScores(s036_Test, mu_s036, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1152,7 +1205,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s037_Test = ExtractTestingSamples(s037, N);
 
-                    double[] s037_Genuine = CalculateGenuineScores(s037_Test, mu_s037, N);
+                    s037_Genuine = CalculateGenuineScores(s037_Test, mu_s037, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1181,7 +1234,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s038_Test = ExtractTestingSamples(s038, N);
 
-                    double[] s038_Genuine = CalculateGenuineScores(s039_Test, mu_s038, N); 
+                    s038_Genuine = CalculateGenuineScores(s039_Test, mu_s038, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1210,7 +1263,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s039_Test = ExtractTestingSamples(s039, N);
 
-                    double[] s039_Genuine = CalculateGenuineScores(s039_Test, mu_s039, N); 
+                    s039_Genuine = CalculateGenuineScores(s039_Test, mu_s039, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1239,7 +1292,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s040_Test = ExtractTestingSamples(s040, N);
 
-                    double[] s040_Genuine = CalculateGenuineScores(s040_Test, mu_s040, N);
+                    s040_Genuine = CalculateGenuineScores(s040_Test, mu_s040, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1268,7 +1321,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s041_Test = ExtractTestingSamples(s041, N);
 
-                    double[] s041_Genuine = CalculateGenuineScores(s041_Test, mu_s041, N); 
+                    s041_Genuine = CalculateGenuineScores(s041_Test, mu_s041, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1297,7 +1350,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s042_Test = ExtractTestingSamples(s042, N);
 
-                    double[] s042_Genuine = CalculateGenuineScores(s042_Test, mu_s042, N); 
+                    s042_Genuine = CalculateGenuineScores(s042_Test, mu_s042, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1326,7 +1379,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s043_Test = ExtractTestingSamples(s043, N);
 
-                    double[] s043_Genuine = CalculateGenuineScores(s043_Test, mu_s043, N); 
+                    s043_Genuine = CalculateGenuineScores(s043_Test, mu_s043, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1355,7 +1408,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s044_Test = ExtractTestingSamples(s044, N);
 
-                    double[] s044_Genuine = CalculateGenuineScores(s004_Test, mu_s044, N); 
+                    s044_Genuine = CalculateGenuineScores(s004_Test, mu_s044, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1384,7 +1437,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s046_Test = ExtractTestingSamples(s046, N);
 
-                    double[] s046_Genuine = CalculateGenuineScores(s046_Test, mu_s046, N); 
+                    s046_Genuine = CalculateGenuineScores(s046_Test, mu_s046, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1413,7 +1466,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s047_Test = ExtractTestingSamples(s047, N);
 
-                    double[] s047_Genuine = CalculateGenuineScores(s047_Test, mu_s047, N);
+                    s047_Genuine = CalculateGenuineScores(s047_Test, mu_s047, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1442,7 +1495,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s048_Test = ExtractTestingSamples(s048, N);
 
-                    double[] s048_Genuine = CalculateGenuineScores(s048_Test, mu_s048, N); 
+                    s048_Genuine = CalculateGenuineScores(s048_Test, mu_s048, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1471,7 +1524,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s049_Test = ExtractTestingSamples(s049, N);
 
-                    double[] s049_Genuine = CalculateGenuineScores(s049_Test, mu_s049, N);
+                    s049_Genuine = CalculateGenuineScores(s049_Test, mu_s049, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1500,7 +1553,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s050_Test = ExtractTestingSamples(s050, N);
 
-                    double[] s050_Genuine = CalculateGenuineScores(s050_Test, mu_s050, N); 
+                    s050_Genuine = CalculateGenuineScores(s050_Test, mu_s050, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1529,7 +1582,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s051_Test = ExtractTestingSamples(s051, N);
 
-                    double[] s051_Genuine = CalculateGenuineScores(s051_Test, mu_s051, N); 
+                    s051_Genuine = CalculateGenuineScores(s051_Test, mu_s051, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1558,7 +1611,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s052_Test = ExtractTestingSamples(s052, N);
 
-                    double[] s052_Genuine = CalculateGenuineScores(s052_Test, mu_s052, N); 
+                    s052_Genuine = CalculateGenuineScores(s052_Test, mu_s052, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1587,7 +1640,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s053_Test = ExtractTestingSamples(s053, N);
 
-                    double[] s053_Genuine = CalculateGenuineScores(s053_Test, mu_s053, N);
+                    s053_Genuine = CalculateGenuineScores(s053_Test, mu_s053, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1616,7 +1669,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s054_Test = ExtractTestingSamples(s054, N);
 
-                    double[] s054_Genuine = CalculateGenuineScores(s054_Test, mu_s054, N); 
+                    s054_Genuine = CalculateGenuineScores(s054_Test, mu_s054, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1645,7 +1698,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s055_Test = ExtractTestingSamples(s055, N);
 
-                    double[] s055_Genuine = CalculateGenuineScores(s055_Test, mu_s055, N); 
+                    s055_Genuine = CalculateGenuineScores(s055_Test, mu_s055, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1674,7 +1727,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s056_Test = ExtractTestingSamples(s056, N);
 
-                    double[] s056_Genuine = CalculateGenuineScores(s056_Test, mu_s056, N); 
+                    s056_Genuine = CalculateGenuineScores(s056_Test, mu_s056, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1703,7 +1756,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s057_Test = ExtractTestingSamples(s057, N);
 
-                    double[] s057_Genuine = CalculateGenuineScores(s057_Test, mu_s057, N); 
+                    s057_Genuine = CalculateGenuineScores(s057_Test, mu_s057, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1717,6 +1770,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             Console.ReadKey(); // Default program termination
         }
 
+        #region This is the in class/ in code API (almost)
         #region This method will calculate the genuine scores
         /// <summary>
         /// Here, this method will be calculating the genuine scores
@@ -1736,7 +1790,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 for (int j = 0; j < s002_Test.GetLength(1) ; j++)
                 {
                     // This is the first part to the Manhattan Distance verifier
-                    difference[j] += Math.Abs(s002_Test[i, j] - mu_s002[j]); 
+                    difference[j] += (Math.Abs(s002_Test[i, j] - mu_s002[j]) / N); 
                 }
             }
 
@@ -1907,6 +1961,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             // 2D double that is automatically named due to polymorphism. 
             return values;
         }
+        #endregion
         #endregion
     }
 }
