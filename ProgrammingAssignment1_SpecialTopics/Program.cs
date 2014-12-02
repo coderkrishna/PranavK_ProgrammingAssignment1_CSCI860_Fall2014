@@ -264,7 +264,15 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Calling to the method which will calculate the Template Vectors. 
                     mu_s003 = CalculateTemplateVectors(s003_Samples, N); 
 
+                    // Printing out the mean vector
+                    for (int i = 0; i < mu_s003.Length; i++)
+                    {
+                        Console.WriteLine(mu_s003[i]); 
+                    }
+
                     s003_Test = ExtractTestingSamples(s003, N);
+
+                    CalculateGenuineScores(s002_Test, mu_s002, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN !="300")
@@ -1888,6 +1896,11 @@ namespace ProgrammingAssignment1_SpecialTopics
             #endregion
 
             Console.ReadKey(); // Default program termination
+        }
+
+        private static void CalculateGenuineScores(double[,] s002_Test, double[] mu_s002, int N)
+        {
+            
         }
 
         #region The Test Sample extraction, got that done
