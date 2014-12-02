@@ -1898,9 +1898,15 @@ namespace ProgrammingAssignment1_SpecialTopics
             Console.ReadKey(); // Default program termination
         }
 
+        /// <summary>
+        /// Here, this method will be calculating the genuine scores
+        /// </summary>
+        /// <param name="s002_Test">The test vector that contains 400 - N samples</param>
+        /// <param name="mu_s002">This is the mean or template vector of the first N samples</param>
+        /// <param name="N">Static (fixed) integer value which contains the first N samples upon which analysis will be conducted</param>
         private static void CalculateGenuineScores(double[,] s002_Test, double[] mu_s002, int N)
         {
-            
+            // TODO: Make sure to code this method tomorrow morning!  (FIRST THING)!
         }
 
         #region The Test Sample extraction, got that done
