@@ -419,6 +419,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Extracting the test samples
                     s003_Test = ExtractTestingSamples(s003, N);
 
+                    #region Test samples for impostor scores
                     // Extracting the test samples for impostor calculations
                     s002_Test = ExtractTestingSamples(s002, N);
                     s004_Test = ExtractTestingSamples(s004, N);
@@ -470,6 +471,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s055_Test = ExtractTestingSamples(s055, N);
                     s056_Test = ExtractTestingSamples(s056, N);
                     s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     s003_Genuine = CalculateGenuineScores(s003_Test, mu_s003, N);
 
