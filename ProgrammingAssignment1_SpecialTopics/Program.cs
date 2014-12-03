@@ -670,10 +670,62 @@ namespace ProgrammingAssignment1_SpecialTopics
                     double[,] s007_Samples = ExtractTrainingSamples(s007, N);  
 
                     mu_s007 = CalculateTemplateVectors(s007_Samples, N); 
-
                     s007_Test = ExtractTestingSamples(s007, N);
 
                     s007_Genuine = CalculateGenuineScores(s007_Test, mu_s007, N);
+
+                    #region Extracting all the samples for the impostor calculations
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
@@ -705,6 +757,59 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s008_Genuine = CalculateGenuineScores(s008_Test, mu_s008, N);
 
+                    #region Extracting all the samples for the impostor calculations
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
+
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
@@ -735,6 +840,59 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s010_Genuine = CalculateGenuineScores(s010_Test, mu_s010, N);
 
+                    #region Extracting all the samples for the impostor calculations
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
+
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
@@ -762,6 +920,59 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s011_Test = ExtractTestingSamples(s011, N);
                     s011_Genuine = CalculateGenuineScores(s011_Test, mu_s011, N);
+
+                    #region Extracting all the samples for the impostor calculations
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
@@ -792,6 +1003,59 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s012_Genuine = CalculateGenuineScores(s012_Test, mu_s012, N);
 
+                    #region Extracting all the samples for the impostor calculations
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
+
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
@@ -821,6 +1085,59 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s013_Genuine = CalculateGenuineScores(s013_Test, mu_s013, N);
 
+                    #region Extracting all the samples for the impostor calculations
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
+
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
@@ -847,8 +1164,59 @@ namespace ProgrammingAssignment1_SpecialTopics
                     mu_s015 = CalculateTemplateVectors(s015_Samples, N); 
 
                     s015_Test = ExtractTestingSamples(s015, N);
-
                     s015_Genuine = CalculateGenuineScores(s015_Test, mu_s015, N);
+
+                    #region Extracting all the samples for the impostor calculations
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
@@ -876,8 +1244,59 @@ namespace ProgrammingAssignment1_SpecialTopics
                     mu_s016 = CalculateTemplateVectors(s016_Samples, N); 
 
                     s016_Test = ExtractTestingSamples(s016, N);
-
                     s016_Genuine = CalculateGenuineScores(s016_Test, mu_s016, N);
+
+                    #region Extracting all the samples for the impostor calculations
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
@@ -908,6 +1327,59 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s017_Genuine = CalculateGenuineScores(s017_Test, mu_s017, N);
 
+                    #region Extracting all the samples for the impostor calculations
+                    s002_Test = ExtractTestingSamples(s002, N);
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
+
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
@@ -934,8 +1406,60 @@ namespace ProgrammingAssignment1_SpecialTopics
                     mu_s018 = CalculateTemplateVectors(s018_Samples, N);
 
                     s018_Test = ExtractTestingSamples(s018, N);
-
                     s018_Genuine = CalculateGenuineScores(s018_Test, mu_s018, N);
+
+                    #region Extracting all the samples for the impostor calculations
+                    s002_Test = ExtractTestingSamples(s002, N);
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
@@ -963,8 +1487,59 @@ namespace ProgrammingAssignment1_SpecialTopics
                     mu_s019 = CalculateTemplateVectors(s019_Samples, N);
 
                     s019_Test = ExtractTestingSamples(s019, N);
-
                     s019_Genuine = CalculateGenuineScores(s019_Test, mu_s019, N);
+
+                    #region Extracting all the samples for the impostor calculations
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
@@ -995,6 +1570,60 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s020_Genuine = CalculateGenuineScores(s020_Test, mu_s020, N);
 
+                    #region Extracting all the samples for the impostor calculations
+                    s002_Test = ExtractTestingSamples(s002, N);
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
+
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
@@ -1023,6 +1652,59 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s021_Test = ExtractTestingSamples(s021, N);
 
                     s021_Genuine = CalculateGenuineScores(s021_Test, mu_s021, N);
+
+                    #region Extracting all the samples for the impostor calculations
+                    s002_Test = ExtractTestingSamples(s002, N);
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
@@ -1053,6 +1735,59 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s022_Genuine = CalculateGenuineScores(s022_Test, mu_s022, N);
 
+                    #region Extracting all the samples for the impostor calculations
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
+
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
@@ -1081,6 +1816,59 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s024_Test = ExtractTestingSamples(s024, N);
 
                     s024_Genuine = CalculateGenuineScores(s024_Test, mu_s024, N);
+
+                    #region Extracting all the samples for the impostor calculations
+                    s002_Test = ExtractTestingSamples(s002, N);
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
@@ -1111,6 +1899,59 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s025_Genuine = CalculateGenuineScores(s025_Test, mu_s025, N);
 
+                    #region Extracting all the samples for the impostor calculations
+                    s002_Test = ExtractTestingSamples(s002, N);
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
+
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
@@ -1139,6 +1980,59 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s026_Test = ExtractTestingSamples(s026, N);
 
                     s026_Genuine = CalculateGenuineScores(s026_Test, mu_s026, N);
+
+                    #region Extracting all the samples for the impostor calculations
+                    s002_Test = ExtractTestingSamples(s002, N);
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
@@ -1169,6 +2063,59 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s027_Genuine = CalculateGenuineScores(s027_Test, mu_s027, N);
 
+                    #region Extracting all the samples for the impostor calculations
+                    s002_Test = ExtractTestingSamples(s002, N);
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
+
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
@@ -1197,6 +2144,59 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s028_Test = ExtractTestingSamples(s028, N);
 
                     s028_Genuine = CalculateGenuineScores(s028_Test, mu_s028, N);
+
+                    #region Extracting all the samples for the impostor calculation
+                    s002_Test = ExtractTestingSamples(s002, N);
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
@@ -2005,12 +3005,11 @@ namespace ProgrammingAssignment1_SpecialTopics
                     double[,] s057_Samples = ExtractTrainingSamples(s057, N);
 
                     mu_s057 = CalculateTemplateVectors(s057_Samples, N);
-
                     s057_Test = ExtractTestingSamples(s057, N);
 
                     s057_Genuine = CalculateGenuineScores(s057_Test, mu_s057, N);
 
-                    CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
+                    CalculateImpostorScores(N, mu_s057, s002_Test, s003_Test, s005_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
