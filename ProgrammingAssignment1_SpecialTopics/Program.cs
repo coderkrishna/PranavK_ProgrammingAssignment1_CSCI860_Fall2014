@@ -4689,6 +4689,11 @@ namespace ProgrammingAssignment1_SpecialTopics
                 Console.Write(imp1[i] + " " + imp2[i] + " " + imp3[i] + " " + imp4[i] + " " + imp5[i] + " " + imp6[i] + " " + imp7[i] + " " + imp8[i] + " " + imp9[i] + " " + imp10[i] + " " + imp11[i] + " " + imp12[i] + " " + imp13[i] + " " + imp14[i] + " " + imp15[i] + " " + imp16[i] + " " + imp17[i] + " " + imp18[i] + " " + imp19[i] + " " + imp20[i] + " " + imp21+ " " + imp22[i] + " " + imp23[i] + " " + imp24[i] + " " + imp25[i] + " " + imp26[i] + " " + imp27[i] + " " + imp28[i] + " " + imp29[i] + " " + imp30[i] + " " + imp31[i] + " " + imp32[i] + " " + imp33[i] + " " + imp34[i] + " " + imp35[i] + " " + imp36[i] + " " + imp37[i] + " " + imp38[i] + " " + imp39[i] + " " + imp40[i] + " " + imp41[i] + " " + imp42[i] + " " + imp43[i] + " " + imp44[i] + " " + imp45[i] + " " + imp46[i] + " " + imp47[i] + " " + imp48[i] + " " + imp49[i] + " " + imp50[i] + Environment.NewLine); 
             }
 
+            Console.Write("Now to calculate the Impostor Pass Rate, please enter a threshold value of T." + Environment.NewLine + "T = ");
+            string threshold = Console.ReadLine();
+            double T = double.Parse(threshold); 
+
+            // This is the method call for finding out the impostor pass rate
 
         }
         #endregion
