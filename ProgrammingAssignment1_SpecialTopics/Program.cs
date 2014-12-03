@@ -254,6 +254,40 @@ namespace ProgrammingAssignment1_SpecialTopics
             Console.WriteLine("We will now be starting to take data from various users and begin to calculate various rates. Now, begin by selecting the user to analyze.  Keep in mind that the subject ID's will not be entered in.  Every user number that is between 1 and 51 and that the user number will be tied to the appropriate subject ID.");
             #endregion
 
+            s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv");
+            s003 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s003.csv");
+            s004 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s004.csv");
+            s005 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s005.csv");
+            s007 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s007.csv");
+            s008 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s008.csv");
+            s010 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s010.csv");
+            s011 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s011.csv");
+            s012 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s012.csv");
+            s013 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s013.csv");
+            s015 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s015.csv");
+            s016 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s016.csv");
+            s017 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s017.csv");
+            s018 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s018.csv");
+            s019 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s019.csv");
+            s020 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s020.csv");
+            s021 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s021.csv");
+            s022 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s022.csv");
+            s024 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s024.csv");
+            s025 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s025.csv");
+            s026 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s026.csv");
+            s027 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s027.csv");
+            s028 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s028.csv");
+            s029 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s029.csv");
+            s030 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s030.csv");
+            s031 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s031.csv");
+            s032 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s032.csv");
+            s033 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s033.csv");
+            s034 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s034.csv");
+            s035 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s035.csv");
+            s036 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s036.csv");
+            s037 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s037.csv");
+
+
             // This is the string for which the end user will determine which user will have the samples retrieved.
             string userNumber = Console.ReadLine();
 
@@ -261,7 +295,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             if (userNumber == "1")
             {
                 // Initialization of the 2D array called s002.  
-                s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv");
+                
 
                 // Prompting the user to now enter in the number of samples to be analyzed
                 Console.Write("Enter N:  The number of samples. The value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
@@ -287,8 +321,10 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Making the method call to generate the various genuine scores for user 1
                     s002_Genuine = CalculateGenuineScores(s002_Test, mu_s002, N);
 
-                    // Pulling all the test vectors from the other users and calculating the zero-effort impostor scores
-                    CalculateImpostorScores(mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N); 
+                    for (int i = 0; i < s002_Genuine.Length; i++)
+                    {
+                        Console.WriteLine(s002_Genuine[i]); 
+                    }
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -303,9 +339,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 2
             if (userNumber == "2")
             {
-                // Referring to the second user
-                s003 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s003.csv");
-
                 // Prompting the user to enter in the number of samples to be analyzed. 
                 Console.Write("Enter N: The number of samples. The value of N can be either 100, 200, or 300." + Environment.NewLine+ "N = ");
                 string inputN = Console.ReadLine(); 
@@ -321,9 +354,12 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Calling to the method which will calculate the Template Vectors. 
                     mu_s003 = CalculateTemplateVectors(s003_Samples, N); 
 
+                    // Extracting the test samples
                     s003_Test = ExtractTestingSamples(s003, N);
+                    s002_Test = ExtractTestingSamples(s002, N); 
 
                     s003_Genuine = CalculateGenuineScores(s003_Test, mu_s003, N);
+
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN !="300")
@@ -338,7 +374,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             if (userNumber == "3")
             {
                 // Creating the 2D Double array3
-                s004 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s004.csv");
+                
 
                 // Prompting the user       
                 Console.Write("Enter N: The number of samples.  Value of N can be 100, 200 or 300." + Environment.NewLine + "N = ");
@@ -372,8 +408,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 4
             if(userNumber == "4")
             {
-                s005 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s005.csv");
-
                 // Prompting the user to enter in the sample size
                 Console.Write("Enter N: The number of samples.  Value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
@@ -405,8 +439,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 5
             if (userNumber == "5")
             {
-                s007 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s007.csv");
-
                 // Prompting the user to enter in the number of samples
                 Console.Write("Enter N: The number of samples.  Value of N can either be 100, 200, or 300." + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
@@ -436,8 +468,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 6
             if (userNumber == "6")
             {
-                s008 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s008.csv");
-
                 // Prompting the user to enter the number of samples
                 Console.Write("Enter N:  The number of samples. Value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
@@ -466,8 +496,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 7
             if (userNumber == "7")
             {
-                s010 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s010.csv");
-
                 Console.Write("Enter N: The number of samples.  Value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
 
@@ -495,8 +523,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 8
             if (userNumber == "8")
             {
-                s011 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s011.csv");
-
                 Console.Write("Enter N: The number of samples.  Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
 
@@ -524,8 +550,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 9
             if (userNumber == "9")
             {
-                s012 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s012.csv");
-
                 Console.Write("Enter N: The number of samples.  Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
 
@@ -553,8 +577,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 10
             if (userNumber == "10")
             {
-                s013 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s013.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
 
@@ -582,8 +604,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 11
             if (userNumber == "11")
             {
-                s015 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s015.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
 
@@ -611,8 +631,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 12
             if (userNumber == "12")
             {
-                s016 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s016.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
 
@@ -640,8 +658,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 13
             if (userNumber == "13")
             {
-                s017 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s017.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
 
@@ -669,8 +685,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 14
             if (userNumber == "14")
             {
-                s018 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s018.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -698,8 +712,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 15
             if (userNumber == "15")
             {
-                s019 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s019.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -727,8 +739,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 16
             if (userNumber == "16")
             {
-                s020 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s020.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -756,8 +766,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 17
             if (userNumber == "17")
             {
-                s021 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s021.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -785,8 +793,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 18
             if (userNumber == "18")
             {
-                s022 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s022.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -814,8 +820,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 19
             if (userNumber == "19")
             {
-                s024 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s024.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -843,8 +847,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 20
             if (userNumber == "20")
             {
-                s025 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s025.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -872,8 +874,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 21
             if (userNumber == "21")
             {
-                s026 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s026.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -901,8 +901,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 22
             if (userNumber == "22")
             {
-                s027 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s027.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -930,8 +928,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 23
             if (userNumber == "23")
             {
-                s028 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s028.csv");
-
+                
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -959,8 +956,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 24
             if (userNumber == "24")
             {
-                s029 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s029.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -988,8 +983,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 25
             if (userNumber == "25")
             {
-                s030 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s030.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1017,8 +1010,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 26
             if (userNumber == "26")
             {
-                s031 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s031.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1046,8 +1037,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 27
             if (userNumber == "27")
             {
-                s032 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s032.csv");
-
+                
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1075,8 +1065,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 28
             if (userNumber == "28")
             {
-                s033 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s033.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1104,8 +1092,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 29
             if (userNumber == "29")
             {
-                s034 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s034.csv");
-
+              
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1133,8 +1120,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 30
             if (userNumber == "30")
             {
-                s035 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s035.csv");
-
+                
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1162,8 +1148,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 31
             if (userNumber == "31")
             {
-                s036 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s036.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1191,8 +1175,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 32
             if (userNumber == "32")
             {
-                s037 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s037.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1771,24 +1753,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             Console.ReadKey(); // Default program termination
         }
 
-        #region This is the in class/ in code API (almost)
-        private static void CalculateImpostorScores(double[] mu_s002, double[,] s003_Test, double[,] s004_Test, double[,] s005_Test, double[,] s007_Test, double[,] s008_Test, double[,] s010_Test, double[,] s011_Test, double[,] s012_Test, double[,] s013_Test, double[,] s015_Test, double[,] s017_Test, double[,] s018_Test, double[,] s019_Test, double[,] s020_Test, double[,] s021_Test, double[,] s022_Test, double[,] s024_Test, double[,] s025_Test, double[,] s026_Test, double[,] s027_Test, double[,] s028_Test, double[,] s029_Test, double[,] s030_Test, double[,] s031_Test, double[,] s032_Test, double[,] s033_Test, double[,] s034_Test, double[,] s035_Test, double[,] s036_Test, double[,] s037_Test, double[,] s038_Test, double[,] s039_Test, double[,] s040_Test, double[,] s041_Test, double[,] s042_Test, double[,] s043_Test, double[,] s044_Test, double[,] s046_Test, double[,] s047_Test, double[,] s048_Test, double[,] s049_Test, double[,] s050_Test, double[,] s051_Test, double[,] s052_Test, double[,] s053_Test, double[,] s054_Test, double[,] s055_Test, double[,] s056_Test, double[,] s057_Test, int N)
-        {
-            #region Declaring 50 1D impostor arrays here
-            
-            #endregion
-
-            int M = 400 - N; 
-            Console.Write("The number of samples are " + N + " and the number of samples to calculate the impostor scores are " + M);
-
-            for (int i = 0; i < M; i++)
-            {
-                for (int j = 0; j < s003_Test.GetLength(1); j++)
-                {
-
-                }
-            }
-        }
         #region This method will calculate the genuine scores
         /// <summary>
         /// Here, this method will be calculating the genuine scores
@@ -1833,7 +1797,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                 for (int i = 0; i < 299; i++)
                 {
-                    for (int j = 0; j < test100.GetLength(1); j++)
+                    for (int j = 0; j < test100.GetLength(1) - 1; j++)
                     {
                         // i = M;
                         test100[i, j] = s002[100 + i, j];
@@ -1979,7 +1943,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             // 2D double that is automatically named due to polymorphism. 
             return values;
         }
-        #endregion
         #endregion
     }
 }
