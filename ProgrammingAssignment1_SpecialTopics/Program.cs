@@ -13,15 +13,11 @@ namespace ProgrammingAssignment1_SpecialTopics
     /// Programming Assignment 1
     /// CSCI-860-W01: Biometrics and its Applications in a Networked Society
     /// Instructor: Dr. Kiran Balagani
-    ///  
-    /// 2nd December 2014 - Deadline/Submission date
-    /// Here are the following that I tasks that I need to get done today:
-    /// * Code and execute all the impostor scores
-    /// * Find a way that I can begin to report the FAR and FRR
-    /// * Compile the report - Started
     /// 
-    /// Accomplishments: 
-    /// * Genuine score - Coded and function calls made
+    /// 3rd December 2014
+    /// * Have to get this done at all costs
+    /// * Right now, I have to be able to finish off the declarations of the function
+    /// * Also have to finish the report
     /// </summary>
     class Program
     {
@@ -335,9 +331,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s002_Test = ExtractTestingSamples(s002, N);
 
                     // Extracting all the samples for the impostor calculations
-                    s003_Test = ExtractTestingSamples(s003, N);
-                    s004_Test = ExtractTestingSamples(s004, N);
-                    s005_Test = ExtractTestingSamples(s005, N);
+                    s003_Test = ExtractTestingSamples(s003, N); // Done
+                    s004_Test = ExtractTestingSamples(s004, N); // Done
+                    s005_Test = ExtractTestingSamples(s005, N); // Done
                     s007_Test = ExtractTestingSamples(s007, N);
                     s008_Test = ExtractTestingSamples(s008, N);
                     s010_Test = ExtractTestingSamples(s010, N);
@@ -407,7 +403,19 @@ namespace ProgrammingAssignment1_SpecialTopics
                     }
                     #endregion
 
+                    Console.WriteLine(); 
+
                     #region Impostor score 3
+                    double[] impu1s3 = CalculateImpostorScores(mu_s002, s005_Test, N);
+                    for (int i = 0; i < impu1s3.Length; i++)
+                    {
+                        Console.Write(impu1s3[i] + Environment.NewLine); 
+                    }
+                    #endregion
+
+                    Console.WriteLine();
+
+                    #region Impostor score 4
                     
                     #endregion
 
