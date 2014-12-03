@@ -254,6 +254,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             Console.WriteLine("We will now be starting to take data from various users and begin to calculate various rates. Now, begin by selecting the user to analyze.  Keep in mind that the subject ID's will not be entered in.  Every user number that is between 1 and 51 and that the user number will be tied to the appropriate subject ID.");
             #endregion
 
+            #region Parsing data
             s002 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s002.csv");
             s003 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s003.csv");
             s004 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s004.csv");
@@ -286,7 +287,26 @@ namespace ProgrammingAssignment1_SpecialTopics
             s035 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s035.csv");
             s036 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s036.csv");
             s037 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s037.csv");
-
+            s038 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s038.csv");
+            s039 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s039.csv");
+            s040 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s040.csv");
+            s041 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s041.csv");
+            s042 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s042.csv");
+            s043 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s042.csv");
+            s044 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s044.csv");
+            s046 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s046.csv");
+            s047 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s047.csv");
+            s048 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s042.csv");
+            s049 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s049.csv");
+            s050 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s050.csv");
+            s051 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s051.csv");
+            s052 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s052.csv");
+            s053 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s053.csv");
+            s054 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s054.csv");
+            s055 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s055.csv");
+            s056 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s056.csv");
+            s057 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s057.csv");
+            #endregion
 
             // This is the string for which the end user will determine which user will have the samples retrieved.
             string userNumber = Console.ReadLine();
@@ -294,9 +314,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 1
             if (userNumber == "1")
             {
-                // Initialization of the 2D array called s002.  
-                
-
                 // Prompting the user to now enter in the number of samples to be analyzed
                 Console.Write("Enter N:  The number of samples. The value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
@@ -314,17 +331,87 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Calculates the templates now and stores it in an array which can be used later on. 
                     mu_s002 = CalculateTemplateVectors(s002_Samples, N); 
 
-                    // Here is the method call to extract the 400 - N test samples that will be used to calculate both the
-                    // genuine and impostor scores
+                    // Extracting all the samples for the genuine calculations
                     s002_Test = ExtractTestingSamples(s002, N);
+
+                    // Extracting all the samples for the impostor calculations
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
 
                     // Making the method call to generate the various genuine scores for user 1
                     s002_Genuine = CalculateGenuineScores(s002_Test, mu_s002, N);
 
-                    for (int i = 0; i < s002_Genuine.Length; i++)
+                    #region Impostor score 1
+                    double[] impu1s1 = CalculateImpostorScores(mu_s002, s003_Test, N); 
+                    for(int i = 0; i < impu1s1.Length; i++)
                     {
-                        Console.WriteLine(s002_Genuine[i]); 
+                        Console.Write(impu1s1[i] + Environment.NewLine);
                     }
+                    #endregion
+
+                    Console.WriteLine();
+
+                    #region Impostor score 2
+                    double[] impu1s2 = CalculateImpostorScores(mu_s002, s004_Test, N);
+                    for (int i = 0; i < impu1s2.Length; i++)
+                    {
+                        Console.Write(impu1s2[i] + Environment.NewLine);
+                    }
+                    #endregion
+
+                    #region Impostor score 3
+                    
+                    #endregion
+
+                    Console.WriteLine(); 
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -356,10 +443,65 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     // Extracting the test samples
                     s003_Test = ExtractTestingSamples(s003, N);
-                    s002_Test = ExtractTestingSamples(s002, N); 
+
+                    // Extracting the test samples for impostor calculations
+                    s002_Test = ExtractTestingSamples(s002, N);
+                    s004_Test = ExtractTestingSamples(s004, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
 
                     s003_Genuine = CalculateGenuineScores(s003_Test, mu_s003, N);
 
+                    for (int i = 0; i < s002_Genuine.Length; i++)
+                    {
+                        Console.WriteLine(s002_Genuine[i]);
+                    }
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN !="300")
@@ -373,9 +515,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 3
             if (userNumber == "3")
             {
-                // Creating the 2D Double array3
-                
-
                 // Prompting the user       
                 Console.Write("Enter N: The number of samples.  Value of N can be 100, 200 or 300." + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
@@ -392,7 +531,60 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Method call to calculate the template vectors
                     mu_s004 = CalculateTemplateVectors(s004_Samples, N); 
 
+                    // Genuine sample extraction
                     s004_Test = ExtractTestingSamples(s004, N);
+
+                    // Impostor sample extractions
+                    s002_Test = ExtractTestingSamples(s002, N);
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s005_Test = ExtractTestingSamples(s005, N);
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
 
                     s004_Genuine = CalculateGenuineScores(s004_Test, mu_s004, N); 
                 }
@@ -422,10 +614,60 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     // Making the call to calculate the template vectors
                     mu_s005 = CalculateTemplateVectors(s005_Samples, N);
- 
-                    s005_Test = ExtractTestingSamples(s005, N);
 
+                    s005_Test = ExtractTestingSamples(s005, N);
                     s005_Genuine = CalculateGenuineScores(s005_Test, mu_s005, N);
+                    
+                    s002_Test = ExtractTestingSamples(s002, N);
+                    s003_Test = ExtractTestingSamples(s003, N);
+                    s004_Test = ExtractTestingSamples(s004, N); 
+                    s007_Test = ExtractTestingSamples(s007, N);
+                    s008_Test = ExtractTestingSamples(s008, N);
+                    s010_Test = ExtractTestingSamples(s010, N);
+                    s011_Test = ExtractTestingSamples(s011, N);
+                    s012_Test = ExtractTestingSamples(s012, N);
+                    s013_Test = ExtractTestingSamples(s013, N);
+                    s015_Test = ExtractTestingSamples(s015, N);
+                    s016_Test = ExtractTestingSamples(s016, N);
+                    s017_Test = ExtractTestingSamples(s017, N);
+                    s018_Test = ExtractTestingSamples(s018, N);
+                    s019_Test = ExtractTestingSamples(s019, N);
+                    s020_Test = ExtractTestingSamples(s020, N);
+                    s021_Test = ExtractTestingSamples(s021, N);
+                    s022_Test = ExtractTestingSamples(s022, N);
+                    s024_Test = ExtractTestingSamples(s024, N);
+                    s025_Test = ExtractTestingSamples(s025, N);
+                    s026_Test = ExtractTestingSamples(s026, N);
+                    s027_Test = ExtractTestingSamples(s027, N);
+                    s028_Test = ExtractTestingSamples(s028, N);
+                    s029_Test = ExtractTestingSamples(s029, N);
+                    s030_Test = ExtractTestingSamples(s030, N);
+                    s031_Test = ExtractTestingSamples(s031, N);
+                    s032_Test = ExtractTestingSamples(s032, N);
+                    s033_Test = ExtractTestingSamples(s033, N);
+                    s034_Test = ExtractTestingSamples(s034, N);
+                    s035_Test = ExtractTestingSamples(s035, N);
+                    s036_Test = ExtractTestingSamples(s036, N);
+                    s037_Test = ExtractTestingSamples(s037, N);
+                    s038_Test = ExtractTestingSamples(s038, N);
+                    s039_Test = ExtractTestingSamples(s039, N);
+                    s040_Test = ExtractTestingSamples(s040, N);
+                    s041_Test = ExtractTestingSamples(s041, N);
+                    s042_Test = ExtractTestingSamples(s042, N);
+                    s043_Test = ExtractTestingSamples(s043, N);
+                    s044_Test = ExtractTestingSamples(s044, N);
+                    s046_Test = ExtractTestingSamples(s046, N);
+                    s047_Test = ExtractTestingSamples(s047, N);
+                    s048_Test = ExtractTestingSamples(s048, N);
+                    s049_Test = ExtractTestingSamples(s049, N);
+                    s050_Test = ExtractTestingSamples(s050, N);
+                    s051_Test = ExtractTestingSamples(s051, N);
+                    s052_Test = ExtractTestingSamples(s052, N);
+                    s053_Test = ExtractTestingSamples(s053, N);
+                    s054_Test = ExtractTestingSamples(s054, N);
+                    s055_Test = ExtractTestingSamples(s055, N);
+                    s056_Test = ExtractTestingSamples(s056, N);
+                    s057_Test = ExtractTestingSamples(s057, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -496,6 +738,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 7
             if (userNumber == "7")
             {
+                
                 Console.Write("Enter N: The number of samples.  Value of N can be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine(); 
 
@@ -928,7 +1171,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 23
             if (userNumber == "23")
             {
-                
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1037,7 +1279,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 27
             if (userNumber == "27")
             {
-                
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1092,7 +1333,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 29
             if (userNumber == "29")
             {
-              
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1120,7 +1360,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 30
             if (userNumber == "30")
             {
-                
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1202,8 +1441,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 33
             if (userNumber == "33")
             {
-                s038 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s038.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1231,8 +1468,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 34
             if (userNumber == "34")
             {
-                s039 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s039.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1260,8 +1495,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 35
             if (userNumber == "35")
             {
-                s040 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s040.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1289,8 +1522,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 36
             if (userNumber == "36")
             {
-                s041 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s041.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1318,8 +1549,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 37
             if (userNumber == "37")
             {
-                s042 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s042.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1347,8 +1576,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 38
             if (userNumber == "38")
             {
-                s043 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s042.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1376,8 +1603,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 39
             if (userNumber == "39")
             {
-                s044 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s044.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1405,8 +1630,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 40
             if (userNumber == "40")
             {
-                s046 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s046.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1434,8 +1657,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 41
             if (userNumber == "41")
             {
-                s047 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s047.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1463,8 +1684,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 42
             if (userNumber == "42")
             {
-                s048 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s042.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1492,8 +1711,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 43
             if (userNumber == "43")
             {
-                s049 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s049.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1521,8 +1738,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 44
             if (userNumber == "44")
             {
-                s050 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s050.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1550,8 +1765,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 45
             if (userNumber == "45")
             {
-                s051 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s051.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1579,8 +1792,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 46
             if (userNumber == "46")
             {
-                s052 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s052.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1608,8 +1819,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 47
             if (userNumber == "47")
             {
-                s053 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s053.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1637,8 +1846,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 48
             if (userNumber == "48")
             {
-                s054 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s054.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1666,8 +1873,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 49
             if (userNumber == "49")
             {
-                s055 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s055.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1695,8 +1900,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 50
             if (userNumber == "50")
             {
-                s056 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s056.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1724,8 +1927,6 @@ namespace ProgrammingAssignment1_SpecialTopics
             #region For user 51
             if (userNumber == "51")
             {
-                s057 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s057.csv");
-
                 Console.Write("Enter N: The number of samples. Value of N could be either 100, 200, or 300" + Environment.NewLine + "N = ");
                 string inputN = Console.ReadLine();
 
@@ -1752,6 +1953,34 @@ namespace ProgrammingAssignment1_SpecialTopics
 
             Console.ReadKey(); // Default program termination
         }
+
+        #region This is the method that is used to calculate the Impostor scores
+        /// <summary>
+        /// Method to calculate impostor scores for the given two vectors
+        /// </summary>
+        /// <param name="mu_s002">Average vector</param>
+        /// <param name="s003_Test">This is the test vector</param>
+        /// <param name="N">Static (fixed) value of N samples</param>
+        /// <returns>This is the impostors vector</returns>
+        static double[] CalculateImpostorScores(double[] mu_s002, double[,] s003_Test, int N)
+        {
+            // This is the impostors vector
+            double[] impostors = new double[21]; 
+
+            // The nested loop through which I will iterate
+            for (int i = 0; i < s003_Test.GetLength(0); i++)
+            {
+                for (int j = 0; j < s003_Test.GetLength(1); j++)
+                {
+                    // Here is where I am going to have the calculations for the impostor score
+                    impostors[j] += (Math.Abs(s003_Test[i, j] - mu_s002[j]) / N); 
+                }
+            }
+
+            // Returning the value
+            return impostors; 
+        }
+        #endregion
 
         #region This method will calculate the genuine scores
         /// <summary>
