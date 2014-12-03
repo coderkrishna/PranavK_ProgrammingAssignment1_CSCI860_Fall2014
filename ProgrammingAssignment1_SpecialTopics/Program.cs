@@ -330,10 +330,11 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Extracting all the samples for the genuine calculations
                     s002_Test = ExtractTestingSamples(s002, N);
 
-                    // Extracting all the samples for the impostor calculations
-                    s003_Test = ExtractTestingSamples(s003, N); // Done
-                    s004_Test = ExtractTestingSamples(s004, N); // Done
-                    s005_Test = ExtractTestingSamples(s005, N); // Done
+
+                    #region Extracting all the samples for the impostor calculations
+                    s003_Test = ExtractTestingSamples(s003, N); 
+                    s004_Test = ExtractTestingSamples(s004, N); 
+                    s005_Test = ExtractTestingSamples(s005, N); 
                     s007_Test = ExtractTestingSamples(s007, N);
                     s008_Test = ExtractTestingSamples(s008, N);
                     s010_Test = ExtractTestingSamples(s010, N);
@@ -381,45 +382,12 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s055_Test = ExtractTestingSamples(s055, N);
                     s056_Test = ExtractTestingSamples(s056, N);
                     s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     // Making the method call to generate the various genuine scores for user 1
                     s002_Genuine = CalculateGenuineScores(s002_Test, mu_s002, N);
 
-                    #region Impostor score 1
-                    double[] impu1s1 = CalculateImpostorScores(mu_s002, s003_Test, N); 
-                    for(int i = 0; i < impu1s1.Length; i++)
-                    {
-                        Console.Write(impu1s1[i] + Environment.NewLine);
-                    }
-                    #endregion
-
-                    Console.WriteLine();
-
-                    #region Impostor score 2
-                    double[] impu1s2 = CalculateImpostorScores(mu_s002, s004_Test, N);
-                    for (int i = 0; i < impu1s2.Length; i++)
-                    {
-                        Console.Write(impu1s2[i] + Environment.NewLine);
-                    }
-                    #endregion
-
-                    Console.WriteLine(); 
-
-                    #region Impostor score 3
-                    double[] impu1s3 = CalculateImpostorScores(mu_s002, s005_Test, N);
-                    for (int i = 0; i < impu1s3.Length; i++)
-                    {
-                        Console.Write(impu1s3[i] + Environment.NewLine); 
-                    }
-                    #endregion
-
-                    Console.WriteLine();
-
-                    #region Impostor score 4
-                    
-                    #endregion
-
-                    Console.WriteLine(); 
+                    CalculateImpostorScores(N, mu_s002, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -506,10 +474,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s003_Genuine = CalculateGenuineScores(s003_Test, mu_s003, N);
 
-                    for (int i = 0; i < s002_Genuine.Length; i++)
-                    {
-                        Console.WriteLine(s002_Genuine[i]);
-                    }
+                    CalculateImpostorScores(N, mu_s003, s002_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN !="300")
@@ -594,7 +559,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s056_Test = ExtractTestingSamples(s056, N);
                     s057_Test = ExtractTestingSamples(s057, N);
 
-                    s004_Genuine = CalculateGenuineScores(s004_Test, mu_s004, N); 
+                    s004_Genuine = CalculateGenuineScores(s004_Test, mu_s004, N);
+
+                    CalculateImpostorScores(N, mu_s004, s002_Test, s003_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -676,6 +643,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s055_Test = ExtractTestingSamples(s055, N);
                     s056_Test = ExtractTestingSamples(s056, N);
                     s057_Test = ExtractTestingSamples(s057, N);
+
+                    CalculateImpostorScores(N, mu_s005, s002_Test, s003_Test, s004_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -1962,33 +1931,10 @@ namespace ProgrammingAssignment1_SpecialTopics
             Console.ReadKey(); // Default program termination
         }
 
-        #region This is the method that is used to calculate the Impostor scores
-        /// <summary>
-        /// Method to calculate impostor scores for the given two vectors
-        /// </summary>
-        /// <param name="mu_s002">Average vector</param>
-        /// <param name="s003_Test">This is the test vector</param>
-        /// <param name="N">Static (fixed) value of N samples</param>
-        /// <returns>This is the impostors vector</returns>
-        static double[] CalculateImpostorScores(double[] mu_s002, double[,] s003_Test, int N)
+        private static void CalculateImpostorScores(int N, double[] mu_s002, double[,] s003_Test, double[,] s004_Test, double[,] s005_Test, double[,] s007_Test, double[,] s008_Test, double[,] s010_Test, double[,] s011_Test, double[,] s012_Test, double[,] s013_Test, double[,] s015_Test, double[,] s016_Test, double[,] s017_Test, double[,] s018_Test, double[,] s019_Test, double[,] s020_Test, double[,] s021_Test, double[,] s022_Test, double[,] s024_Test, double[,] s025_Test, double[,] s026_Test, double[,] s028_Test, double[,] s030_Test, double[,] s031_Test, double[,] s032_Test, double[,] s033_Test, double[,] s034_Test, double[,] s035_Test, double[,] s036_Test, double[,] s037_Test, double[,] s038_Test, double[,] s039_Test, double[,] s040_Test, double[,] s041_Test, double[,] s042_Test, double[,] s043_Test, double[,] s044_Test, double[,] s046_Test, double[,] s047_Test, double[,] s048_Test, double[,] s049_Test, double[,] s050_Test, double[,] s051_Test, double[,] s052_Test, double[,] s053_Test, double[,] s054_Test, double[,] s055_Test, double[,] s056_Test, double[,] s057_Test)
         {
-            // This is the impostors vector
-            double[] impostors = new double[21]; 
-
-            // The nested loop through which I will iterate
-            for (int i = 0; i < s003_Test.GetLength(0); i++)
-            {
-                for (int j = 0; j < s003_Test.GetLength(1); j++)
-                {
-                    // Here is where I am going to have the calculations for the impostor score
-                    impostors[j] += (Math.Abs(s003_Test[i, j] - mu_s002[j]) / N); 
-                }
-            }
-
-            // Returning the value
-            return impostors; 
+            // TODO - Fully code this method
         }
-        #endregion
 
         #region This method will calculate the genuine scores
         /// <summary>
