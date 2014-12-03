@@ -4683,18 +4683,81 @@ namespace ProgrammingAssignment1_SpecialTopics
             }
             #endregion
 
-            // Printing them out
-            for (int i = 0; i < imp1.Length; i++)
-            {
-                Console.Write(imp1[i] + " " + imp2[i] + " " + imp3[i] + " " + imp4[i] + " " + imp5[i] + " " + imp6[i] + " " + imp7[i] + " " + imp8[i] + " " + imp9[i] + " " + imp10[i] + " " + imp11[i] + " " + imp12[i] + " " + imp13[i] + " " + imp14[i] + " " + imp15[i] + " " + imp16[i] + " " + imp17[i] + " " + imp18[i] + " " + imp19[i] + " " + imp20[i] + " " + imp21+ " " + imp22[i] + " " + imp23[i] + " " + imp24[i] + " " + imp25[i] + " " + imp26[i] + " " + imp27[i] + " " + imp28[i] + " " + imp29[i] + " " + imp30[i] + " " + imp31[i] + " " + imp32[i] + " " + imp33[i] + " " + imp34[i] + " " + imp35[i] + " " + imp36[i] + " " + imp37[i] + " " + imp38[i] + " " + imp39[i] + " " + imp40[i] + " " + imp41[i] + " " + imp42[i] + " " + imp43[i] + " " + imp44[i] + " " + imp45[i] + " " + imp46[i] + " " + imp47[i] + " " + imp48[i] + " " + imp49[i] + " " + imp50[i] + Environment.NewLine); 
-            }
-
             Console.Write("Now to calculate the Impostor Pass Rate, please enter a threshold value of T." + Environment.NewLine + "T = ");
             string threshold = Console.ReadLine();
             double T = double.Parse(threshold); 
 
             // This is the method call for finding out the impostor pass rate
+            ImpostorPassRate(imp1, imp2, imp3, imp4, imp5, imp6, imp7, imp8, imp9, imp10, imp11, imp12, imp13, imp14, imp15, imp16, imp17, imp18, imp19, imp20, imp21, imp22, imp23, imp24, imp25, imp26, imp27, imp28, imp29, imp30, imp31, imp32, imp33, imp34, imp35, imp36, imp37, imp38, imp39, imp40, imp41, imp42, imp43, imp44, imp45, imp46, imp47, imp48, imp49, imp50, T, N); 
 
+        }
+        #endregion
+
+        #region Calculating the Impostor Pass Rate
+        /// <summary>
+        /// This method will calculate the Impostor Pass Rate, also known as the 
+        /// False Reject Rate
+        /// </summary>
+        /// <param name="imp1">Impostor scores</param>
+        /// <param name="imp2">Impostor scores</param>
+        /// <param name="imp3">Impostor scores</param>
+        /// <param name="imp4">Impostor scores</param>
+        /// <param name="imp5">Impostor scores</param>
+        /// <param name="imp6">Impostor scores</param>
+        /// <param name="imp7">Impostor scores</param>
+        /// <param name="imp8">Impostor scores</param>
+        /// <param name="imp9">Impostor scores</param>
+        /// <param name="imp10">Impostor scores</param>
+        /// <param name="imp11">Impostor scores</param>
+        /// <param name="imp12">Impostor scores</param>
+        /// <param name="imp13">Impostor scores</param>
+        /// <param name="imp14">Impostor scores</param>
+        /// <param name="imp15">Impostor scores</param>
+        /// <param name="imp16">Impostor scores</param>
+        /// <param name="imp17">impostor scores</param>
+        /// <param name="imp18">impostor</param>
+        /// <param name="imp19">impostor</param>
+        /// <param name="imp20">impostor</param>
+        /// <param name="imp21">impostor</param>
+        /// <param name="imp22">impostor</param>
+        /// <param name="imp23">impostor</param>
+        /// <param name="imp24">impostor</param>
+        /// <param name="imp25">impostor</param>
+        /// <param name="imp26">impostor</param>
+        /// <param name="imp27">impostor</param>
+        /// <param name="imp28">impostor</param>
+        /// <param name="imp29">impostor</param>
+        /// <param name="imp30">impostor</param>
+        /// <param name="imp31">impostor</param>
+        /// <param name="imp32">impostor</param>
+        /// <param name="imp33">impostor</param>
+        /// <param name="imp34">impostor</param>
+        /// <param name="imp35">impostor</param>
+        /// <param name="imp36">impostor</param>
+        /// <param name="imp37">impostor</param>
+        /// <param name="imp38">impostor</param>
+        /// <param name="imp39">impostor</param>
+        /// <param name="imp40">impostor</param>
+        /// <param name="imp41"></param>
+        /// <param name="imp42"></param>
+        /// <param name="imp43"></param>
+        /// <param name="imp44"></param>
+        /// <param name="imp45"></param>
+        /// <param name="imp46"></param>
+        /// <param name="imp47"></param>
+        /// <param name="imp48"></param>
+        /// <param name="imp49"></param>
+        /// <param name="imp50"></param>
+        /// <param name="T">Threshold value of T, which the end user will enter in</param>
+        /// <param name="N">Here this is the number of samples.</param>
+        static void ImpostorPassRate(double[] imp1, double[] imp2, double[] imp3, double[] imp4, double[] imp5, double[] imp6, double[] imp7, double[] imp8, double[] imp9, double[] imp10, double[] imp11, double[] imp12, double[] imp13, double[] imp14, double[] imp15, double[] imp16, double[] imp17, double[] imp18, double[] imp19, double[] imp20, double[] imp21, double[] imp22, double[] imp23, double[] imp24, double[] imp25, double[] imp26, double[] imp27, double[] imp28, double[] imp29, double[] imp30, double[] imp31, double[] imp32, double[] imp33, double[] imp34, double[] imp35, double[] imp36, double[] imp37, double[] imp38, double[] imp39, double[] imp40, double[] imp41, double[] imp42, double[] imp43, double[] imp44, double[] imp45, double[] imp46, double[] imp47, double[] imp48, double[] imp49, double[] imp50, double T, int N)
+        {
+            int totalScores = 51 * 50 * N; 
+            Console.Write("Your threshold T = " + T + ". Your sample size, N = " + N + "." + Environment.NewLine + "Total number of scores presented to the user are " + totalScores);
+
+
+
+            Console.ReadKey(); 
         }
         #endregion
 
