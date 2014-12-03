@@ -4753,11 +4753,269 @@ namespace ProgrammingAssignment1_SpecialTopics
         static void ImpostorPassRate(double[] imp1, double[] imp2, double[] imp3, double[] imp4, double[] imp5, double[] imp6, double[] imp7, double[] imp8, double[] imp9, double[] imp10, double[] imp11, double[] imp12, double[] imp13, double[] imp14, double[] imp15, double[] imp16, double[] imp17, double[] imp18, double[] imp19, double[] imp20, double[] imp21, double[] imp22, double[] imp23, double[] imp24, double[] imp25, double[] imp26, double[] imp27, double[] imp28, double[] imp29, double[] imp30, double[] imp31, double[] imp32, double[] imp33, double[] imp34, double[] imp35, double[] imp36, double[] imp37, double[] imp38, double[] imp39, double[] imp40, double[] imp41, double[] imp42, double[] imp43, double[] imp44, double[] imp45, double[] imp46, double[] imp47, double[] imp48, double[] imp49, double[] imp50, double T, int N)
         {
             int totalScores = 51 * 50 * N; 
-            Console.Write("Your threshold T = " + T + ". Your sample size, N = " + N + "." + Environment.NewLine + "Total number of scores presented to the user are " + totalScores);
+            Console.Write("Your threshold T = " + T + ". Your sample size, N = " + N + "." + Environment.NewLine + "Total number of scores presented to the user are " + totalScores + Environment.NewLine);
+            int genuine = 0;
 
+            for (int i = 0; i < imp1.Length; i++)
+            {
+                #region Checking with the threshold
+                if (imp1[i] <= T)
+                {
+                    genuine++;
+                }
 
+                if (imp2[i] <= T)
+                {
+                    genuine++; 
+                }
 
-            Console.ReadKey(); 
+                if (imp3[i] <= T)
+                {
+                    genuine++; 
+                }
+
+                if (imp4[i] <= T)
+                {
+                    genuine++; 
+                }
+
+                if (imp5[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp6[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp7[i] <= T)
+                {
+                    genuine++; 
+                }
+
+                if (imp8[i] <= T)
+                {
+                    genuine++; 
+                }
+
+                if (imp9[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp10[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp11[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp12[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp13[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp14[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp15[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp16[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp17[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp18[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp19[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp20[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp21[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp22[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp23[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp24[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp25[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp26[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp27[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp28[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp29[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp30[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp31[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp32[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp33[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp34[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp35[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp36[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp37[i] <= T)
+                {
+                    genuine++;
+                }
+                
+                if (imp38[i] <= T)
+                {
+                    genuine++;
+                } 
+                
+                if (imp39[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp40[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp41[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp42[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp43[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp44[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp45[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp46[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp47[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp48[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp49[i] <= T)
+                {
+                    genuine++;
+                }
+
+                if (imp50[i] <= T)
+                {
+                    genuine++;
+                }
+                #endregion
+            }
+
+            Console.WriteLine(genuine + " scores");
+
+            double ipr = Convert.ToDouble(genuine) / totalScores; 
+
+            Console.WriteLine("Thus, given the sample size of N = " + N + ", the IPR = " + ipr); 
         }
         #endregion
 
