@@ -22,3 +22,7 @@ Please follow the following steps in order to be able to access the executable f
 1. Navigate to the folder that reads "ProgrammingAssignment1_SpecialTopics"
 2. In this folder there are various subfolders, one of which reads "bin\Debug" click navigate to that folder. 
 3. Finally, in this folder named "bin\Debug" you should find the executable file (.exe extension) with the file name of "ProgrammingAssignment1_SpecialTopics.exe"
+
+When Executing This Code
+================================================
+Please do note that when you are executing this program, there are CSV files used as the data input for the program.  Please ensure that you change the directories of the files accordingly that way there are no mishaps.  
