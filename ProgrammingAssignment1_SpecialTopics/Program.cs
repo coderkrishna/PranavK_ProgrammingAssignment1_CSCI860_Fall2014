@@ -4634,53 +4634,53 @@ namespace ProgrammingAssignment1_SpecialTopics
                     imp1[j] += (Math.Abs(s003_Test[i, j] - mu_s002[j]) / N);
                     imp2[j] += (Math.Abs(s004_Test[i, j] - mu_s002[j]) / N);
                     imp3[j] += (Math.Abs(s005_Test[i, j] - mu_s002[j]) / N);
-                    imp4[j] += (Math.Abs(s007_Test[i, j] - mu_s002[j]) / N);
-                    imp5[j] += (Math.Abs(s008_Test[i, j] - mu_s002[j]) / N);
-                    imp6[j] += (Math.Abs(s010_Test[i, j] - mu_s002[j]) / N);
-                    imp7[j] += (Math.Abs(s011_Test[i, j] - mu_s002[j]) / N);
-                    imp8[j] += (Math.Abs(s012_Test[i, j] - mu_s002[j]) / N);
-                    imp9[j] += (Math.Abs(s013_Test[i, j] - mu_s002[j]) / N);
-                    imp10[j] += (Math.Abs(s015_Test[i, j] - mu_s002[j]) / N);
-                    imp11[j] += (Math.Abs(s016_Test[i, j] - mu_s002[j]) / N);
-                    imp12[j] += (Math.Abs(s017_Test[i, j] - mu_s002[j]) / N);
-                    imp13[j] += (Math.Abs(s018_Test[i, j] - mu_s002[j]) / N);
-                    imp14[j] += (Math.Abs(s019_Test[i, j] - mu_s002[j]) / N);
-                    imp15[j] += (Math.Abs(s020_Test[i, j] - mu_s002[j]) / N);
-                    imp16[j] += (Math.Abs(s021_Test[i, j] - mu_s002[j]) / N);
-                    imp17[j] += (Math.Abs(s022_Test[i, j] - mu_s002[j]) / N);
-                    imp18[j] += (Math.Abs(s024_Test[i, j] - mu_s002[j]) / N);
-                    imp19[j] += (Math.Abs(s025_Test[i, j] - mu_s002[j]) / N);
-                    imp20[j] += (Math.Abs(s026_Test[i, j] - mu_s002[j]) / N);
-                    imp21[j] += (Math.Abs(s027_Test[i, j] - mu_s002[j]) / N);
-                    imp22[j] += (Math.Abs(s028_Test[i, j] - mu_s002[j]) / N);
-                    imp23[j] += (Math.Abs(s029_Test[i, j] - mu_s002[j]) / N);
-                    imp24[j] += (Math.Abs(s030_Test[i, j] - mu_s002[j]) / N);
-                    imp25[j] += (Math.Abs(s031_Test[i, j] - mu_s002[j]) / N);
-                    imp26[j] += (Math.Abs(s032_Test[i, j] - mu_s002[j]) / N);
-                    imp27[j] += (Math.Abs(s033_Test[i, j] - mu_s002[j]) / N);
-                    imp28[j] += (Math.Abs(s034_Test[i, j] - mu_s002[j]) / N);
-                    imp29[j] += (Math.Abs(s035_Test[i, j] - mu_s002[j]) / N);
-                    imp30[j] += (Math.Abs(s036_Test[i, j] - mu_s002[j]) / N);
-                    imp31[j] += (Math.Abs(s037_Test[i, j] - mu_s002[j]) / N);
-                    imp32[j] += (Math.Abs(s038_Test[i, j] - mu_s002[j]) / N);
-                    imp33[j] += (Math.Abs(s039_Test[i, j] - mu_s002[j]) / N);
-                    imp34[j] += (Math.Abs(s040_Test[i, j] - mu_s002[j]) / N);
-                    imp35[j] += (Math.Abs(s041_Test[i, j] - mu_s002[j]) / N);
-                    imp36[j] += (Math.Abs(s042_Test[i, j] - mu_s002[j]) / N);
-                    imp37[j] += (Math.Abs(s043_Test[i, j] - mu_s002[j]) / N);
-                    imp38[j] += (Math.Abs(s044_Test[i, j] - mu_s002[j]) / N);
-                    imp39[j] += (Math.Abs(s046_Test[i, j] - mu_s002[j]) / N);
-                    imp40[j] += (Math.Abs(s047_Test[i, j] - mu_s002[j]) / N);
-                    imp41[j] += (Math.Abs(s048_Test[i, j] - mu_s002[j]) / N);
-                    imp42[j] += (Math.Abs(s049_Test[i, j] - mu_s002[j]) / N);
-                    imp43[j] += (Math.Abs(s050_Test[i, j] - mu_s002[j]) / N);
-                    imp44[j] += (Math.Abs(s051_Test[i, j] - mu_s002[j]) / N);
-                    imp45[j] += (Math.Abs(s052_Test[i, j] - mu_s002[j]) / N);
-                    imp46[j] += (Math.Abs(s053_Test[i, j] - mu_s002[j]) / N);
-                    imp47[j] += (Math.Abs(s054_Test[i, j] - mu_s002[j]) / N);
-                    imp48[j] += (Math.Abs(s055_Test[i, j] - mu_s002[j]) / N);
-                    imp49[j] += (Math.Abs(s056_Test[i, j] - mu_s002[j]) / N);
-                    imp50[j] += (Math.Abs(s057_Test[i, j] - mu_s002[j]) / N);
+                    imp4[j] += (Math.Abs(s007_Test[i, j] - mu_s002[j])) / N;
+                    imp5[j] += (Math.Abs(s008_Test[i, j] - mu_s002[j])) / N;
+                    imp6[j] += (Math.Abs(s010_Test[i, j] - mu_s002[j])) / N;
+                    imp7[j] += (Math.Abs(s011_Test[i, j] - mu_s002[j])) / N;
+                    imp8[j] += (Math.Abs(s012_Test[i, j] - mu_s002[j])) / N;
+                    imp9[j] += (Math.Abs(s013_Test[i, j] - mu_s002[j])) / N;
+                    imp10[j] += (Math.Abs(s015_Test[i, j] - mu_s002[j])) / N;
+                    imp11[j] += (Math.Abs(s016_Test[i, j] - mu_s002[j])) / N;
+                    imp12[j] += (Math.Abs(s017_Test[i, j] - mu_s002[j])) / N;
+                    imp13[j] += (Math.Abs(s018_Test[i, j] - mu_s002[j])) / N;
+                    imp14[j] += (Math.Abs(s019_Test[i, j] - mu_s002[j])) / N;
+                    imp15[j] += (Math.Abs(s020_Test[i, j] - mu_s002[j])) / N;
+                    imp16[j] += (Math.Abs(s021_Test[i, j] - mu_s002[j])) / N;
+                    imp17[j] += (Math.Abs(s022_Test[i, j] - mu_s002[j])) / N;
+                    imp18[j] += (Math.Abs(s024_Test[i, j] - mu_s002[j])) / N;
+                    imp19[j] += (Math.Abs(s025_Test[i, j] - mu_s002[j])) / N;
+                    imp20[j] += (Math.Abs(s026_Test[i, j] - mu_s002[j])) / N;
+                    imp21[j] += (Math.Abs(s027_Test[i, j] - mu_s002[j])) / N;
+                    imp22[j] += (Math.Abs(s028_Test[i, j] - mu_s002[j])) / N;
+                    imp23[j] += (Math.Abs(s029_Test[i, j] - mu_s002[j])) / N;
+                    imp24[j] += (Math.Abs(s030_Test[i, j] - mu_s002[j])) / N;
+                    imp25[j] += (Math.Abs(s031_Test[i, j] - mu_s002[j])) / N;
+                    imp26[j] += (Math.Abs(s032_Test[i, j] - mu_s002[j])) / N;
+                    imp27[j] += (Math.Abs(s033_Test[i, j] - mu_s002[j])) / N;
+                    imp28[j] += (Math.Abs(s034_Test[i, j] - mu_s002[j])) / N;
+                    imp29[j] += (Math.Abs(s035_Test[i, j] - mu_s002[j])) / N;
+                    imp30[j] += (Math.Abs(s036_Test[i, j] - mu_s002[j])) / N;
+                    imp31[j] += (Math.Abs(s037_Test[i, j] - mu_s002[j])) / N;
+                    imp32[j] += (Math.Abs(s038_Test[i, j] - mu_s002[j])) / N;
+                    imp33[j] += (Math.Abs(s039_Test[i, j] - mu_s002[j])) / N;
+                    imp34[j] += (Math.Abs(s040_Test[i, j] - mu_s002[j])) / N;
+                    imp35[j] += (Math.Abs(s041_Test[i, j] - mu_s002[j])) / N;
+                    imp36[j] += (Math.Abs(s042_Test[i, j] - mu_s002[j])) / N;
+                    imp37[j] += (Math.Abs(s043_Test[i, j] - mu_s002[j])) / N;
+                    imp38[j] += (Math.Abs(s044_Test[i, j] - mu_s002[j])) / N;
+                    imp39[j] += (Math.Abs(s046_Test[i, j] - mu_s002[j])) / N;
+                    imp40[j] += (Math.Abs(s047_Test[i, j] - mu_s002[j])) / N;
+                    imp41[j] += (Math.Abs(s048_Test[i, j] - mu_s002[j])) / N;
+                    imp42[j] += (Math.Abs(s049_Test[i, j] - mu_s002[j])) / N;
+                    imp43[j] += (Math.Abs(s050_Test[i, j] - mu_s002[j])) / N;
+                    imp44[j] += (Math.Abs(s051_Test[i, j] - mu_s002[j])) / N;
+                    imp45[j] += (Math.Abs(s052_Test[i, j] - mu_s002[j])) / N;
+                    imp46[j] += (Math.Abs(s053_Test[i, j] - mu_s002[j])) / N;
+                    imp47[j] += (Math.Abs(s054_Test[i, j] - mu_s002[j])) / N;
+                    imp48[j] += (Math.Abs(s055_Test[i, j] - mu_s002[j])) / N;
+                    imp49[j] += (Math.Abs(s056_Test[i, j] - mu_s002[j])) / N;
+                    imp50[j] += (Math.Abs(s057_Test[i, j] - mu_s002[j])) / N;
                 }
             }
             #endregion
@@ -4762,7 +4762,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             for (int i = 0; i < imp1.Length; i++)
             {
                 #region Checking with the threshold
-                if (imp1[i] <= T)
+                if (imp1[i] >= T)
                 {
                     genuine++;
                 }
@@ -5066,10 +5066,10 @@ namespace ProgrammingAssignment1_SpecialTopics
 
             Console.WriteLine(genuine + " scores");
 
-            double ipr = (Convert.ToDouble(genuine) / totalScores) * 100;
-            double ir = (Convert.ToDouble(impostor) / totalScores) * 100; 
+            double far = Convert.ToDouble(genuine) / totalScores;
+            double ir = Convert.ToDouble(impostor) / totalScores; 
 
-            Console.WriteLine("Thus, given the sample size of N = " + N + ", the IPR = " + ir); 
+            Console.WriteLine("Thus, given the sample size of N = " + N + ", the IPR = " + far); 
         }
         #endregion
 
@@ -5092,7 +5092,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 for (int j = 0; j < s002_Test.GetLength(1) ; j++)
                 {
                     // This is the first part to the Manhattan Distance verifier
-                    difference[j] += (Math.Abs(s002_Test[i, j] - mu_s002[j]) / N); 
+                    difference[j] += (Math.Abs(s002_Test[i, j] - mu_s002[j])) / N; 
                 }
             }
 
@@ -5215,7 +5215,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             }
 
             // Iterating over the mean array to
-            for (int k = 0; k < mean.Length; k++)
+            for (int k = 0; k < sum.Length; k++)
             {
                 mean[k] = sum[k] / N; 
             }
