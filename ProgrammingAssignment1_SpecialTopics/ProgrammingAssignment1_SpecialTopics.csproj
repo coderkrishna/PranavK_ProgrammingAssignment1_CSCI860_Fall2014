@@ -47,7 +47,6 @@
   <ItemGroup>
     <Content Include="code_changelog.txt" />
     <Content Include="Data Files\s002.csv" />
-    <None Include="Data Files\PasswordData.csv" />
     <None Include="Data Files\s003.csv" />
     <None Include="Data Files\s004.csv" />
     <None Include="Data Files\s005.csv" />
