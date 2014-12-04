@@ -4521,8 +4521,6 @@ namespace ProgrammingAssignment1_SpecialTopics
                 }
             }
             #endregion
-
-            Console.ReadKey(); // Default program termination
         }
 
         #region Method to calculate the Impostor Scores
@@ -4717,8 +4715,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             int totalScores = 51 * 50 * N; 
             Console.Write("Your threshold T = " + T + ". Your sample size, N = " + N + "." + Environment.NewLine + "Total number of scores presented to the user are " + totalScores + Environment.NewLine);
             int genuine = 0;
-            int impostor = 0; 
-
+           
             for (int i = 0; i < imp1.Length; i++)
             {
                 #region Checking with the threshold whether or not if the impostor score is marked as genuine, that means the impostor is getting through.  
@@ -4726,310 +4723,276 @@ namespace ProgrammingAssignment1_SpecialTopics
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp2[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp3[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp4[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
 
                 if (imp5[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
 
                 if (imp6[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp7[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp8[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
+               
 
                 if (imp9[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp10[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp11[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
 
                 if (imp12[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp13[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp14[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
+                
 
                 if (imp15[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp16[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp17[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp18[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp19[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp20[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp21[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp22[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp23[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp24[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp25[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp26[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp27[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp28[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp29[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp30[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp31[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp32[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp33[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp34[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+               
                 if (imp35[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
 
                 if (imp36[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp37[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-                
+                                
                 if (imp38[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-                
+                                
                 if (imp39[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp40[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp41[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp42[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp43[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp44[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp45[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp46[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp47[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp48[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp49[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
-
+                
                 if (imp50[i] <= T)
                 {
                     genuine++;
                 }
-                else impostor++;
                 #endregion
             }
 
             Console.WriteLine(genuine + " scores");
 
-            double far = Convert.ToDouble(genuine) / totalScores;
-            double ir = Convert.ToDouble(impostor) / totalScores; 
+            double IPR = Convert.ToDouble(genuine) / totalScores;
+            Console.WriteLine("Thus, given the sample size of N = " + N + ", the IPR = " + IPR);
 
-            Console.WriteLine("Thus, given the sample size of N = " + N + ", the IPR = " + far); 
+            Console.Write("Do you want to go again?" + Environment.NewLine + "Press y or n");
+            string choice = Console.ReadLine();
+
+            #region Prompting the user whether or not to restart the whole program again
+            if (choice == "y")
+            {
+                Main(); 
+            }
+
+            if (choice == "n")
+            {
+                Console.Write("Thanks for using the Biometric Keyset Analyzer! Press any key to quit");
+                Console.ReadKey();
+            }
+            #endregion
         }
         #endregion
 
@@ -5207,8 +5170,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             // commas which separates each element. 
             foreach (var row in input.Split('\n'))
             {
-                j = 0; 
-                
+                j = 0;
                 // Again using the nested foreach loop in order to remove the comma which separates the various values. 
                 foreach (var col in row.Trim().Split(','))
                 {
