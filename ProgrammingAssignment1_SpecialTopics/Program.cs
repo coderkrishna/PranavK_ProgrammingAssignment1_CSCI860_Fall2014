@@ -15,9 +15,17 @@ namespace ProgrammingAssignment1_SpecialTopics
     /// Instructor: Dr. Kiran Balagani
     /// 
     /// 3rd December 2014
-    /// * Getting as much as I can get done today
+    /// * Getting as much as I can get done today - DONE!
     /// * Need to finish off the calculations of the IPR
-    /// * Now I will be able to write the report and let Kiran know that I can get this submitted to him. 
+    /// * Now I will be able to write the report and let Kiran know that I can get this submitted to him.
+    /// 
+    /// Accomplishments:
+    /// * Got to report the IPR (or at least what I think is the IPR)
+    /// * Mentioned that I am able to only do one of the two rates (in the report)
+    /// * Program code - done
+    /// 
+    /// Remaining task:
+    /// * Comment where necessary to make sure that the code is readable
     /// </summary>
     class Program
     {
@@ -237,6 +245,7 @@ namespace ProgrammingAssignment1_SpecialTopics
         static double[] s057_Genuine;
         #endregion
 
+        // This is the driver method
         static void Main()
         {
             #region Header
@@ -304,7 +313,8 @@ namespace ProgrammingAssignment1_SpecialTopics
             s057 = ParseData(@"C:\Users\Pranav\Documents\GitHub\PranavK_ProgrammingAssignment1_CSCI860_Fall2014\ProgrammingAssignment1_SpecialTopics\Data Files\s057.csv");
             #endregion
 
-            // This is the string for which the end user will determine which user will have the samples retrieved.
+            // This is the string for which the end user will determine which user will have the samples retrieved, and all the 
+            // rates will be calculated based upon the user number that the end user will input
             string userNumber = Console.ReadLine();
 
             #region For user 1
@@ -386,6 +396,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s057_Test = ExtractTestingSamples(s057, N);
                     #endregion
 
+                    // Making the method call to calculate all the zero-effort impostor scores
                     CalculateImpostorScores(s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s002);
                 }
 
@@ -418,6 +429,8 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     // Extracting the test samples
                     s003_Test = ExtractTestingSamples(s003, N);
+
+                    s003_Genuine = CalculateGenuineScores(s003_Test, mu_s003, N);
 
                     #region Test samples for impostor scores
                     // Extracting the test samples for impostor calculations
@@ -472,8 +485,6 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s056_Test = ExtractTestingSamples(s056, N);
                     s057_Test = ExtractTestingSamples(s057, N);
                     #endregion
-
-                    s003_Genuine = CalculateGenuineScores(s003_Test, mu_s003, N);
 
                     CalculateImpostorScores(s002_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s003);
                 }
@@ -4634,53 +4645,53 @@ namespace ProgrammingAssignment1_SpecialTopics
                     imp1[j] += (Math.Abs(s003_Test[i, j] - mu_s002[j]) / N);
                     imp2[j] += (Math.Abs(s004_Test[i, j] - mu_s002[j]) / N);
                     imp3[j] += (Math.Abs(s005_Test[i, j] - mu_s002[j]) / N);
-                    imp4[j] += (Math.Abs(s007_Test[i, j] - mu_s002[j])) / N;
-                    imp5[j] += (Math.Abs(s008_Test[i, j] - mu_s002[j])) / N;
-                    imp6[j] += (Math.Abs(s010_Test[i, j] - mu_s002[j])) / N;
-                    imp7[j] += (Math.Abs(s011_Test[i, j] - mu_s002[j])) / N;
-                    imp8[j] += (Math.Abs(s012_Test[i, j] - mu_s002[j])) / N;
-                    imp9[j] += (Math.Abs(s013_Test[i, j] - mu_s002[j])) / N;
-                    imp10[j] += (Math.Abs(s015_Test[i, j] - mu_s002[j])) / N;
-                    imp11[j] += (Math.Abs(s016_Test[i, j] - mu_s002[j])) / N;
-                    imp12[j] += (Math.Abs(s017_Test[i, j] - mu_s002[j])) / N;
-                    imp13[j] += (Math.Abs(s018_Test[i, j] - mu_s002[j])) / N;
-                    imp14[j] += (Math.Abs(s019_Test[i, j] - mu_s002[j])) / N;
-                    imp15[j] += (Math.Abs(s020_Test[i, j] - mu_s002[j])) / N;
-                    imp16[j] += (Math.Abs(s021_Test[i, j] - mu_s002[j])) / N;
-                    imp17[j] += (Math.Abs(s022_Test[i, j] - mu_s002[j])) / N;
-                    imp18[j] += (Math.Abs(s024_Test[i, j] - mu_s002[j])) / N;
-                    imp19[j] += (Math.Abs(s025_Test[i, j] - mu_s002[j])) / N;
-                    imp20[j] += (Math.Abs(s026_Test[i, j] - mu_s002[j])) / N;
-                    imp21[j] += (Math.Abs(s027_Test[i, j] - mu_s002[j])) / N;
-                    imp22[j] += (Math.Abs(s028_Test[i, j] - mu_s002[j])) / N;
-                    imp23[j] += (Math.Abs(s029_Test[i, j] - mu_s002[j])) / N;
-                    imp24[j] += (Math.Abs(s030_Test[i, j] - mu_s002[j])) / N;
-                    imp25[j] += (Math.Abs(s031_Test[i, j] - mu_s002[j])) / N;
-                    imp26[j] += (Math.Abs(s032_Test[i, j] - mu_s002[j])) / N;
-                    imp27[j] += (Math.Abs(s033_Test[i, j] - mu_s002[j])) / N;
-                    imp28[j] += (Math.Abs(s034_Test[i, j] - mu_s002[j])) / N;
-                    imp29[j] += (Math.Abs(s035_Test[i, j] - mu_s002[j])) / N;
-                    imp30[j] += (Math.Abs(s036_Test[i, j] - mu_s002[j])) / N;
-                    imp31[j] += (Math.Abs(s037_Test[i, j] - mu_s002[j])) / N;
-                    imp32[j] += (Math.Abs(s038_Test[i, j] - mu_s002[j])) / N;
-                    imp33[j] += (Math.Abs(s039_Test[i, j] - mu_s002[j])) / N;
-                    imp34[j] += (Math.Abs(s040_Test[i, j] - mu_s002[j])) / N;
-                    imp35[j] += (Math.Abs(s041_Test[i, j] - mu_s002[j])) / N;
-                    imp36[j] += (Math.Abs(s042_Test[i, j] - mu_s002[j])) / N;
-                    imp37[j] += (Math.Abs(s043_Test[i, j] - mu_s002[j])) / N;
-                    imp38[j] += (Math.Abs(s044_Test[i, j] - mu_s002[j])) / N;
-                    imp39[j] += (Math.Abs(s046_Test[i, j] - mu_s002[j])) / N;
-                    imp40[j] += (Math.Abs(s047_Test[i, j] - mu_s002[j])) / N;
-                    imp41[j] += (Math.Abs(s048_Test[i, j] - mu_s002[j])) / N;
-                    imp42[j] += (Math.Abs(s049_Test[i, j] - mu_s002[j])) / N;
-                    imp43[j] += (Math.Abs(s050_Test[i, j] - mu_s002[j])) / N;
-                    imp44[j] += (Math.Abs(s051_Test[i, j] - mu_s002[j])) / N;
-                    imp45[j] += (Math.Abs(s052_Test[i, j] - mu_s002[j])) / N;
-                    imp46[j] += (Math.Abs(s053_Test[i, j] - mu_s002[j])) / N;
-                    imp47[j] += (Math.Abs(s054_Test[i, j] - mu_s002[j])) / N;
-                    imp48[j] += (Math.Abs(s055_Test[i, j] - mu_s002[j])) / N;
-                    imp49[j] += (Math.Abs(s056_Test[i, j] - mu_s002[j])) / N;
-                    imp50[j] += (Math.Abs(s057_Test[i, j] - mu_s002[j])) / N;
+                    imp4[j] += (Math.Abs(s007_Test[i, j] - mu_s002[j]) / N);
+                    imp5[j] += (Math.Abs(s008_Test[i, j] - mu_s002[j]) / N);
+                    imp6[j] += (Math.Abs(s010_Test[i, j] - mu_s002[j]) / N);
+                    imp7[j] += (Math.Abs(s011_Test[i, j] - mu_s002[j]) / N);
+                    imp8[j] += (Math.Abs(s012_Test[i, j] - mu_s002[j]) / N);
+                    imp9[j] += (Math.Abs(s013_Test[i, j] - mu_s002[j]) / N);
+                    imp10[j] += (Math.Abs(s015_Test[i, j] - mu_s002[j]) / N);
+                    imp11[j] += (Math.Abs(s016_Test[i, j] - mu_s002[j]) / N);
+                    imp12[j] += (Math.Abs(s017_Test[i, j] - mu_s002[j]) / N);
+                    imp13[j] += (Math.Abs(s018_Test[i, j] - mu_s002[j]) / N);
+                    imp14[j] += (Math.Abs(s019_Test[i, j] - mu_s002[j]) / N);
+                    imp15[j] += (Math.Abs(s020_Test[i, j] - mu_s002[j]) / N);
+                    imp16[j] += (Math.Abs(s021_Test[i, j] - mu_s002[j]) / N);
+                    imp17[j] += (Math.Abs(s022_Test[i, j] - mu_s002[j]) / N);
+                    imp18[j] += (Math.Abs(s024_Test[i, j] - mu_s002[j]) / N);
+                    imp19[j] += (Math.Abs(s025_Test[i, j] - mu_s002[j]) / N);
+                    imp20[j] += (Math.Abs(s026_Test[i, j] - mu_s002[j]) / N);
+                    imp21[j] += (Math.Abs(s027_Test[i, j] - mu_s002[j]) / N);
+                    imp22[j] += (Math.Abs(s028_Test[i, j] - mu_s002[j]) / N);
+                    imp23[j] += (Math.Abs(s029_Test[i, j] - mu_s002[j]) / N);
+                    imp24[j] += (Math.Abs(s030_Test[i, j] - mu_s002[j]) / N);
+                    imp25[j] += (Math.Abs(s031_Test[i, j] - mu_s002[j]) / N);
+                    imp26[j] += (Math.Abs(s032_Test[i, j] - mu_s002[j]) / N);
+                    imp27[j] += (Math.Abs(s033_Test[i, j] - mu_s002[j]) / N);
+                    imp28[j] += (Math.Abs(s034_Test[i, j] - mu_s002[j]) / N);
+                    imp29[j] += (Math.Abs(s035_Test[i, j] - mu_s002[j]) / N);
+                    imp30[j] += (Math.Abs(s036_Test[i, j] - mu_s002[j]) / N);
+                    imp31[j] += (Math.Abs(s037_Test[i, j] - mu_s002[j]) / N);
+                    imp32[j] += (Math.Abs(s038_Test[i, j] - mu_s002[j]) / N);
+                    imp33[j] += (Math.Abs(s039_Test[i, j] - mu_s002[j]) / N);
+                    imp34[j] += (Math.Abs(s040_Test[i, j] - mu_s002[j]) / N);
+                    imp35[j] += (Math.Abs(s041_Test[i, j] - mu_s002[j]) / N);
+                    imp36[j] += (Math.Abs(s042_Test[i, j] - mu_s002[j]) / N);
+                    imp37[j] += (Math.Abs(s043_Test[i, j] - mu_s002[j]) / N);
+                    imp38[j] += (Math.Abs(s044_Test[i, j] - mu_s002[j]) / N);
+                    imp39[j] += (Math.Abs(s046_Test[i, j] - mu_s002[j]) / N);
+                    imp40[j] += (Math.Abs(s047_Test[i, j] - mu_s002[j]) / N);
+                    imp41[j] += (Math.Abs(s048_Test[i, j] - mu_s002[j]) / N);
+                    imp42[j] += (Math.Abs(s049_Test[i, j] - mu_s002[j]) / N);
+                    imp43[j] += (Math.Abs(s050_Test[i, j] - mu_s002[j]) / N);
+                    imp44[j] += (Math.Abs(s051_Test[i, j] - mu_s002[j]) / N);
+                    imp45[j] += (Math.Abs(s052_Test[i, j] - mu_s002[j]) / N);
+                    imp46[j] += (Math.Abs(s053_Test[i, j] - mu_s002[j]) / N);
+                    imp47[j] += (Math.Abs(s054_Test[i, j] - mu_s002[j]) / N);
+                    imp48[j] += (Math.Abs(s055_Test[i, j] - mu_s002[j]) / N);
+                    imp49[j] += (Math.Abs(s056_Test[i, j] - mu_s002[j]) / N);
+                    imp50[j] += (Math.Abs(s057_Test[i, j] - mu_s002[j]) / N);
                 }
             }
             #endregion
@@ -4691,7 +4702,6 @@ namespace ProgrammingAssignment1_SpecialTopics
 
             // This is the method call for finding out the impostor pass rate
             ImpostorPassRate(imp1, imp2, imp3, imp4, imp5, imp6, imp7, imp8, imp9, imp10, imp11, imp12, imp13, imp14, imp15, imp16, imp17, imp18, imp19, imp20, imp21, imp22, imp23, imp24, imp25, imp26, imp27, imp28, imp29, imp30, imp31, imp32, imp33, imp34, imp35, imp36, imp37, imp38, imp39, imp40, imp41, imp42, imp43, imp44, imp45, imp46, imp47, imp48, imp49, imp50, T, N); 
-
         }
         #endregion
 
@@ -4700,58 +4710,8 @@ namespace ProgrammingAssignment1_SpecialTopics
         /// This method will calculate the Impostor Pass Rate, also known as the 
         /// False Reject Rate
         /// </summary>
-        /// <param name="imp1">Impostor scores</param>
-        /// <param name="imp2">Impostor scores</param>
-        /// <param name="imp3">Impostor scores</param>
-        /// <param name="imp4">Impostor scores</param>
-        /// <param name="imp5">Impostor scores</param>
-        /// <param name="imp6">Impostor scores</param>
-        /// <param name="imp7">Impostor scores</param>
-        /// <param name="imp8">Impostor scores</param>
-        /// <param name="imp9">Impostor scores</param>
-        /// <param name="imp10">Impostor scores</param>
-        /// <param name="imp11">Impostor scores</param>
-        /// <param name="imp12">Impostor scores</param>
-        /// <param name="imp13">Impostor scores</param>
-        /// <param name="imp14">Impostor scores</param>
-        /// <param name="imp15">Impostor scores</param>
-        /// <param name="imp16">Impostor scores</param>
-        /// <param name="imp17">impostor scores</param>
-        /// <param name="imp18">impostor</param>
-        /// <param name="imp19">impostor</param>
-        /// <param name="imp20">impostor</param>
-        /// <param name="imp21">impostor</param>
-        /// <param name="imp22">impostor</param>
-        /// <param name="imp23">impostor</param>
-        /// <param name="imp24">impostor</param>
-        /// <param name="imp25">impostor</param>
-        /// <param name="imp26">impostor</param>
-        /// <param name="imp27">impostor</param>
-        /// <param name="imp28">impostor</param>
-        /// <param name="imp29">impostor</param>
-        /// <param name="imp30">impostor</param>
-        /// <param name="imp31">impostor</param>
-        /// <param name="imp32">impostor</param>
-        /// <param name="imp33">impostor</param>
-        /// <param name="imp34">impostor</param>
-        /// <param name="imp35">impostor</param>
-        /// <param name="imp36">impostor</param>
-        /// <param name="imp37">impostor</param>
-        /// <param name="imp38">impostor</param>
-        /// <param name="imp39">impostor</param>
-        /// <param name="imp40">impostor</param>
-        /// <param name="imp41"></param>
-        /// <param name="imp42"></param>
-        /// <param name="imp43"></param>
-        /// <param name="imp44"></param>
-        /// <param name="imp45"></param>
-        /// <param name="imp46"></param>
-        /// <param name="imp47"></param>
-        /// <param name="imp48"></param>
-        /// <param name="imp49"></param>
-        /// <param name="imp50"></param>
-        /// <param name="T">Threshold value of T, which the end user will enter in</param>
-        /// <param name="N">Here this is the number of samples.</param>
+        /// <param name="N">This is the number of samples, that is originally input from the beginning.</param>
+        /// <param name="T">Threshold value, T which the user also inputs. </param>
         static void ImpostorPassRate(double[] imp1, double[] imp2, double[] imp3, double[] imp4, double[] imp5, double[] imp6, double[] imp7, double[] imp8, double[] imp9, double[] imp10, double[] imp11, double[] imp12, double[] imp13, double[] imp14, double[] imp15, double[] imp16, double[] imp17, double[] imp18, double[] imp19, double[] imp20, double[] imp21, double[] imp22, double[] imp23, double[] imp24, double[] imp25, double[] imp26, double[] imp27, double[] imp28, double[] imp29, double[] imp30, double[] imp31, double[] imp32, double[] imp33, double[] imp34, double[] imp35, double[] imp36, double[] imp37, double[] imp38, double[] imp39, double[] imp40, double[] imp41, double[] imp42, double[] imp43, double[] imp44, double[] imp45, double[] imp46, double[] imp47, double[] imp48, double[] imp49, double[] imp50, double T, int N)
         {
             int totalScores = 51 * 50 * N; 
@@ -4761,8 +4721,8 @@ namespace ProgrammingAssignment1_SpecialTopics
 
             for (int i = 0; i < imp1.Length; i++)
             {
-                #region Checking with the threshold
-                if (imp1[i] >= T)
+                #region Checking with the threshold whether or not if the impostor score is marked as genuine, that means the impostor is getting through.  
+                if (imp1[i] <= T)
                 {
                     genuine++;
                 }
