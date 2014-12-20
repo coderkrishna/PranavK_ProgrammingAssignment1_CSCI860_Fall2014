@@ -192,57 +192,57 @@ namespace ProgrammingAssignment1_SpecialTopics
         #endregion
 
         #region Static double arrays that represent the genuine vectors
-        static double[] s002_Genuine;
-        static double[] s003_Genuine;
-        static double[] s004_Genuine;
-        static double[] s005_Genuine;
-        static double[] s007_Genuine;
-        static double[] s008_Genuine;
-        static double[] s010_Genuine;
-        static double[] s011_Genuine;
-        static double[] s012_Genuine;
-        static double[] s013_Genuine;
-        static double[] s015_Genuine;
-        static double[] s016_Genuine;
-        static double[] s017_Genuine;
-        static double[] s018_Genuine;
-        static double[] s019_Genuine;
-        static double[] s020_Genuine;
-        static double[] s021_Genuine;
-        static double[] s022_Genuine;
-        static double[] s024_Genuine;
-        static double[] s025_Genuine;
-        static double[] s026_Genuine;
-        static double[] s027_Genuine;
-        static double[] s028_Genuine;
-        static double[] s029_Genuine;
-        static double[] s030_Genuine;
-        static double[] s031_Genuine;
-        static double[] s032_Genuine;
-        static double[] s033_Genuine;
-        static double[] s034_Genuine;
-        static double[] s035_Genuine;
-        static double[] s036_Genuine;
-        static double[] s037_Genuine;
-        static double[] s038_Genuine;
-        static double[] s039_Genuine;
-        static double[] s040_Genuine;
-        static double[] s041_Genuine;
-        static double[] s042_Genuine;
-        static double[] s043_Genuine;
-        static double[] s044_Genuine;
-        static double[] s046_Genuine;
-        static double[] s047_Genuine;
-        static double[] s048_Genuine;
-        static double[] s049_Genuine;
-        static double[] s050_Genuine;
-        static double[] s051_Genuine;
-        static double[] s052_Genuine;
-        static double[] s053_Genuine;
-        static double[] s054_Genuine;
-        static double[] s055_Genuine;
-        static double[] s056_Genuine;
-        static double[] s057_Genuine;
+        static double[,] s002_Genuine;
+        static double[,] s003_Genuine;
+        static double[,] s004_Genuine;
+        static double[,] s005_Genuine;
+        static double[,] s007_Genuine;
+        static double[,] s008_Genuine;
+        static double[,] s010_Genuine;
+        static double[,] s011_Genuine;
+        static double[,] s012_Genuine;
+        static double[,] s013_Genuine;
+        static double[,] s015_Genuine;
+        static double[,] s016_Genuine;
+        static double[,] s017_Genuine;
+        static double[,] s018_Genuine;
+        static double[,] s019_Genuine;
+        static double[,] s020_Genuine;
+        static double[,] s021_Genuine;
+        static double[,] s022_Genuine;
+        static double[,] s024_Genuine;
+        static double[,] s025_Genuine;
+        static double[,] s026_Genuine;
+        static double[,] s027_Genuine;
+        static double[,] s028_Genuine;
+        static double[,] s029_Genuine;
+        static double[,] s030_Genuine;
+        static double[,] s031_Genuine;
+        static double[,] s032_Genuine;
+        static double[,] s033_Genuine;
+        static double[,] s034_Genuine;
+        static double[,] s035_Genuine;
+        static double[,] s036_Genuine;
+        static double[,] s037_Genuine;
+        static double[,] s038_Genuine;
+        static double[,] s039_Genuine;
+        static double[,] s040_Genuine;
+        static double[,] s041_Genuine;
+        static double[,] s042_Genuine;
+        static double[,] s043_Genuine;
+        static double[,] s044_Genuine;
+        static double[,] s046_Genuine;
+        static double[,] s047_Genuine;
+        static double[,] s048_Genuine;
+        static double[,] s049_Genuine;
+        static double[,] s050_Genuine;
+        static double[,] s051_Genuine;
+        static double[,] s052_Genuine;
+        static double[,] s053_Genuine;
+        static double[,] s054_Genuine;
+        static double[,] s055_Genuine;
+        static double[,] s056_Genuine;
+        static double[,] s057_Genuine;
         #endregion
 
         // This is the driver method
@@ -342,9 +342,13 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     // Making the method call to generate the various genuine scores for user 1
                     s002_Genuine = CalculateGenuineScores(s002_Test, mu_s002, N);
-                    
+
+                    FalseRejectRate(s002_Genuine, N);
+
+                    Console.ReadLine(); 
+
                     #region Extracting all the samples for the impostor calculations
-                    s003_Test = ExtractTestingSamples(s003, N); 
+                        s003_Test = ExtractTestingSamples(s003, N); 
                     s004_Test = ExtractTestingSamples(s004, N); 
                     s005_Test = ExtractTestingSamples(s005, N); 
                     s007_Test = ExtractTestingSamples(s007, N);
@@ -432,9 +436,18 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     s003_Genuine = CalculateGenuineScores(s003_Test, mu_s003, N);
 
+                    for (int i = 0; i < s003_Genuine.GetLength(0); i++)
+                    {
+                        for (int j = 0; j < s003_Genuine.GetLength(1); j++)
+                        {
+                            Console.Write(string.Format("{0} ", s003_Genuine[i, j]));
+                        }
+                        Console.Write(Environment.NewLine);  
+                    }
+
                     #region Test samples for impostor scores
-                    // Extracting the test samples for impostor calculations
-                    s002_Test = ExtractTestingSamples(s002, N);
+                        // Extracting the test samples for impostor calculations
+                        s002_Test = ExtractTestingSamples(s002, N);
                     s004_Test = ExtractTestingSamples(s004, N);
                     s005_Test = ExtractTestingSamples(s005, N);
                     s007_Test = ExtractTestingSamples(s007, N);
@@ -4523,6 +4536,18 @@ namespace ProgrammingAssignment1_SpecialTopics
             #endregion
         }
 
+        static void FalseRejectRate(double[,] s002_Genuine, int N)
+        {
+            for (int i = 0; i < s002_Genuine.GetLength(0); i++)
+            {
+                for (int j = 0; j < s002_Genuine.GetLength(1); j++)
+                {
+                    Console.Write(string.Format("{0} ", s002_Genuine[i, j]));
+                }
+                Console.Write(Environment.NewLine); 
+            }
+        }
+
         #region Method to calculate the Impostor Scores
         /// <summary>
         /// This is the method that is going to calculate the impostor scores using the data from other users
@@ -4583,56 +4608,56 @@ namespace ProgrammingAssignment1_SpecialTopics
         public static void CalculateImpostorScores(double[,] s003_Test, double[,] s004_Test, double[,] s005_Test, double[,] s007_Test, double[,] s008_Test, double[,] s010_Test, double[,] s011_Test, double[,] s012_Test, double[,] s013_Test, double[,] s015_Test, double[,] s016_Test, double[,] s017_Test, double[,] s018_Test, double[,] s019_Test, double[,] s020_Test, double[,] s021_Test, double[,] s022_Test, double[,] s024_Test, double[,] s025_Test, double[,] s026_Test, double[,] s027_Test, double[,] s028_Test, double[,] s029_Test, double[,] s030_Test, double[,] s031_Test, double[,] s032_Test, double[,] s033_Test, double[,] s034_Test, double[,] s035_Test, double[,] s036_Test, double[,] s037_Test, double[,] s038_Test, double[,] s039_Test, double[,] s040_Test, double[,] s041_Test, double[,] s042_Test, double[,] s043_Test, double[,] s044_Test, double[,] s046_Test, double[,] s047_Test, double[,] s048_Test, double[,] s049_Test, double[,] s050_Test, double[,] s051_Test, double[,] s052_Test, double[,] s053_Test, double[,] s054_Test, double[,] s055_Test, double[,] s056_Test, double[,] s057_Test, int N, double[] mu_s002)
         {
             #region 50 double arrays that represent the Impostor scores
-            double[] imp1 = new double[21];
-            double[] imp2 = new double[21];
-            double[] imp3 = new double[21];
-            double[] imp4 = new double[21];
-            double[] imp5 = new double[21];
-            double[] imp6 = new double[21];
-            double[] imp7 = new double[21];
-            double[] imp8 = new double[21];
-            double[] imp9 = new double[21];
-            double[] imp10 = new double[21];
-            double[] imp11 = new double[21];
-            double[] imp12 = new double[21];
-            double[] imp13 = new double[21];
-            double[] imp14 = new double[21];
-            double[] imp15 = new double[21];
-            double[] imp16 = new double[21];
-            double[] imp17 = new double[21];
-            double[] imp18 = new double[21];
-            double[] imp19 = new double[21];
-            double[] imp20 = new double[21];
-            double[] imp21 = new double[21];
-            double[] imp22 = new double[21];
-            double[] imp23 = new double[21];
-            double[] imp24 = new double[21];
-            double[] imp25 = new double[21];
-            double[] imp26 = new double[21];
-            double[] imp27 = new double[21];
-            double[] imp28 = new double[21];
-            double[] imp29 = new double[21];
-            double[] imp30 = new double[21];
-            double[] imp31 = new double[21];
-            double[] imp32 = new double[21];
-            double[] imp33 = new double[21];
-            double[] imp34 = new double[21];
-            double[] imp35 = new double[21];
-            double[] imp36 = new double[21];
-            double[] imp37 = new double[21];
-            double[] imp38 = new double[21];
-            double[] imp39 = new double[21];
-            double[] imp40 = new double[21];
-            double[] imp41 = new double[21];
-            double[] imp42 = new double[21];
-            double[] imp43 = new double[21];
-            double[] imp44 = new double[21];
-            double[] imp45 = new double[21];
-            double[] imp46 = new double[21];
-            double[] imp47 = new double[21];
-            double[] imp48 = new double[21];
-            double[] imp49 = new double[21];
-            double[] imp50 = new double[21]; 
+            double[,] imp1 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp2 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp3 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp4 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp5 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp6 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp7 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp8 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp9 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp10 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp11 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp12 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp13 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp14 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp15 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp16 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp17 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp18 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp19 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp20 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp21 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp22 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp23 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp24 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp25 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp26 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp27 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp28 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp29 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp30 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp31 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp32 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp33 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp34 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp35 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp36 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp37 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp38 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp39 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp40 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp41 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp42 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp43 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp44 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp45 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp46 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp47 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp48 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp49 = new double[s003_Test.GetLength(0), 21];
+            double[,] imp50 = new double[s003_Test.GetLength(0), 21]; 
             #endregion
 
             #region Populating all the arrays at one go. 
@@ -4640,64 +4665,59 @@ namespace ProgrammingAssignment1_SpecialTopics
             {
                 for (int j = 0; j < s003_Test.GetLength(1); j++)
                 {
-                    imp1[j] += (Math.Abs(s003_Test[i, j] - mu_s002[j]) / 2);
-                    imp2[j] += (Math.Abs(s004_Test[i, j] - mu_s002[j]) / 2);
-                    imp3[j] += (Math.Abs(s005_Test[i, j] - mu_s002[j]) / 2);
-                    imp4[j] += (Math.Abs(s007_Test[i, j] - mu_s002[j]) / 2);
-                    imp5[j] += (Math.Abs(s008_Test[i, j] - mu_s002[j]) / 2);
-                    imp6[j] += (Math.Abs(s010_Test[i, j] - mu_s002[j]) / 2);
-                    imp7[j] += (Math.Abs(s011_Test[i, j] - mu_s002[j]) / 2);
-                    imp8[j] += (Math.Abs(s012_Test[i, j] - mu_s002[j]) / 2);
-                    imp9[j] += (Math.Abs(s013_Test[i, j] - mu_s002[j]) / 2);
-                    imp10[j] += (Math.Abs(s015_Test[i, j] - mu_s002[j]) / 2);
-                    imp11[j] += (Math.Abs(s016_Test[i, j] - mu_s002[j]) / 2);
-                    imp12[j] += (Math.Abs(s017_Test[i, j] - mu_s002[j]) / 2);
-                    imp13[j] += (Math.Abs(s018_Test[i, j] - mu_s002[j]) / 2);
-                    imp14[j] += (Math.Abs(s019_Test[i, j] - mu_s002[j]) / 2);
-                    imp15[j] += (Math.Abs(s020_Test[i, j] - mu_s002[j]) / 2);
-                    imp16[j] += (Math.Abs(s021_Test[i, j] - mu_s002[j]) / 2);
-                    imp17[j] += (Math.Abs(s022_Test[i, j] - mu_s002[j]) / 2);
-                    imp18[j] += (Math.Abs(s024_Test[i, j] - mu_s002[j]) / 2);
-                    imp19[j] += (Math.Abs(s025_Test[i, j] - mu_s002[j]) / 2);
-                    imp20[j] += (Math.Abs(s026_Test[i, j] - mu_s002[j]) / 2);
-                    imp21[j] += (Math.Abs(s027_Test[i, j] - mu_s002[j]) / 2);
-                    imp22[j] += (Math.Abs(s028_Test[i, j] - mu_s002[j]) / 2);
-                    imp23[j] += (Math.Abs(s029_Test[i, j] - mu_s002[j]) / 2);
-                    imp24[j] += (Math.Abs(s030_Test[i, j] - mu_s002[j]) / 2);
-                    imp25[j] += (Math.Abs(s031_Test[i, j] - mu_s002[j]) / 2);
-                    imp26[j] += (Math.Abs(s032_Test[i, j] - mu_s002[j]) / 2);
-                    imp27[j] += (Math.Abs(s033_Test[i, j] - mu_s002[j]) / 2);
-                    imp28[j] += (Math.Abs(s034_Test[i, j] - mu_s002[j]) / 2);
-                    imp29[j] += (Math.Abs(s035_Test[i, j] - mu_s002[j]) / 2);
-                    imp30[j] += (Math.Abs(s036_Test[i, j] - mu_s002[j]) / 2);
-                    imp31[j] += (Math.Abs(s037_Test[i, j] - mu_s002[j]) / 2);
-                    imp32[j] += (Math.Abs(s038_Test[i, j] - mu_s002[j]) / 2);
-                    imp33[j] += (Math.Abs(s039_Test[i, j] - mu_s002[j]) / 2);
-                    imp34[j] += (Math.Abs(s040_Test[i, j] - mu_s002[j]) / 2);
-                    imp35[j] += (Math.Abs(s041_Test[i, j] - mu_s002[j]) / 2);
-                    imp36[j] += (Math.Abs(s042_Test[i, j] - mu_s002[j]) / 2);
-                    imp37[j] += (Math.Abs(s043_Test[i, j] - mu_s002[j]) / 2);
-                    imp38[j] += (Math.Abs(s044_Test[i, j] - mu_s002[j]) / 2);
-                    imp39[j] += (Math.Abs(s046_Test[i, j] - mu_s002[j]) / 2);
-                    imp40[j] += (Math.Abs(s047_Test[i, j] - mu_s002[j]) / 2);
-                    imp41[j] += (Math.Abs(s048_Test[i, j] - mu_s002[j]) / 2);
-                    imp42[j] += (Math.Abs(s049_Test[i, j] - mu_s002[j]) / 2);
-                    imp43[j] += (Math.Abs(s050_Test[i, j] - mu_s002[j]) / 2);
-                    imp44[j] += (Math.Abs(s051_Test[i, j] - mu_s002[j]) / 2);
-                    imp45[j] += (Math.Abs(s052_Test[i, j] - mu_s002[j]) / 2);
-                    imp46[j] += (Math.Abs(s053_Test[i, j] - mu_s002[j]) / 2);
-                    imp47[j] += (Math.Abs(s054_Test[i, j] - mu_s002[j]) / 2);
-                    imp48[j] += (Math.Abs(s055_Test[i, j] - mu_s002[j]) / 2);
-                    imp49[j] += (Math.Abs(s056_Test[i, j] - mu_s002[j]) / 2);
-                    imp50[j] += (Math.Abs(s057_Test[i, j] - mu_s002[j]) / 2);
+                    imp1[i,j] += (Math.Abs(s003_Test[i, j] - mu_s002[j]) / 2);
+                    imp2[i,j] += (Math.Abs(s004_Test[i, j] - mu_s002[j]) / 2);
+                    imp3[i,j] += (Math.Abs(s005_Test[i, j] - mu_s002[j]) / 2);
+                    imp4[i,j] += (Math.Abs(s007_Test[i, j] - mu_s002[j]) / 2);
+                    imp5[i,j] += (Math.Abs(s008_Test[i, j] - mu_s002[j]) / 2);
+                    imp6[i,j] += (Math.Abs(s010_Test[i, j] - mu_s002[j]) / 2);
+                    imp7[i,j] += (Math.Abs(s011_Test[i, j] - mu_s002[j]) / 2);
+                    imp8[i,j] += (Math.Abs(s012_Test[i, j] - mu_s002[j]) / 2);
+                    imp9[i,j] += (Math.Abs(s013_Test[i, j] - mu_s002[j]) / 2);
+                    imp10[i,j] += (Math.Abs(s015_Test[i, j] - mu_s002[j]) / 2);
+                    imp11[i,j] += (Math.Abs(s016_Test[i, j] - mu_s002[j]) / 2);
+                    imp12[i,j] += (Math.Abs(s017_Test[i, j] - mu_s002[j]) / 2);
+                    imp13[i,j] += (Math.Abs(s018_Test[i, j] - mu_s002[j]) / 2);
+                    imp14[i,j] += (Math.Abs(s019_Test[i, j] - mu_s002[j]) / 2);
+                    imp15[i,j] += (Math.Abs(s020_Test[i, j] - mu_s002[j]) / 2);
+                    imp16[i,j] += (Math.Abs(s021_Test[i, j] - mu_s002[j]) / 2);
+                    imp17[i,j] += (Math.Abs(s022_Test[i, j] - mu_s002[j]) / 2);
+                    imp18[i,j] += (Math.Abs(s024_Test[i, j] - mu_s002[j]) / 2);
+                    imp19[i,j] += (Math.Abs(s025_Test[i, j] - mu_s002[j]) / 2);
+                    imp20[i,j] += (Math.Abs(s026_Test[i, j] - mu_s002[j]) / 2);
+                    imp21[i,j] += (Math.Abs(s027_Test[i, j] - mu_s002[j]) / 2);
+                    imp22[i,j] += (Math.Abs(s028_Test[i, j] - mu_s002[j]) / 2);
+                    imp23[i,j] += (Math.Abs(s029_Test[i, j] - mu_s002[j]) / 2);
+                    imp24[i,j] += (Math.Abs(s030_Test[i, j] - mu_s002[j]) / 2);
+                    imp25[i,j] += (Math.Abs(s031_Test[i, j] - mu_s002[j]) / 2);
+                    imp26[i,j] += (Math.Abs(s032_Test[i, j] - mu_s002[j]) / 2);
+                    imp27[i,j] += (Math.Abs(s033_Test[i, j] - mu_s002[j]) / 2);
+                    imp28[i,j] += (Math.Abs(s034_Test[i, j] - mu_s002[j]) / 2);
+                    imp29[i,j] += (Math.Abs(s035_Test[i, j] - mu_s002[j]) / 2);
+                    imp30[i,j] += (Math.Abs(s036_Test[i, j] - mu_s002[j]) / 2);
+                    imp31[i,j] += (Math.Abs(s037_Test[i, j] - mu_s002[j]) / 2);
+                    imp32[i,j] += (Math.Abs(s038_Test[i, j] - mu_s002[j]) / 2);
+                    imp33[i,j] += (Math.Abs(s039_Test[i, j] - mu_s002[j]) / 2);
+                    imp34[i,j] += (Math.Abs(s040_Test[i, j] - mu_s002[j]) / 2);
+                    imp35[i,j] += (Math.Abs(s041_Test[i, j] - mu_s002[j]) / 2);
+                    imp36[i,j] += (Math.Abs(s042_Test[i, j] - mu_s002[j]) / 2);
+                    imp37[i,j] += (Math.Abs(s043_Test[i, j] - mu_s002[j]) / 2);
+                    imp38[i,j] += (Math.Abs(s044_Test[i, j] - mu_s002[j]) / 2);
+                    imp39[i,j] += (Math.Abs(s046_Test[i, j] - mu_s002[j]) / 2);
+                    imp40[i,j] += (Math.Abs(s047_Test[i, j] - mu_s002[j]) / 2);
+                    imp41[i,j] += (Math.Abs(s048_Test[i, j] - mu_s002[j]) / 2);
+                    imp42[i,j] += (Math.Abs(s049_Test[i, j] - mu_s002[j]) / 2);
+                    imp43[i,j] += (Math.Abs(s050_Test[i, j] - mu_s002[j]) / 2);
+                    imp44[i,j] += (Math.Abs(s051_Test[i, j] - mu_s002[j]) / 2);
+                    imp45[i,j] += (Math.Abs(s052_Test[i, j] - mu_s002[j]) / 2);
+                    imp46[i,j] += (Math.Abs(s053_Test[i, j] - mu_s002[j]) / 2);
+                    imp47[i,j] += (Math.Abs(s054_Test[i, j] - mu_s002[j]) / 2);
+                    imp48[i,j] += (Math.Abs(s055_Test[i, j] - mu_s002[j]) / 2);
+                    imp49[i,j] += (Math.Abs(s056_Test[i, j] - mu_s002[j]) / 2);
+                    imp50[i,j] += (Math.Abs(s057_Test[i, j] - mu_s002[j]) / 2);
                 }
             }
             #endregion
-
-            for (int i = 0; i < imp1.Length; i++)
-            {
-                Console.Write(imp1[i] + " " + imp2[i] + " " + Environment.NewLine); 
-            }
 
             Console.Write("Now to calculate the Impostor Pass Rate, please enter a threshold value of T." + Environment.NewLine + "T = ");
             string threshold = Console.ReadLine();
@@ -4715,267 +4735,270 @@ namespace ProgrammingAssignment1_SpecialTopics
         /// </summary>
         /// <param name="N">This is the number of samples, that is originally input from the beginning.</param>
         /// <param name="T">Threshold value, T which the user also inputs. </param>
-        static void ImpostorPassRate(double[] imp1, double[] imp2, double[] imp3, double[] imp4, double[] imp5, double[] imp6, double[] imp7, double[] imp8, double[] imp9, double[] imp10, double[] imp11, double[] imp12, double[] imp13, double[] imp14, double[] imp15, double[] imp16, double[] imp17, double[] imp18, double[] imp19, double[] imp20, double[] imp21, double[] imp22, double[] imp23, double[] imp24, double[] imp25, double[] imp26, double[] imp27, double[] imp28, double[] imp29, double[] imp30, double[] imp31, double[] imp32, double[] imp33, double[] imp34, double[] imp35, double[] imp36, double[] imp37, double[] imp38, double[] imp39, double[] imp40, double[] imp41, double[] imp42, double[] imp43, double[] imp44, double[] imp45, double[] imp46, double[] imp47, double[] imp48, double[] imp49, double[] imp50, double T, int N)
+        static void ImpostorPassRate(double[,] imp1, double[,] imp2, double[,] imp3, double[,] imp4, double[,] imp5, double[,] imp6, double[,] imp7, double[,] imp8, double[,] imp9, double[,] imp10, double[,] imp11, double[,] imp12, double[,] imp13, double[,] imp14, double[,] imp15, double[,] imp16, double[,] imp17, double[,] imp18, double[,] imp19, double[,] imp20, double[,] imp21, double[,] imp22, double[,] imp23, double[,] imp24, double[,] imp25, double[,] imp26, double[,] imp27, double[,] imp28, double[,] imp29, double[,] imp30, double[,] imp31, double[,] imp32, double[,] imp33, double[,] imp34, double[,] imp35, double[,] imp36, double[,] imp37, double[,] imp38, double[,] imp39, double[,] imp40, double[,] imp41, double[,] imp42, double[,] imp43, double[,] imp44, double[,] imp45, double[,] imp46, double[,] imp47, double[,] imp48, double[,] imp49, double[,] imp50, double T, int N)
         {
             int totalScores = 51 * 50 * N; 
             Console.Write("Your threshold T = " + T + ". Your sample size, N = " + N + "." + Environment.NewLine + "Total number of scores presented to the user are " + totalScores + Environment.NewLine);
             int genuine = 0;
            
-            for (int i = 0; i < imp1.Length; i++)
+            for (int i = 0; i < imp1.GetLength(0); i++)
             {
-                #region Checking with the threshold whether or not if the impostor score is marked as genuine, that means the impostor is getting through.  
-                if (imp1[i] <= T)
+                for (int j = 0; j < imp1.GetLength(1); j++)
                 {
-                    genuine++;
-                }
-                
-                if (imp2[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp3[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp4[i] <= T)
-                {
-                    genuine++;
-                }
+                    #region Checking with the threshold whether or not if the impostor score is marked as genuine, that means the impostor is getting through.
+                    if (imp1[i, j] <= T)
+                    {
+                        genuine++;
+                    }
 
-                if (imp5[i] <= T)
-                {
-                    genuine++;
-                }
+                    if (imp2[i, j] <= T)
+                    {
+                        genuine++;
+                    }
 
-                if (imp6[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp7[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp8[i] <= T)
-                {
-                    genuine++;
-                }
-               
+                    if (imp3[i, j] <= T)
+                    {
+                        genuine++;
+                    }
 
-                if (imp9[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp10[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp11[i] <= T)
-                {
-                    genuine++;
-                }
+                    if (imp4[i, j] <= T)
+                    {
+                        genuine++;
+                    }
 
-                if (imp12[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp13[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp14[i] <= T)
-                {
-                    genuine++;
-                }
-                
+                    if (imp5[i, j] <= T)
+                    {
+                        genuine++;
+                    }
 
-                if (imp15[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp16[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp17[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp18[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp19[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp20[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp21[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp22[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp23[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp24[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp25[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp26[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp27[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp28[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp29[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp30[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp31[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp32[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp33[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp34[i] <= T)
-                {
-                    genuine++;
-                }
-               
-                if (imp35[i] <= T)
-                {
-                    genuine++;
-                }
+                    if (imp6[i, j] <= T)
+                    {
+                        genuine++;
+                    }
 
-                if (imp36[i] <= T)
-                {
-                    genuine++;
+                    if (imp7[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp8[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+
+                    if (imp9[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp10[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp11[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp12[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp13[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp14[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+
+                    if (imp15[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp16[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp17[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp18[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp19[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp20[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp21[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp22[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp23[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp24[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp25[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp26[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp27[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp28[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp29[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp30[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp31[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp32[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp33[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp34[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp35[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp36[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp37[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp38[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp39[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp40[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp41[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp42[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp43[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp44[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp45[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp46[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp47[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp48[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp49[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+
+                    if (imp50[i, j] <= T)
+                    {
+                        genuine++;
+                    }
+                    #endregion
                 }
-                
-                if (imp37[i] <= T)
-                {
-                    genuine++;
-                }
-                                
-                if (imp38[i] <= T)
-                {
-                    genuine++;
-                }
-                                
-                if (imp39[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp40[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp41[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp42[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp43[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp44[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp45[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp46[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp47[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp48[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp49[i] <= T)
-                {
-                    genuine++;
-                }
-                
-                if (imp50[i] <= T)
-                {
-                    genuine++;
-                }
-                #endregion
             }
 
             Console.WriteLine(genuine + " scores");
@@ -4983,7 +5006,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             double IPR = Convert.ToDouble(genuine) / totalScores;
             Console.WriteLine("Thus, given the sample size of N = " + N + ", the IPR = " + IPR);
 
-            Console.Write("Do you want to go again?" + Environment.NewLine + "Press y or n");
+            Console.Write("Do you want to go again?" + Environment.NewLine + "Press y or n" + Environment.NewLine);
             string choice = Console.ReadLine();
 
             #region Prompting the user whether or not to restart the whole program again
@@ -5009,10 +5032,10 @@ namespace ProgrammingAssignment1_SpecialTopics
         /// <param name="mu_s002">This is the mean or template vector of the first N samples</param>
         /// <param name="N">Static (fixed) integer value which contains the first N samples upon which analysis will be conducted</param>
         /// <note>Please note that I am making the assumption that for the Manhattan Verifier is being used with the value of n as the number of samples (N)</note>
-        static double[] CalculateGenuineScores(double[,] s002_Test, double[] mu_s002, int N)
+        static double[,] CalculateGenuineScores(double[,] s002_Test, double[] mu_s002, int N)
         {
-            // Initialize the 1D double array
-            double[] difference = new double[21];
+            // Initialize the 2D double array
+            double[,] difference = new double[s002_Test.GetLength(0), 21];
 
             // Iterating over the nested for loop and making column wise calculations
             for (int i = 0; i < s002_Test.GetLength(0); i++)
@@ -5020,7 +5043,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                 for (int j = 0; j < s002_Test.GetLength(1) ; j++)
                 {
                     // This is the first part to the Manhattan Distance verifier
-                    difference[j] += (Math.Abs(s002_Test[i, j] - mu_s002[j])) / 2; 
+                    difference[i, j] += (Math.Abs(s002_Test[i, j] - mu_s002[j])) / 2; 
                 }
             }
 
