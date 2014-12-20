@@ -17,6 +17,7 @@ namespace ProgrammingAssignment1_SpecialTopics
     /// 20th December 2014
     /// * Finishing up the ENTIRE project, and will be able to get the results properly to Kiran soon!
     /// * Have to make sure that the code is entirely well written, comments included. 
+    /// * Have finished the program, and making sure that I know what is going on!
     /// 
     /// Accomplishments:
     /// * Was able to get both Impostor Pass Rates and False Reject Rates and plot them on a set 
@@ -428,15 +429,6 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s003_Test = ExtractTestingSamples(s003, N);
 
                     s003_Genuine = CalculateGenuineScores(s003_Test, mu_s003, N);
-
-                    for (int i = 0; i < s003_Genuine.GetLength(0); i++)
-                    {
-                        for (int j = 0; j < s003_Genuine.GetLength(1); j++)
-                        {
-                            Console.Write(string.Format("{0} ", s003_Genuine[i, j]));
-                        }
-                        Console.Write(Environment.NewLine);  
-                    }
 
                     #region Test samples for impostor scores
                         // Extracting the test samples for impostor calculations
@@ -4664,6 +4656,22 @@ namespace ProgrammingAssignment1_SpecialTopics
             double FRR = Convert.ToDouble(impostor) / FRR_Total;
 
             Console.Write("The false reject rate, FRR = " + FRR + " with N = " + N + " samples at the threshold T = " + threshold_FRR);
+
+            #region Prompting the user whether or not to restart the whole program again
+            Console.Write("Do you want to go again?" + Environment.NewLine + "Press y or n" + Environment.NewLine);
+            string choice = Console.ReadLine();
+
+            if (choice == "y")
+            {
+                Main();
+            }
+
+            if (choice == "n")
+            {
+                Console.Write("Thanks for using the Biometric Keyset Analyzer! Press any key to quit");
+                Console.ReadKey();
+            }
+            #endregion
         }
         #endregion
 
@@ -5124,22 +5132,6 @@ namespace ProgrammingAssignment1_SpecialTopics
 
             double IPR = Convert.ToDouble(genuine) / totalScores;
             Console.WriteLine("Thus, given the sample size of N = " + N + ", the IPR = " + IPR);
-
-            Console.Write("Do you want to go again?" + Environment.NewLine + "Press y or n" + Environment.NewLine);
-            string choice = Console.ReadLine();
-
-            #region Prompting the user whether or not to restart the whole program again
-            if (choice == "y")
-            {
-                Main(); 
-            }
-
-            if (choice == "n")
-            {
-                Console.Write("Thanks for using the Biometric Keyset Analyzer! Press any key to quit");
-                Console.ReadKey();
-            }
-            #endregion
         }
         #endregion
 
