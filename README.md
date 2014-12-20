@@ -26,3 +26,9 @@ Please follow the following steps in order to be able to access the executable f
 When Executing This Code
 ================================================
 Please do note that when you are executing this program, there are CSV files used as the data input for the program.  Please ensure that you change the directories of the files accordingly that way there are no mishaps.  
+
+Changes
+========
+1. The code has been completed to be able to calculate both Impostor Pass Rate and False Reject Rate.  
+2. I have been able to select five thresholds which I plan to examine and change the sampling size from 100 samples to 300 samples. 
+3. I have also made a change in the report. 
