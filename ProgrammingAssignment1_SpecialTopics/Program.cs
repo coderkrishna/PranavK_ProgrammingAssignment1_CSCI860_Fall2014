@@ -14,18 +14,13 @@ namespace ProgrammingAssignment1_SpecialTopics
     /// CSCI-860-W01: Biometrics and its Applications in a Networked Society
     /// Instructor: Dr. Kiran Balagani
     /// 
-    /// 3rd December 2014
-    /// * Getting as much as I can get done today - DONE!
-    /// * Need to finish off the calculations of the IPR
-    /// * Now I will be able to write the report and let Kiran know that I can get this submitted to him.
+    /// 20th December 2014
+    /// * Finishing up the ENTIRE project, and will be able to get the results properly to Kiran soon!
+    /// * Have to make sure that the code is entirely well written, comments included. 
     /// 
     /// Accomplishments:
-    /// * Got to report the IPR (or at least what I think is the IPR)
-    /// * Mentioned that I am able to only do one of the two rates (in the report)
-    /// * Program code - done
-    /// 
-    /// Remaining task:
-    /// * Comment where necessary to make sure that the code is readable
+    /// * Was able to get both Impostor Pass Rates and False Reject Rates and plot them on a set 
+    /// of axes in Excel. 
     /// </summary>
     class Program
     {
@@ -342,13 +337,9 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     // Making the method call to generate the various genuine scores for user 1
                     s002_Genuine = CalculateGenuineScores(s002_Test, mu_s002, N);
-
-                    FalseRejectRate(s002_Genuine, N);
-
-                    Console.ReadLine(); 
-
+                    
                     #region Extracting all the samples for the impostor calculations
-                        s003_Test = ExtractTestingSamples(s003, N); 
+                    s003_Test = ExtractTestingSamples(s003, N); 
                     s004_Test = ExtractTestingSamples(s004, N); 
                     s005_Test = ExtractTestingSamples(s005, N); 
                     s007_Test = ExtractTestingSamples(s007, N);
@@ -402,6 +393,8 @@ namespace ProgrammingAssignment1_SpecialTopics
 
                     // Making the method call to calculate all the zero-effort impostor scores
                     CalculateImpostorScores(s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s002);
+
+                    FalseRejectRate(s002_Genuine, N);
                 }
 
                 // If the user enters in a number that is not equal to either the three options listed
@@ -500,6 +493,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s003);
+
+                    FalseRejectRate(s003_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -532,7 +527,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     // Genuine sample extraction
                     s004_Test = ExtractTestingSamples(s004, N);
 
-                    // Impostor sample extractions
+                    #region Extracting samples for the Impostor scores
                     s002_Test = ExtractTestingSamples(s002, N);
                     s003_Test = ExtractTestingSamples(s003, N);
                     s005_Test = ExtractTestingSamples(s005, N);
@@ -583,10 +578,13 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s055_Test = ExtractTestingSamples(s055, N);
                     s056_Test = ExtractTestingSamples(s056, N);
                     s057_Test = ExtractTestingSamples(s057, N);
+                    #endregion
 
                     s004_Genuine = CalculateGenuineScores(s004_Test, mu_s004, N);
 
                     CalculateImpostorScores(s002_Test, s003_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s004);
+
+                    FalseRejectRate(s004_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -670,7 +668,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s056_Test = ExtractTestingSamples(s056, N);
                     s057_Test = ExtractTestingSamples(s057, N);
 
-                    CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s005); 
+                    CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s005);
+
+                    FalseRejectRate(s005_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -753,7 +753,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s057_Test = ExtractTestingSamples(s057, N);
                     #endregion
 
-                    CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s007); 
+                    CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s007);
+
+                    FalseRejectRate(s007_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -838,6 +840,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s008);
+
+                    FalseRejectRate(s008_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -921,6 +925,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s010);
+
+                    FalseRejectRate(s010_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -1002,6 +1008,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s011);
+
+                    FalseRejectRate(s011_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -1039,7 +1047,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s008_Test = ExtractTestingSamples(s008, N);
                     s010_Test = ExtractTestingSamples(s010, N);
                     s011_Test = ExtractTestingSamples(s011, N);
-                    s012_Test = ExtractTestingSamples(s012, N);
+                    // s012_Test = ExtractTestingSamples(s012, N);
                     s013_Test = ExtractTestingSamples(s013, N);
                     s015_Test = ExtractTestingSamples(s015, N);
                     s016_Test = ExtractTestingSamples(s016, N);
@@ -1084,7 +1092,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s057_Test = ExtractTestingSamples(s057, N);
                     #endregion
 
-                    CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s012);
+                    CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s012);
+
+                    FalseRejectRate(s012_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -1167,6 +1177,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s013);
+
+                    FalseRejectRate(s013_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -1248,6 +1260,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s015);
+
+                    FalseRejectRate(s015_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -1329,6 +1343,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s016);
+
+                    FalseRejectRate(s016_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN != "200" || inputN != "300")
@@ -1411,6 +1427,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s017);
+
+                    FalseRejectRate(s017_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1492,6 +1510,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s018);
+
+                    FalseRejectRate(s018_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1573,6 +1593,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s019);
+
+                    FalseRejectRate(s019_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1655,6 +1677,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s020);
+
+                    FalseRejectRate(s020_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1737,6 +1761,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s021);
+
+                    FalseRejectRate(s021_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1820,6 +1846,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s022);
+
+                    FalseRejectRate(s022_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1902,6 +1930,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s024);
+
+                    FalseRejectRate(s024_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -1984,6 +2014,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s025);
+
+                    FalseRejectRate(s025_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -2066,6 +2098,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s026);
+
+                    FalseRejectRate(s026_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -2148,6 +2182,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s027);
+
+                    FalseRejectRate(s027_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -2230,6 +2266,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s028);
+
+                    FalseRejectRate(s028_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -2312,6 +2350,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s029);
+
+                    FalseRejectRate(s029_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -2394,6 +2434,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s030);
+
+                    FalseRejectRate(s030_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -2476,6 +2518,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s027_Test, s026_Test, s028_Test, s029_Test, s030_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s031);
+
+                    FalseRejectRate(s031_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -2558,6 +2602,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s032);
+
+                    FalseRejectRate(s032_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -2641,6 +2687,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s033);
+
+                    FalseRejectRate(s033_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -2723,6 +2771,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s034);
+
+                    FalseRejectRate(s034_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -2805,6 +2855,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s035);
+
+                    FalseRejectRate(s035_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -2887,6 +2939,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s036);
+
+                    FalseRejectRate(s036_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -2969,6 +3023,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s037);
+
+                    FalseRejectRate(s037_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -3051,6 +3107,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s038);
+
+                    FalseRejectRate(s038_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -3133,6 +3191,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s039);
+
+                    FalseRejectRate(s039_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -3214,6 +3274,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s040);
+
+                    FalseRejectRate(s040_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -3296,6 +3358,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s041);
+
+                    FalseRejectRate(s041_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -3378,6 +3442,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s042);
+
+                    FalseRejectRate(s042_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -3460,6 +3526,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s043);
+
+                    FalseRejectRate(s043_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -3542,6 +3610,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s044);
+
+                    FalseRejectRate(s044_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -3624,6 +3694,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s046);
+
+                    FalseRejectRate(s046_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -3705,7 +3777,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s057_Test = ExtractTestingSamples(s057, N);
                     #endregion
 
-                    CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s002);
+                    CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s047);
+
+                    FalseRejectRate(s047_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -3787,7 +3861,11 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s057_Test = ExtractTestingSamples(s057, N);
                     #endregion
 
+
+                    // Method calls to calculate the Impostor scores and the False Reject Rates.  
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s048);
+
+                    FalseRejectRate(s048_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -3870,6 +3948,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s049);
+
+                    FalseRejectRate(s049_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -3952,6 +4032,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s050);
+
+                    FalseRejectRate(s050_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -4034,6 +4116,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s002);
+
+                    FalseRejectRate(s051_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -4116,6 +4200,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s053_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s052);
+
+                    FalseRejectRate(s052_Genuine, N); 
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -4198,6 +4284,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s054_Test, s055_Test, s056_Test, s057_Test, N, mu_s053);
+
+                    FalseRejectRate(s053_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -4280,6 +4368,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s055_Test, s056_Test, s057_Test, N, mu_s054);
+
+                    FalseRejectRate(s054_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -4362,6 +4452,8 @@ namespace ProgrammingAssignment1_SpecialTopics
                     #endregion
 
                     CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s056_Test, s057_Test, N, mu_s055);
+
+                    FalseRejectRate(s055_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -4443,7 +4535,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s057_Test = ExtractTestingSamples(s057, N);
                     #endregion
 
-                    CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s057_Test, N, mu_s056); 
+                    CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s057_Test, N, mu_s056);
+
+                    FalseRejectRate(s056_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -4524,7 +4618,9 @@ namespace ProgrammingAssignment1_SpecialTopics
                     s056_Test = ExtractTestingSamples(s056, N);
                     #endregion
 
-                    CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, N, mu_s057); 
+                    CalculateImpostorScores(s002_Test, s003_Test, s004_Test, s005_Test, s007_Test, s008_Test, s010_Test, s011_Test, s012_Test, s013_Test, s015_Test, s016_Test, s017_Test, s018_Test, s019_Test, s020_Test, s021_Test, s022_Test, s024_Test, s025_Test, s026_Test, s027_Test, s028_Test, s029_Test, s030_Test, s031_Test, s032_Test, s033_Test, s034_Test, s035_Test, s036_Test, s037_Test, s038_Test, s039_Test, s040_Test, s041_Test, s042_Test, s043_Test, s044_Test, s046_Test, s047_Test, s048_Test, s049_Test, s050_Test, s051_Test, s052_Test, s053_Test, s054_Test, s055_Test, s056_Test, N, mu_s057);
+
+                    FalseRejectRate(s057_Genuine, N);
                 }
 
                 else if (inputN != "100" || inputN == "200" || inputN != "300")
@@ -4536,17 +4632,40 @@ namespace ProgrammingAssignment1_SpecialTopics
             #endregion
         }
 
+        #region Calculating the False Reject Rate
+        /// <summary>
+        /// This will be calculating the false reject rate, given a threshold T, and the number of samples N. 
+        /// </summary>
+        /// <param name="s002_Genuine">These are the genuine scores which have been calculated</param>
+        /// <param name="N">The number of samples, N.  This is an integer</param>
         static void FalseRejectRate(double[,] s002_Genuine, int N)
         {
+            Console.Write("Enter your threshold T to find out the False Reject Rate for " + N + " samples." + Environment.NewLine + "T = ");
+            double threshold_FRR = double.Parse(Console.ReadLine());
+
+            int impostor = 0, genuine = 0;
+            int FRR_Total = N * 51; 
+
+            // Using the nested for loop to find out where the false reject rates occur
             for (int i = 0; i < s002_Genuine.GetLength(0); i++)
             {
                 for (int j = 0; j < s002_Genuine.GetLength(1); j++)
                 {
-                    Console.Write(string.Format("{0} ", s002_Genuine[i, j]));
+                    if (threshold_FRR <= s002_Genuine[i, j])
+                    {
+                        impostor++;
+                    }
+                    else genuine++; 
                 }
-                Console.Write(Environment.NewLine); 
             }
+
+            Console.Write(impostor + " scores which have been marked as impostor out of " + FRR_Total + " scores.");
+
+            double FRR = Convert.ToDouble(impostor) / FRR_Total;
+
+            Console.Write("The false reject rate, FRR = " + FRR + " with N = " + N + " samples at the threshold T = " + threshold_FRR);
         }
+        #endregion
 
         #region Method to calculate the Impostor Scores
         /// <summary>
