@@ -14,14 +14,7 @@ namespace ProgrammingAssignment1_SpecialTopics
     /// CSCI-860-W01: Biometrics and its Applications in a Networked Society
     /// Instructor: Dr. Kiran Balagani
     /// 
-    /// 20th December 2014
-    /// * Finishing up the ENTIRE project, and will be able to get the results properly to Kiran soon!
-    /// * Have to make sure that the code is entirely well written, comments included. 
-    /// * Have finished the program, and making sure that I know what is going on!
-    /// 
-    /// Accomplishments:
-    /// * Was able to get both Impostor Pass Rates and False Reject Rates and plot them on a set 
-    /// of axes in Excel. 
+    /// 22nd December 2014
     /// </summary>
     class Program
     {

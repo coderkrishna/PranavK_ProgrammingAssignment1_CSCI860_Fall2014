@@ -71,3 +71,11 @@ Here are the following that I tasks that I need to get done today:
  * Got to report the IPR (or at least what I think is the IPR)
  * Mentioned that I am able to only do one of the two rates (in the report)
  * Program code - done
+
+ 20th December 2014
+ * Finishing up the ENTIRE project, and will be able to get the results properly to Kiran soon!
+ * Have to make sure that the code is entirely well written, comments included. 
+ * Have finished the program, and making sure that I know what is going on!
+ 
+    Accomplishments:
+    * Was able to get both Impostor Pass Rates and False Reject Rates and plot them on a set of axes in Excel.
