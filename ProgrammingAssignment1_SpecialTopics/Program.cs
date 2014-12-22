@@ -15,6 +15,8 @@ namespace ProgrammingAssignment1_SpecialTopics
     /// Instructor: Dr. Kiran Balagani
     /// 
     /// 22nd December 2014
+    /// * Making sure I know what is going on in this code. 
+    /// * Reviewing all the code that I have written.
     /// </summary>
     class Program
     {
