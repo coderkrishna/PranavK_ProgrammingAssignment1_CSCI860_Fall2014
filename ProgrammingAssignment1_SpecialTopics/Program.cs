@@ -17,6 +17,7 @@ namespace ProgrammingAssignment1_SpecialTopics
     /// 22nd December 2014
     /// * Making sure I know what is going on in this code. 
     /// * Reviewing all the code that I have written.
+    /// * Having the necessary changes made to be able to have a more accurate picture of everything. 
     /// </summary>
     class Program
     {
@@ -326,7 +327,7 @@ namespace ProgrammingAssignment1_SpecialTopics
                     double[,] s002_Samples = ExtractTrainingSamples(s002, N);
 
                     // Calculates the templates now and stores it in an array which can be used later on. 
-                    mu_s002 = CalculateTemplateVectors(s002_Samples, N); 
+                    mu_s002 = CalculateTemplateVectors(s002_Samples, N);
 
                     // Extracting all the samples for the genuine calculations
                     s002_Test = ExtractTestingSamples(s002, N);
@@ -4634,6 +4635,7 @@ namespace ProgrammingAssignment1_SpecialTopics
             int FRR_Total = N * 51; 
 
             // Using the nested for loop to find out where the false reject rates occur
+            // The logic here is a bit funky, but it works at the moment.  
             for (int i = 0; i < s002_Genuine.GetLength(0); i++)
             {
                 for (int j = 0; j < s002_Genuine.GetLength(1); j++)
@@ -4650,7 +4652,7 @@ namespace ProgrammingAssignment1_SpecialTopics
 
             double FRR = Convert.ToDouble(impostor) / FRR_Total;
 
-            Console.Write("The false reject rate, FRR = " + FRR + " with N = " + N + " samples at the threshold T = " + threshold_FRR);
+            Console.Write("The false reject rate, FRR = " + FRR + " with N = " + N + " samples at the threshold T = " + threshold_FRR + Environment.NewLine);
 
             #region Prompting the user whether or not to restart the whole program again
             Console.Write("Do you want to go again?" + Environment.NewLine + "Press y or n" + Environment.NewLine);
@@ -4853,7 +4855,7 @@ namespace ProgrammingAssignment1_SpecialTopics
         #region Calculating the Impostor Pass Rate
         /// <summary>
         /// This method will calculate the Impostor Pass Rate, also known as the 
-        /// False Reject Rate
+        /// False Accept Rate
         /// </summary>
         /// <param name="N">This is the number of samples, that is originally input from the beginning.</param>
         /// <param name="T">Threshold value, T which the user also inputs. </param>
