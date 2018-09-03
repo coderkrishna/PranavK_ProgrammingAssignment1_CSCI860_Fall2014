@@ -1,9 +1,6 @@
 ﻿#region These are the using statements, which function like the import statements for the Java programming language
 using System;
 using System.IO; // This is required for File I/O
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 #endregion
 
 namespace ProgrammingAssignment1_SpecialTopics
@@ -5160,7 +5157,7 @@ namespace ProgrammingAssignment1_SpecialTopics
         }
         #endregion
 
-        #region The Test Sample extraction, got that done
+        #region The Test Sample extraction
         /// <summary>
         /// This method should be able to take the existing 2D double array
         /// and extract the test samples.  However, I am unable to do so
